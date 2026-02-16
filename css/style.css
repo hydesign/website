@@ -1,0 +1,753 @@
+/* ============================================
+   Ary-Yue Huang Portfolio — GitHub Pages
+   基于 Cargo 原站 (aryyuehuang.com) 样式提取
+   ============================================ */
+
+:root {
+  --page-bg: #ffffff;           /* 页面底面白色 */
+  --content-bg: #ffffff;        /* 白内容区 */
+  --text-on-dark: rgba(255, 255, 255, 0.85);
+  --text-on-light: #000000;
+  --text-muted: rgba(134, 134, 134, 0.85);
+  --link-muted: rgb(157, 157, 157);
+  --tag-bg: #ffffff;
+  --tag-text: #000000;
+  --tag-border: #A7B3BF;
+  --font-caption: 'DM Sans', 'Source Sans 3', -apple-system, sans-serif;
+  --font-subcaption: 'IBM Plex Mono', 'JetBrains Mono', monospace;
+  --font-body: 'IBM Plex Mono', 'JetBrains Mono', monospace;
+  --font-mono: 'IBM Plex Mono', 'JetBrains Mono', monospace;
+  --font-name: Georgia, 'Times New Roman', serif;
+  --content-width: 90%;
+  --max-width: min(90vw, 1400px);
+  --max-width-wide: min(90vw, 1400px);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 全局基准字号：1rem = 18px。调整此处可改变全站「正常」字号 */
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: var(--text-on-light);
+  background: #ffffff;
+  line-height: 1.3;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 主内容区 - 初始加载时为首屏内容留足 header 空间 */
+/* 调整此处 padding-top 可改变 header 下方的留白：css/style.css 约第 53、59 行 */
+.page-wrapper {
+  flex: 1;
+  background: var(--content-bg);
+  padding: 4rem 2rem;
+  padding-top: 13.5rem;
+}
+
+@media (max-width: 640px) {
+  .page-wrapper {
+    padding: 2rem 1.25rem;
+    padding-top: 10.5rem;
+  }
+}
+
+/* 顶部固定栏 - 两头明显缩进，不贴边 */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 2rem 0 1.5rem;
+  padding-left: clamp(2.5rem, 6vw, 4rem);
+  padding-right: clamp(2.5rem, 6vw, 4rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background: transparent;
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+
+.site-header > * {
+  pointer-events: auto;
+}
+
+.nav-link,
+.hero-title,
+.hero-subtitle {
+  color: #ffffff; /* 配合 difference 实现自适应对比 */
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem clamp(1.5rem, 5vw, 2rem) 1rem;
+  }
+}
+
+/* 左侧导航 — 垂直排列，每项一行 */
+.nav {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: flex-start;
+}
+
+.nav-link {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity 0.2s;
+  display: block;
+}
+
+.nav-link:hover {
+  opacity: 0.85;
+}
+
+.nav-link.active {
+  font-weight: 600;
+}
+
+/* Hero / Name - 右侧 */
+.hero {
+  padding: 0;
+  text-align: right;
+  margin-left: auto;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    margin-left: 0;
+    text-align: left;
+  }
+}
+
+.hero-title {
+  font-family: var(--font-name);
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+.hero-subtitle {
+  font-family: var(--font-name);
+  font-size: 2rem;
+  font-weight: normal;
+  margin-top: 0.15em;
+  color: #ffffff;
+  opacity: 0.95;
+}
+
+/* Main content - 90% 页面宽度，响应式 */
+.content {
+  width: var(--content-width);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.content-wide {
+  width: var(--content-width);
+  max-width: var(--max-width-wide);
+  margin: 0 auto;
+}
+
+.content-narrow {
+  width: var(--content-width);
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* Caption - 主文案：Arizona Sans Light 风格 */
+.caption {
+  font-family: var(--font-caption);
+  font-size: 2.05em;
+  font-weight: 300;
+  line-height: 1.3;
+  letter-spacing: 0;
+  color: var(--text-on-light);
+}
+
+/* Sub-caption - 图下引用：Diatype Semi-mono 风格 */
+.sub-caption {
+  font-family: var(--font-subcaption);
+  font-size: 1.15em;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: 0;
+  color: var(--text-on-light);
+}
+
+/* Intro */
+.intro {
+  margin-bottom: 3rem;
+}
+
+/* intro-text 字号：此处 font-size，2.05em 相对 html 基准(18px) ≈ 36.9px */
+.intro-text {
+  font-family: var(--font-caption);
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.3;
+  letter-spacing: 0;
+  color: var(--text-on-light);
+  margin-bottom: 1rem;
+}
+
+/* 系列名等：灰蓝渐变圆角框（Agent-Based Art 等） */
+.intro-text em,
+.about-intro em,
+.project-detail em,
+em.series-tag {
+  font-style: normal;
+  display: inline-block;
+  padding: 2px 8px;
+  background: linear-gradient(#fff, #fff) padding-box,
+              linear-gradient(to right, #7898af, #8c8c8c, #6a6a6f, #7898af) border-box;
+  border: 1px solid transparent;
+  border-radius: 20px;
+}
+
+.intro-link {
+  display: inline-block;
+  font-size: 1rem;
+  color: var(--link-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.intro-link:hover {
+  color: var(--text-on-light);
+}
+
+/* 标签 pill - 灰蓝渐变圆角框 */
+.tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background: linear-gradient(#fff, #fff) padding-box,
+              linear-gradient(to right, #7898af, #8c8c8c, #6a6a6f, #7898af) border-box;
+  border: 1px solid transparent;
+  border-radius: 24px;
+  font-family: var(--font-caption);
+  font-size: 1em;
+  font-weight: 400;
+  color: var(--tag-text);
+}
+
+/* Projects - 参考图：居中、层级排版 */
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.project-quote {
+  font-family: var(--font-subcaption);
+  font-size: 1.15em;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: 0;
+  color: var(--text-on-light);
+  margin-bottom: 0.75rem;
+}
+
+.project-info {
+  margin-bottom: 0.25rem;
+}
+
+.project-title {
+  font-family: var(--font-caption);
+  font-size: 2.05em;
+  font-weight: 300;
+  color: var(--text-on-light);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.project-title:hover {
+  opacity: 0.7;
+}
+
+.project-year {
+  font-family: var(--font-caption);
+  font-size: 0.85em;
+  font-weight: 400;
+  color: var(--text-on-light);
+  display: inline;
+  margin-left: 0.35em;
+}
+
+.project-title .arrow {
+  font-size: 0.45em;
+  vertical-align: super;
+  opacity: 0.85;
+}
+
+.project-meta {
+  font-family: var(--font-caption);
+  font-size: 1.15em;
+  font-weight: 400;
+  color: var(--text-on-light);
+  line-height: 1.3;
+  margin-top: 0.4em;
+}
+
+.project-meta .tag {
+  margin-right: 0.25em;
+}
+
+/* 项目图片占位 - 可选嵌入 Cargo CDN 图片 */
+.project-image {
+  width: 100%;
+  max-width: 800px;
+  margin: 1rem 0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* About page */
+.about-section {
+  margin-top: 1rem;
+}
+
+.about-intro {
+  font-family: var(--font-caption);
+  font-size: 2.05em;
+  font-weight: 300;
+  line-height: 1.3;
+  letter-spacing: 0;
+  margin-bottom: 1.5rem;
+  color: var(--text-on-light);
+}
+
+/* about-intro em 在 Intro 统一样式中 */
+
+.about-bio {
+  margin-bottom: 2.5rem;
+}
+
+.section-title {
+  font-family: var(--font-caption);
+  font-size: 2.2rem;
+  font-weight: 400;
+  margin: 2.5rem 0 1rem;
+  letter-spacing: 0;
+  color: var(--text-on-light);
+}
+
+.cv-category {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: 1.5rem 0 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-on-light);
+}
+
+.cv-list {
+  list-style: none;
+  margin-bottom: 1.5rem;
+}
+
+.cv-list li {
+  margin-bottom: 0.4rem;
+  padding-left: 0;
+  font-size: 0.95rem;
+  color: var(--text-on-light);
+}
+
+/* Publications */
+.publications-section {
+  margin-top: 1rem;
+}
+
+.publication {
+  display: grid;
+  grid-template-columns: 4rem 1fr;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.publication:last-child {
+  border-bottom: none;
+}
+
+.pub-year {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.pub-title {
+  font-family: var(--font-caption);
+  font-size: 1.15rem;
+  font-weight: 400;
+  margin-bottom: 0.35rem;
+  color: var(--text-on-light);
+}
+
+.pub-venue {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.pub-doi {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-decoration: underline;
+}
+
+.pub-doi:hover {
+  color: var(--text-on-light);
+}
+
+.pub-status {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Contact */
+.contact-section {
+  margin-top: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.contact-label {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.contact-value {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--text-on-light);
+}
+
+.contact-value[href] {
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.contact-value[href]:hover {
+  opacity: 0.7;
+}
+
+/* Project detail page */
+.project-detail {
+  margin-top: 1rem;
+}
+
+.project-detail-title {
+  font-family: var(--font-caption);
+  font-size: 2.9rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  color: var(--text-on-light);
+}
+
+.project-detail-subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: var(--text-on-light);
+  opacity: 0.85;
+}
+
+.project-detail-meta {
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  color: var(--text-on-light);
+  margin-bottom: 2rem;
+}
+
+.project-collab {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.project-collab a {
+  color: var(--text-on-light);
+  text-decoration: underline;
+}
+
+/* Project Gallery - 标题上图库轮播，当前向左滑出、新图从右滑入 */
+.project-gallery {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 16 / 9;
+  margin: 0 0 1.5rem 0;
+  overflow: hidden;
+  background: #fff;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.project-gallery.gallery-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 悬停时显示左右箭头 */
+.project-gallery .gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.12);
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.2s, background 0.2s;
+}
+
+.project-gallery:hover .gallery-arrow {
+  opacity: 1;
+}
+
+.project-gallery .gallery-arrow:hover {
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.project-gallery .gallery-arrow-prev {
+  left: 12px;
+}
+
+.project-gallery .gallery-arrow-next {
+  right: 12px;
+}
+
+.project-gallery .gallery-arrow svg {
+  width: 20px;
+  height: 20px;
+}
+
+.project-gallery .gallery-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(100%);
+  opacity: 1;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+  background: #fff;
+}
+
+.project-gallery .gallery-slide.active {
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 2;
+}
+
+.project-gallery .gallery-slide.slide-out-left {
+  transform: translateX(-100%);
+  z-index: 1;
+}
+
+.project-gallery .gallery-slide.slide-out-right {
+  transform: translateX(100%);
+  z-index: 1;
+}
+
+/* 新图从右滑入时同时淡入，避免中间露出背景 */
+.project-gallery .gallery-slide.slide-in-right {
+  transform: translateX(100%);
+  opacity: 0;
+  z-index: 2;
+}
+
+.project-gallery .gallery-slide.slide-in-right.active {
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 2;
+}
+
+.project-gallery .gallery-slide.slide-in-left {
+  transform: translateX(-100%);
+  opacity: 0;
+  z-index: 2;
+}
+
+.project-gallery .gallery-slide.slide-in-left.active {
+  transform: translateX(0);
+  opacity: 1;
+  z-index: 2;
+}
+
+.project-gallery .gallery-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* fit: contain - 完整显示图片不裁剪（gallery-config fit: 'contain'） */
+.project-gallery.gallery-fit-contain .gallery-slide img {
+  object-fit: contain !important;
+  object-position: center;
+}
+
+.project-detail p {
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  margin-bottom: 1.25rem;
+  color: var(--text-on-light);
+}
+
+.project-detail p:last-of-type {
+  margin-bottom: 2rem;
+}
+
+.project-ref {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.project-ref a {
+  color: var(--text-muted);
+}
+
+.subsection-title {
+  font-family: var(--font-caption);
+  font-size: 1.5rem;
+  font-weight: 450;
+  margin: 2rem 0 0.75rem;
+  color: var(--text-on-light);
+}
+
+.bibliography {
+  margin: 2.5rem 0;
+}
+
+.bib-list {
+  list-style: none;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.bib-list li {
+  margin-bottom: 0.5rem;
+}
+
+.back-link {
+  display: inline-block;
+  font-size: 1rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-top: 2rem;
+  transition: color 0.2s;
+}
+
+.back-link:hover {
+  color: var(--text-on-light);
+}
+
+/* Footer - 透明底面 */
+.footer {
+  padding: 2rem;
+  font-family: var(--font-mono);
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  text-align: center;
+  background: transparent;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  html {
+    font-size: 16px;
+  }
+
+  .nav {
+    gap: 0.2rem;
+  }
+
+  .hero {
+    padding: 0 1.25rem 1.5rem;
+    text-align: left;
+  }
+
+  .hero-title {
+    font-size: 1rem;
+  }
+
+  .content,
+  .content-wide,
+  .content-narrow {
+    padding: 0;
+  }
+
+  .project-title {
+    font-size: 1.2rem;
+  }
+
+  .project-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .publication {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .contact-value {
+    font-size: 1.2rem;
+  }
+}
