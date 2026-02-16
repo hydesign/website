@@ -9,7 +9,8 @@
 ### 方式一：从本仓库根目录发布
 
 1. 在 GitHub 创建新仓库（如 `aryyuehuang.github.io` 或 `website`）
-2. 将所有文件推送到仓库：
+2. **注意**：GitHub 单文件限制 100MB，超大 GIF 已排除（见下方「推送失败」）
+3. 将所有文件推送到仓库：
 
 ```bash
 cd /Users/ary/Documents/new_website
@@ -30,6 +31,20 @@ git push -u origin main
 4. 访问地址：
    - 若仓库名为 `aryyuehuang.github.io`：`https://aryyuehuang.github.io`
    - 否则：`https://你的用户名.github.io/仓库名/`
+
+5. **启用 GitHub Pages**：Settings → Pages → Source 选 "Deploy from a branch" → Branch 选 `main`，根目录 `/`
+
+### 推送失败（HTTP 400 / hung up）
+
+若出现 `RPC failed`、`hung up unexpectedly`，多为仓库含超过 100MB 的文件。已处理的改动：
+- `.gitignore` 排除 `images folder/` 和超大 GIF
+- `gallery-config.js` 中 nomadic-annotators 暂时仅使用 nomadic-1.jpg、nomadic-3.jpg
+
+在终端执行推送前，可增大 Git 缓冲区：
+```bash
+git config http.postBuffer 524288000
+git push -f origin main
+```
 
 ### 方式二：使用子目录 /docs
 
