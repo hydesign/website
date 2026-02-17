@@ -552,7 +552,7 @@ em.series-tag {
   overflow: hidden;
   background: #fff;
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(100px);
   transition: opacity 2s ease-out, transform 2s ease-out;
 }
 
