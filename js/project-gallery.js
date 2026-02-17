@@ -20,9 +20,14 @@
 
     el.style.aspectRatio = ratio[0] + ' / ' + ratio[1];
 
+    function imgTag(fullSrc, i, isActive) {
+      var attr = isActive ? ' src="' + fullSrc + '"' : ' data-src="' + fullSrc + '"';
+      return '<img' + attr + ' alt="" loading="lazy" decoding="async"' + imgStyle + '>';
+    }
+
     if (config.images.length === 1) {
       var src = config.images[0].startsWith('http') ? config.images[0] : base + config.images[0];
-      el.innerHTML = '<div class="gallery-slide active"><img src="' + src + '" alt="" loading="lazy"' + imgStyle + '></div>';
+      el.innerHTML = '<div class="gallery-slide active">' + imgTag(src, 0, true) + '</div>';
       if (config.fit === 'contain') el.classList.add('gallery-fit-contain');
       return;
     }
@@ -30,7 +35,7 @@
     var slidesHtml = config.images.map(function (src, i) {
       var fullSrc = src.startsWith('http') ? src : base + src;
       return '<div class="gallery-slide' + (i === 0 ? ' active' : '') + '" data-index="' + i + '">' +
-        '<img src="' + fullSrc + '" alt="" loading="lazy"' + imgStyle + '>' +
+        imgTag(fullSrc, i, i === 0) +
         '</div>';
     }).join('');
 
@@ -44,10 +49,22 @@
     var slides = el.querySelectorAll('.gallery-slide');
     var intervalId;
 
+    function loadSlideImage(slideEl) {
+      var img = slideEl && slideEl.querySelector('img');
+      if (img && img.dataset.src) {
+        img.src = img.dataset.src;
+        delete img.dataset.src;
+      }
+    }
+
     function goTo(nextIdx) {
       if (nextIdx === idx) return;
       if (nextIdx < 0) nextIdx = slides.length - 1;
       if (nextIdx >= slides.length) nextIdx = 0;
+
+      loadSlideImage(slides[nextIdx]);
+      var nextNext = (nextIdx + 1) % slides.length;
+      if (slides.length > 2) loadSlideImage(slides[nextNext]);
 
       var prevIdx = idx;
       idx = nextIdx;
@@ -65,7 +82,7 @@
       setTimeout(function () {
         slides[prevIdx].classList.remove('active', 'slide-out-left', 'slide-out-right');
         slides[idx].classList.remove('slide-in-right', 'slide-in-left');
-      }, 600);
+      }, 1000);
     }
 
     function next() { goTo(idx + 1); }
@@ -88,6 +105,7 @@
       }
     });
 
+    if (slides.length > 1) loadSlideImage(slides[1]);
     intervalId = setInterval(next, speed);
   }
 

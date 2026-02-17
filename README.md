@@ -156,9 +156,20 @@ html {
 
 ### 5. 性能与加载
 
-- **Gallery**：仅在进入视口时初始化并加载图片（`project-gallery.js`）
-- **图片体积**：部分 GIF 较大（如 nomadic 项目），建议压缩或改用视频
+- **Gallery**：仅在进入视口时初始化；每张图在即将展示前才加载（渐进加载）
 - **脚本加载**：`gallery-config.js` 放在 body 底部，不阻塞首屏渲染
+
+### 6. 图片优化（减轻卡顿）
+
+若加载仍慢，可压缩 `images/` 中的图片：
+
+| 工具 | 用法 |
+|------|------|
+| [Squoosh](https://squoosh.app) | 网页拖拽上传，导出 WebP 或压缩后的 PNG/JPEG |
+| ImageOptim (Mac) | 拖入文件夹批量压缩 |
+| `sips` (Mac 内置) | `sips -Z 1200 images/**/*.png` 等比例缩小到 1200px |
+
+建议：Gallery 展示宽度约 800px，原图超过 2000px 可适当缩小；GIF 可考虑转为 MP4 视频（体积更小）。
 
 ---
 
