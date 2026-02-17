@@ -64,13 +64,13 @@ body {
 .page-wrapper {
   flex: 1;
   background: var(--content-bg);
-  padding: 4rem 0;
+  padding: 4rem 2rem;
   padding-top: 13.5rem;
 }
 
 @media (max-width: 768px) {
   .page-wrapper {
-    padding: 2rem 0;
+    padding: 2rem 1.25rem;
     padding-top: 10.5rem;
   }
 }
@@ -199,33 +199,23 @@ body {
   opacity: 0.95;
 }
 
-/* Main content - 原站 column-set 布局：3(nav) + 1(gutter) + 8(content) = 12 列 */
+/* Main content - 90% 页面宽度，响应式 */
 .content {
-  width: 100%;
+  width: var(--content-width);
   max-width: var(--max-width);
   margin: 0 auto;
-  padding-left: clamp(2.5rem, 6vw, 4rem);
-  padding-right: clamp(2.5rem, 6vw, 4rem);
-  display: grid;
-  grid-template-columns: 3fr 1fr 8fr;
-  gap: 0 clamp(1rem, 5vw, 9.4rem);
-  align-items: start;
 }
 
 .content-wide {
+  width: var(--content-width);
   max-width: var(--max-width-wide);
+  margin: 0 auto;
 }
 
 .content-narrow {
+  width: var(--content-width);
   max-width: 520px;
-}
-
-/* About / Publications / Contact / Project 详情页：内容占满 grid */
-.content .about-section,
-.content .publications-section,
-.content .contact-section,
-.content .project-detail {
-  grid-column: 1 / -1;
+  margin: 0 auto;
 }
 
 /* Caption - 主文案：Arizona Sans Light 风格 */
@@ -248,22 +238,9 @@ body {
   color: var(--text-on-light);
 }
 
-/* Intro - 位于 content 右列，内部 column-set gutter=1：左空列 + 正文 */
+/* Intro */
 .intro {
-  grid-column: 3;
   margin-bottom: 3rem;
-  display: grid;
-  grid-template-columns: 1fr 8fr;
-  gap: 0 1rem;
-  align-items: start;
-}
-
-.intro-text {
-  grid-column: 2;
-}
-
-.intro-link {
-  grid-column: 2;
 }
 
 /* intro-text 字号 */
@@ -318,32 +295,19 @@ em.series-tag {
   color: var(--tag-text);
 }
 
-/* Projects - 位于 content 右列，每个 project 为 column 布局 */
+/* Projects - 参考图：居中、层级排版 */
 .projects {
-  grid-column: 3;
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
 }
 
-/* 每个 project：gallery 通栏，caption 区用 column-set (1空 + 8内容) */
 .project {
-  display: grid;
-  grid-template-columns: 1fr 8fr;
-  gap: 0 1rem;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
   padding-bottom: 2rem;
-  text-align: left;
-}
-
-.project-gallery {
-  grid-column: 1 / -1;
-}
-
-.project-quote,
-.project-info,
-.project-meta {
-  grid-column: 2;
 }
 
 .project-quote {
@@ -554,11 +518,58 @@ em.series-tag {
   opacity: 0.7;
 }
 
-/* Project detail page */
-.project-detail {
+/* Project detail page - 原站 column-set 布局：2(meta) + 1(gutter) + 9(content) */
+.content-wide .project-detail {
   margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 9fr;
+  gap: 0 clamp(1rem, 4vw, 2rem);
+  align-items: start;
+  text-align: left;
 }
 
+.content-wide .project-detail-title {
+  grid-column: 1 / -1;
+  font-family: var(--font-caption);
+  font-size: 2.9rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  color: var(--text-on-light);
+}
+
+.content-wide .project-detail-subtitle {
+  grid-column: 1 / -1;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: var(--text-on-light);
+  opacity: 0.85;
+}
+
+.content-wide .project-detail-meta {
+  grid-column: 1;
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: var(--text-on-light);
+  position: sticky;
+  top: 12rem;
+}
+
+.content-wide .project-detail p,
+.content-wide .project-detail .subsection-title,
+.content-wide .project-detail .project-collab,
+.content-wide .project-detail .bibliography,
+.content-wide .project-detail .back-link,
+.content-wide .project-detail .bib-list {
+  grid-column: 3;
+}
+
+.content-wide .project-detail .project-detail-meta {
+  margin-bottom: 0;
+}
+
+/* About/Publications/Contact 的 content-wide 不受影响，仅 project 详情页 */
 .project-detail-title {
   font-family: var(--font-caption);
   font-size: 2.9rem;
@@ -800,40 +811,7 @@ em.series-tag {
     text-align: left;
   }
 
-  .content {
-    grid-template-columns: 1fr;
-    gap: 0;
-    padding-left: clamp(1rem, 4vw, 1.5rem);
-    padding-right: clamp(1rem, 4vw, 1.5rem);
-  }
-
-  .intro {
-    grid-column: 1;
-    grid-template-columns: 1fr;
-  }
-
-  .intro-text,
-  .intro-link {
-    grid-column: 1;
-  }
-
-  .projects {
-    grid-column: 1;
-  }
-
-  .project {
-    grid-template-columns: 1fr;
-    text-align: center;
-    align-items: center;
-  }
-
-  .project-gallery,
-  .project-quote,
-  .project-info,
-  .project-meta {
-    grid-column: 1;
-  }
-
+  .content,
   .content-wide,
   .content-narrow {
     padding: 0;
@@ -892,5 +870,25 @@ em.series-tag {
 
   .section-title {
     font-size: 1.5rem;
+  }
+
+  /* Project 详情页：手机端单列 */
+  .content-wide .project-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .content-wide .project-detail-meta,
+  .content-wide .project-detail p,
+  .content-wide .project-detail .subsection-title,
+  .content-wide .project-detail .project-collab,
+  .content-wide .project-detail .bibliography,
+  .content-wide .project-detail .back-link,
+  .content-wide .project-detail .bib-list {
+    grid-column: 1;
+  }
+
+  .content-wide .project-detail-meta {
+    position: static;
+    margin-bottom: 1.5rem;
   }
 }
