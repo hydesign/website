@@ -26,6 +26,12 @@
   --tag-text: #000000;
   --tag-border: #A7B3BF;
   --font-caption: 'DM Sans', 'Source Sans 3', -apple-system, sans-serif;
+  /* 项目详情页字体：Arizona Sans Light(正文)/Regular(标题)。
+   * 使用 Adobe Fonts 时在项目页 <head> 中加入：
+   *   <link rel="stylesheet" href="https://use.typekit.net/XXXXXX.css">
+   * 并将下方改为 'ABC Arizona Sans' 或 Adobe 显示的字体名 */
+  --font-project-body: 'ABC Arizona Sans', 'DM Sans', 'Source Sans 3', -apple-system, sans-serif;
+  --font-project-title: 'ABC Arizona Sans', 'DM Sans', 'Source Sans 3', -apple-system, sans-serif;
   --font-subcaption: 'IBM Plex Mono', 'JetBrains Mono', monospace;
   --font-body: 'IBM Plex Mono', 'JetBrains Mono', monospace;
   --font-mono: 'Favorit Mono Book', 'IBM Plex Mono', 'JetBrains Mono', monospace;
@@ -530,7 +536,7 @@ em.series-tag {
 
 .content-wide .project-detail-title {
   grid-column: 1 / -1;
-  font-family: var(--font-caption);
+  font-family: var(--font-project-title);
   font-size: 2.9rem;
   font-weight: 400;
   margin-bottom: 0.5rem;
@@ -539,6 +545,7 @@ em.series-tag {
 
 .content-wide .project-detail-subtitle {
   grid-column: 1 / -1;
+  font-family: var(--font-project-title);
   font-size: 1.2rem;
   font-weight: 400;
   margin-bottom: 1rem;
@@ -552,8 +559,6 @@ em.series-tag {
   font-size: 1.1rem;
   line-height: 1.5;
   color: var(--text-on-light);
-  position: sticky;
-  top: 12rem;
 }
 
 .content-wide .project-detail p,
@@ -569,9 +574,38 @@ em.series-tag {
   margin-bottom: 0;
 }
 
+/* 项目专属排版 - 根据 data-project 覆盖，每个项目可单独定制 */
+.content-wide .project-detail[data-project="drift-of-the-uncharted"] {
+  grid-template-columns: 2fr 1fr 9fr;
+}
+.content-wide .project-detail[data-project="artificial-life-one-leg"] {
+  grid-template-columns: 2fr 1fr 9fr;
+}
+.content-wide .project-detail[data-project="buffer-beach-let-the-waves-render"] {
+  grid-template-columns: 2fr 1fr 9fr;
+}
+.content-wide .project-detail[data-project="return-to-the-peach-blossom-wonderland"] {
+  grid-template-columns: 2fr 1fr 9fr;
+}
+.content-wide .project-detail[data-project="nomadic-annotators"] {
+  grid-template-columns: 2fr 1fr 9fr;
+}
+.content-wide .project-detail[data-project="i-just-stay-in-my-home-not-go-anywhere"] {
+  grid-template-columns: 1fr 1fr 10fr;
+}
+.content-wide .project-detail[data-project="amphibious-rover-ldn2030-scouting-log"] {
+  grid-template-columns: 2fr 1fr 9fr;
+}
+.content-wide .project-detail[data-project="phalaenopsis-and-their-friends-whisper-their-tales"] {
+  grid-template-columns: 2.5fr 1fr 8.5fr;
+}
+.content-wide .project-detail[data-project="fish-tree-rings-and-memory"] {
+  grid-template-columns: 1fr 1fr 10fr;
+}
+
 /* About/Publications/Contact 的 content-wide 不受影响，仅 project 详情页 */
 .project-detail-title {
-  font-family: var(--font-caption);
+  font-family: var(--font-project-title);
   font-size: 2.9rem;
   font-weight: 400;
   margin-bottom: 0.5rem;
@@ -579,6 +613,7 @@ em.series-tag {
 }
 
 .project-detail-subtitle {
+  font-family: var(--font-project-title);
   font-size: 1.2rem;
   font-weight: 400;
   margin-bottom: 1rem;
@@ -594,6 +629,8 @@ em.series-tag {
 }
 
 .project-collab {
+  font-family: var(--font-project-body);
+  font-weight: 300;
   font-size: 0.9rem;
   color: var(--text-muted);
   margin-bottom: 1.5rem;
@@ -732,8 +769,10 @@ em.series-tag {
 }
 
 .project-detail p {
-  font-family: var(--font-mono);
+  font-family: var(--font-project-body);
+  font-weight: 300;
   font-size: 1.2rem;
+  line-height: 1.6;
   margin-bottom: 1.25rem;
   color: var(--text-on-light);
 }
@@ -752,9 +791,9 @@ em.series-tag {
 }
 
 .subsection-title {
-  font-family: var(--font-caption);
+  font-family: var(--font-project-title);
   font-size: 1.5rem;
-  font-weight: 450;
+  font-weight: 400;
   margin: 2rem 0 0.75rem;
   color: var(--text-on-light);
 }
@@ -865,14 +904,42 @@ em.series-tag {
   }
 
   .project-detail-title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    line-height: 1.35;
+  }
+
+  .project-detail-subtitle {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .project-detail-meta {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+  }
+
+  .project-detail p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 1rem;
+  }
+
+  .subsection-title {
+    font-size: 1.2rem;
+    margin: 1.5rem 0 0.5rem;
+  }
+
+  .project-collab {
+    font-size: 0.82rem;
+    margin-bottom: 1rem;
   }
 
   .section-title {
     font-size: 1.5rem;
   }
 
-  /* Project 详情页：手机端单列 */
+  /* Project 详情页：手机端单列，meta 在上、正文在下 */
   .content-wide .project-detail {
     grid-template-columns: 1fr;
   }
@@ -888,7 +955,6 @@ em.series-tag {
   }
 
   .content-wide .project-detail-meta {
-    position: static;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
   }
 }
