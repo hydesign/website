@@ -21,3 +21,7 @@ images/nomadic-annotators/nomadic-4.gif
 *.bak
 images/nomadic-annotators/nomadic-2.webp
 images/nomadic-annotators/nomadic-4.webp
+
+# ignore oversized webp
+images/nomadic-annotators/nomadic-2.webp
+images/nomadic-annotators/nomadic-4.webp
