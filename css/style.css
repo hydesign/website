@@ -95,10 +95,23 @@ body {
 @media (max-width: 640px) {
   .site-header {
     flex-direction: column;
+    flex-wrap: nowrap;
     align-items: flex-start;
-    padding: 1.5rem clamp(1.5rem, 5vw, 2rem) 1rem;
+    padding: 1.25rem clamp(1rem, 4vw, 1.5rem) 1rem;
+    gap: 1rem;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
   }
 }
+
+/* ============================================
+   Header 字体控制：
+   - 左侧（PROJECTS, ABOUT 等）: .nav-link（约第 125 行）
+   - 右侧（Ary-Yue HUANG, 黄钺）: .hero-title、.hero-subtitle（约第 168、178 行）
+   - 手机端缩小: 见 @media (max-width: 640px) 内的 .nav-link、.hero-title、.hero-subtitle
+   ============================================ */
 
 /* 左侧导航 — 垂直排列，每项一行 */
 .nav {
@@ -113,6 +126,7 @@ body {
   font-family: var(--font-mono);
   font-size: 1.5rem;
   font-weight: 500;
+  font-style: normal;
   letter-spacing: 0.02em;
   color: #ffffff;
   text-decoration: none;
@@ -140,20 +154,32 @@ body {
     margin-left: 0;
     text-align: left;
   }
+
+  .hero-title {
+    font-size: 0.95rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.85rem;
+  }
 }
 
+/* 右侧名字：与左侧 PROJECT/ABOUT 等一致，使用 font-mono */
 .hero-title {
-  font-family: var(--font-name);
+  font-family: var(--font-mono);
   font-size: 1.5rem;
-  font-weight: normal;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.02em;
   color: #ffffff;
   line-height: 1.3;
 }
 
 .hero-subtitle {
-  font-family: var(--font-name);
+  font-family: var(--font-mono);
   font-size: 1rem;
-  font-weight: normal;
+  font-weight: 400;
+  font-style: normal;
   margin-top: 0.15em;
   color: #ffffff;
   opacity: 0.95;
@@ -526,7 +552,7 @@ em.series-tag {
   overflow: hidden;
   background: #fff;
   opacity: 0;
-  transform: translateY(1000px);
+  transform: translateY(300px);
   transition: opacity 2s ease-out, transform 2s ease-out;
 }
 
@@ -708,23 +734,19 @@ em.series-tag {
   background: transparent;
 }
 
-/* Responsive */
+/* Responsive - 手机端 */
 @media (max-width: 640px) {
   html {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .nav {
-    gap: 0.2rem;
+    gap: 0.15rem;
   }
 
   .hero {
-    padding: 0 1.25rem 1.5rem;
+    padding: 0;
     text-align: left;
-  }
-
-  .hero-title {
-    font-size: 1rem;
   }
 
   .content,
@@ -733,8 +755,26 @@ em.series-tag {
     padding: 0;
   }
 
+  /* 正文和标题缩小，避免过大 */
+  .intro-text {
+    font-size: 1.1rem;
+  }
+
+  .caption {
+    font-size: 1.5em;
+  }
+
   .project-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  }
+
+  .project-year {
+    font-size: 0.8em;
+  }
+
+  .project-meta,
+  .project-quote {
+    font-size: 0.95em;
   }
 
   .project-info {
@@ -748,6 +788,14 @@ em.series-tag {
   }
 
   .contact-value {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  }
+
+  .project-detail-title {
+    font-size: 1.8rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
   }
 }

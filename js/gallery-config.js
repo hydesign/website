@@ -14,19 +14,19 @@ window.PROJECT_GALLERIES = {
     ratio: '16/9',
     speed: 5,
     images: [
-      'images/drift-of-the-uncharted/DOU-1.png',
-      'images/drift-of-the-uncharted/DOU-2.png',
-      'images/drift-of-the-uncharted/DOU-3.png'
+      'images/drift-of-the-uncharted/DOU-1.webp',
+      'images/drift-of-the-uncharted/DOU-2.webp',
+      'images/drift-of-the-uncharted/DOU-3.webp'
     ]
   },
   'artificial-life-one-leg': {
     ratio: '4/3',
     speed: 4,
     images: [
-      'images/artificial-life-one-leg/1leg-1.png',
-      'images/artificial-life-one-leg/1leg-2.png',
-      'images/artificial-life-one-leg/1leg-3.png',
-      'images/artificial-life-one-leg/1leg-4.png'
+      'images/artificial-life-one-leg/1leg-1.webp',
+      'images/artificial-life-one-leg/1leg-2.webp',
+      'images/artificial-life-one-leg/1leg-3.webp',
+      'images/artificial-life-one-leg/1leg-4.webp'
     ]
   },
   'return-to-the-peach-blossom-wonderland': {
@@ -34,7 +34,7 @@ window.PROJECT_GALLERIES = {
     speed: 6,
     fit: 'contain',  /* 宽图：宽度对齐 gallery，高度等比例缩小 */
     images: [
-      'images/return-to-the-peach-blossom-wonderland/cover.jpg',
+      'images/return-to-the-peach-blossom-wonderland/cover.webp',
       'images/return-to-the-peach-blossom-wonderland/return-1.gif'
     ]
   },
@@ -43,48 +43,48 @@ window.PROJECT_GALLERIES = {
     speed: 5,
     fit: 'contain',  /* 高图：高度对齐 gallery，宽度等比例缩小 */
     images: [
-      'images/buffer-beach-let-the-waves-render/sf2-1.png',
-      'images/buffer-beach-let-the-waves-render/sf2-2.png',
-      'images/buffer-beach-let-the-waves-render/sf2-3.png',
-      'images/buffer-beach-let-the-waves-render/sf2-4.png'
+      'images/buffer-beach-let-the-waves-render/sf2-1.webp',
+      'images/buffer-beach-let-the-waves-render/sf2-2.webp',
+      'images/buffer-beach-let-the-waves-render/sf2-3.webp',
+      'images/buffer-beach-let-the-waves-render/sf2-4.webp'
     ]
   },
   'nomadic-annotators': {
     ratio: '16/9',
     speed: 5,
     images: [
-      'images/nomadic-annotators/nomadic-1.jpg',
-      'images/nomadic-annotators/nomadic-3.jpg'
+      'images/nomadic-annotators/nomadic-1.webp',
+      'images/nomadic-annotators/nomadic-3.webp'
     ]
   },
   'i-just-stay-in-my-home-not-go-anywhere': {
     ratio: '16/9',
     speed: 5,
     images: [
-      'images/i-just-stay-in-my-home-not-go-anywhere/notgoanywhere-1.gif',
-      'images/i-just-stay-in-my-home-not-go-anywhere/notgoanywhere-2.jpeg'
+      'images/i-just-stay-in-my-home-not-go-anywhere/notgoanywhere-1.webp',
+      'images/i-just-stay-in-my-home-not-go-anywhere/notgoanywhere-2.webp'
     ]
   },
   'phalaenopsis-and-their-friends-whisper-their-tales': {
     ratio: '16/9',
     speed: 6,
     images: [
-      'images/phalaenopsis-and-their-friends-whisper-their-tales/兰花.gif'
+      'images/phalaenopsis-and-their-friends-whisper-their-tales/兰花.webp'
     ]
   },
   'amphibious-rover-ldn2030-scouting-log': {
     ratio: '16/9',
     speed: 5,
     images: [
-      'images/amphibious-rover-ldn2030-scouting-log/amphibious-1.png'
+      'images/amphibious-rover-ldn2030-scouting-log/amphibious-1.webp'
     ]
   },
   'fish-tree-rings-and-memory': {
     ratio: '16/9',
     speed: 5,
     images: [
-      'images/fish-tree-rings-and-memory/fish-1.png',
-      'images/fish-tree-rings-and-memory/fish-2.png'
+      'images/fish-tree-rings-and-memory/fish-1.webp',
+      'images/fish-tree-rings-and-memory/fish-2.webp'
     ]
   }
 };

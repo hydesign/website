@@ -18,3 +18,4 @@ images folder/
 # 超大 GIF（超过 GitHub 100MB 限制）
 images/nomadic-annotators/nomadic-2.gif
 images/nomadic-annotators/nomadic-4.gif
+*.bak
