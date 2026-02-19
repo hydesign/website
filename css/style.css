@@ -603,6 +603,214 @@ em.series-tag {
   grid-template-columns: 1fr 1fr 10fr;
 }
 
+/* ============================================
+   Drift of the Uncharted — 深色设计稿专属样式
+   黑底白字，双栏桌面 / 单栏移动
+   ============================================ */
+.project-page-drift {
+  --drift-bg: #000000;
+  --drift-text: #ffffff;
+  --drift-font-title: 'ABC Arizona Serif', Georgia, 'Times New Roman', serif;
+  --drift-font-body: 'ABC Diatype Semi-Mono', 'IBM Plex Mono', 'JetBrains Mono', monospace;
+}
+
+body.project-page-drift,
+body.project-page-drift .page-wrapper,
+.project-page-drift-main {
+  background: var(--drift-bg) !important;
+}
+
+.project-drift {
+  color: var(--drift-text);
+}
+
+.project-drift-title {
+  font-family: var(--drift-font-title);
+  font-size: 2.9rem;
+  font-weight: 400;
+  color: var(--drift-text);
+  margin: 0 0 0.5rem 0;
+}
+
+.project-drift-year,
+.project-drift-keywords {
+  font-family: var(--drift-font-body);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--drift-text);
+  margin: 0 0 0.25rem 0;
+  line-height: 1.4;
+}
+
+.project-drift-hero {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+  margin-bottom: 3rem;
+}
+
+.project-drift-hero-img {
+  width: 100%;
+  overflow: hidden;
+}
+
+.project-drift-hero-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-drift-intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+  margin-bottom: 3rem;
+}
+
+.project-drift-text p {
+  font-family: var(--drift-font-body);
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--drift-text);
+  margin: 0 0 1.25rem 0;
+}
+
+.project-drift-text p:last-child {
+  margin-bottom: 0;
+}
+
+.project-drift-video-embed {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  background: #1a9fff;
+}
+
+.project-drift-video-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.project-drift-context {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+  margin-bottom: 3rem;
+}
+
+.project-drift-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.project-drift-grid img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+}
+
+.project-drift-maps {
+  margin-bottom: 3rem;
+}
+
+.project-drift-maps-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.project-drift-maps-row img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-drift-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.project-drift-gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-drift-back {
+  display: inline-block;
+  font-family: var(--drift-font-body);
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.project-drift-back:hover {
+  color: var(--drift-text);
+}
+
+body.project-page-drift .footer {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 768px) {
+  .project-drift-hero {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .project-drift-title {
+    font-size: 1.8rem;
+  }
+
+  .project-drift-year,
+  .project-drift-keywords {
+    font-size: 0.95rem;
+  }
+
+  .project-drift-intro {
+    grid-template-columns: 1fr;
+    margin-bottom: 2rem;
+  }
+
+  .project-drift-text p {
+    font-size: 0.95rem;
+  }
+
+  .project-drift-context {
+    grid-template-columns: 1fr;
+    margin-bottom: 2rem;
+  }
+
+  .project-drift-grid {
+    order: -1;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 1.5rem;
+  }
+
+  .project-drift-maps-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .project-drift-gallery {
+    gap: 0.75rem;
+  }
+}
+
 /* About/Publications/Contact 的 content-wide 不受影响，仅 project 详情页 */
 .project-detail-title {
   font-family: var(--font-project-title);
