@@ -643,11 +643,14 @@ body.project-page-drift .page-wrapper,
 }
 
 .project-drift-hero {
+  margin-bottom: 3rem;
+}
+
+.project-drift-hero-row {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
+  grid-template-columns: 1fr 1.8fr;
   gap: clamp(2rem, 5vw, 4rem);
   align-items: start;
-  margin-bottom: 3rem;
 }
 
 .project-drift-hero-img {
@@ -663,7 +666,7 @@ body.project-page-drift .page-wrapper,
 
 .project-drift-intro {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.6fr;
   gap: clamp(2rem, 5vw, 4rem);
   align-items: start;
   margin-bottom: 3rem;
@@ -682,14 +685,14 @@ body.project-page-drift .page-wrapper,
   margin-bottom: 0;
 }
 
-.project-drift-video-embed {
+.project-drift-video {
   position: relative;
   width: 100%;
   padding-bottom: 56.25%;
-  background: #1a9fff;
+  overflow: hidden;
 }
 
-.project-drift-video-embed iframe {
+.project-drift-video iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -766,8 +769,16 @@ body.project-page-drift .footer {
 
 @media (max-width: 768px) {
   .project-drift-hero {
+    margin-bottom: 2rem;
+  }
+
+  .project-drift-hero-row {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+  }
+
+  .project-drift-intro {
+    grid-template-columns: 1fr;
     margin-bottom: 2rem;
   }
 
@@ -778,11 +789,6 @@ body.project-page-drift .footer {
   .project-drift-year,
   .project-drift-keywords {
     font-size: 0.95rem;
-  }
-
-  .project-drift-intro {
-    grid-template-columns: 1fr;
-    margin-bottom: 2rem;
   }
 
   .project-drift-text p {
