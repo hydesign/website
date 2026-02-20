@@ -132,7 +132,7 @@ body {
   }
 
   .hero-subtitle {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
   }
 }
 
@@ -193,15 +193,15 @@ body {
   }
 
   .hero-subtitle {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
   }
 }
 
-/* 右侧名字：与左侧一致，Favorit Mono Book 风格 (weight 350, line-height 1.5) */
+/* 右侧名字：Georgia，中文略大 */
 .hero-title {
-  font-family: var(--font-mono);
+  font-family: Georgia, 'Times New Roman', serif;
   font-size: 1.5rem;
-  font-weight: 350;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -209,9 +209,9 @@ body {
 }
 
 .hero-subtitle {
-  font-family: var(--font-mono);
-  font-size: 1.15rem;
-  font-weight: 350;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.3rem;
+  font-weight: 400;
   font-style: normal;
   line-height: 1.5;
   margin-top: 0.15em;
@@ -674,11 +674,8 @@ body.project-page-drift {
   margin-bottom: 3rem;
 }
 
-.project-drift-hero-row {
-  display: grid;
-  grid-template-columns: 1fr 2.5fr;
-  gap: clamp(2rem, 5vw, 4rem);
-  align-items: start;
+.project-drift-meta-block {
+  margin-bottom: 2rem;
 }
 
 .project-drift-hero-img {
@@ -893,11 +890,6 @@ body.project-page-drift .footer {
 @media (max-width: 768px) {
   .project-drift-hero {
     margin-bottom: 2rem;
-  }
-
-  .project-drift-hero-row {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
   }
 
   .project-drift-intro {
