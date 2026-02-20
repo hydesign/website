@@ -26,12 +26,9 @@
   --tag-text: #000000;
   --tag-border: #A7B3BF;
   --font-caption: 'DM Sans', 'Source Sans 3', -apple-system, sans-serif;
-  /* 项目详情页字体：Arizona Sans Light(正文)/Regular(标题)。
-   * 使用 Adobe Fonts 时在项目页 <head> 中加入：
-   *   <link rel="stylesheet" href="https://use.typekit.net/XXXXXX.css">
-   * 并将下方改为 'ABC Arizona Sans' 或 Adobe 显示的字体名 */
+  /* 项目详情页：标题 Arizona Serif Regular，正文 Arizona Sans Light */
   --font-project-body: 'ABC Arizona Sans', 'DM Sans', 'Source Sans 3', -apple-system, sans-serif;
-  --font-project-title: 'ABC Arizona Sans', 'DM Sans', 'Source Sans 3', -apple-system, sans-serif;
+  --font-project-title: 'ABC Arizona Serif', Georgia, 'Times New Roman', serif;
   --font-subcaption: 'IBM Plex Mono', 'JetBrains Mono', monospace;
   --font-body: 'IBM Plex Mono', 'JetBrains Mono', monospace;
   --font-mono: 'Favorit Mono Book', 'IBM Plex Mono', 'JetBrains Mono', monospace;
@@ -645,7 +642,7 @@ body.project-page-drift {
 }
 
 .project-drift-title {
-  font-family: var(--drift-font);
+  font-family: 'ABC Arizona Serif', Georgia, 'Times New Roman', serif;
   font-size: 2.9rem;
   font-weight: 400;
   color: var(--drift-text);

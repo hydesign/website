@@ -1,0 +1,20 @@
+/**
+ * ABC Arizona Font Superfamily — 项目子页面
+ * 标题：Arizona Serif Regular
+ * 正文：Arizona Sans Light（可选）
+ */
+@font-face {
+  font-family: 'ABC Arizona Serif';
+  src: url('abc-arizona-font-superfamily/ABCArizonaSerif-Regular-Trial.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ABC Arizona Sans';
+  src: url('abc-arizona-font-superfamily/ABCArizonaSans-Light-Trial.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
