@@ -988,6 +988,150 @@ body.project-page-drift .footer {
   text-decoration: underline;
 }
 
+/* ============================================
+  Artificial Life: One Leg at a Time - 黑底排版
+   ============================================ */
+.project-page-one-leg {
+  --one-leg-bg: #000000;
+  --one-leg-text: rgba(255, 255, 255, 0.9);
+}
+
+body.project-page-one-leg,
+body.project-page-one-leg .page-wrapper,
+.project-page-one-leg-main {
+  background: var(--one-leg-bg) !important;
+}
+
+body.project-page-one-leg {
+  overflow-x: hidden;
+}
+
+.project-one-leg {
+  color: var(--one-leg-text);
+}
+
+.project-one-leg-title {
+  font-family: 'ABC Arizona Serif', Georgia, 'Times New Roman', serif;
+  font-size: 2.9rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 2.5rem 0 1rem 0;
+}
+
+.project-one-leg-meta {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--one-leg-text);
+  margin: 0 0 1.75rem 0;
+}
+
+.project-one-leg-hero {
+  margin-bottom: 2.5rem;
+}
+
+.project-one-leg-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: clamp(1rem, 3vw, 2rem);
+  align-items: start;
+  margin-bottom: 2.5rem;
+}
+
+.project-one-leg-brief-title {
+  font-family: 'ABC Arizona Serif', Georgia, 'Times New Roman', serif;
+  font-size: 1.65rem;
+  font-weight: 400;
+  margin: 0;
+  color: #ffffff;
+}
+
+.project-one-leg-right-content p,
+.project-one-leg-left-content p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.65;
+  margin: 0 0 1.2rem 0;
+  color: var(--one-leg-text);
+}
+
+.project-one-leg-left-content p:last-child {
+  margin-bottom: 0;
+}
+
+.project-one-leg-mid-gallery {
+  margin-top: 1rem;
+}
+
+.project-one-leg-video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+  background: #000;
+}
+
+.project-one-leg-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.project-one-leg-back {
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  margin-top: 0.5rem;
+}
+
+.project-one-leg-back:hover {
+  color: #ffffff;
+}
+
+body.project-page-one-leg .project-gallery,
+body.project-page-one-leg .project-gallery .gallery-slide {
+  background: #000;
+}
+
+body.project-page-one-leg .project-gallery .gallery-arrow {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+body.project-page-one-leg .project-gallery .gallery-arrow:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+body.project-page-one-leg .footer {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+@media (max-width: 768px) {
+  .project-one-leg-title {
+    font-size: 1.8rem;
+    margin-top: 1.75rem;
+  }
+
+  .project-one-leg-meta {
+    font-size: 0.95rem;
+  }
+
+  .project-one-leg-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .project-one-leg-right-content p,
+  .project-one-leg-left-content p {
+    font-size: 0.95rem;
+  }
+}
+
 /* Project Gallery - 标题上图库轮播，当前向左滑出、新图从右滑入 */
 .project-gallery {
   position: relative;

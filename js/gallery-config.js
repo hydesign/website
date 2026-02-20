@@ -37,6 +37,34 @@ window.PROJECT_GALLERIES = {
       'images/artificial-life-one-leg/1leg-4.webp'
     ]
   },
+  'artificial-life-one-leg-top': {
+    ratio: '16/9',
+    speed: 5,
+    images: [
+      'images folder/artificial-life-one-leg/1leg-5.jpg',
+      'images folder/artificial-life-one-leg/1leg-2.png'
+    ]
+  },
+  'artificial-life-one-leg-body': {
+    ratio: '16/9',
+    speed: 5,
+    fit: 'contain',
+    images: [
+      'images folder/artificial-life-one-leg/GIF3.gif',
+      'images folder/artificial-life-one-leg/1leg-1.png',
+      'images folder/artificial-life-one-leg/1leg-6.jpg',
+      'images folder/artificial-life-one-leg/1leg-7.jpg',
+      'images folder/artificial-life-one-leg/1leg-8.jpg'
+    ]
+  },
+  'artificial-life-one-leg-bottom': {
+    ratio: '4/3',
+    speed: 5,
+    images: [
+      'images folder/artificial-life-one-leg/1leg-4.webp',
+      'images folder/artificial-life-one-leg/1leg-3.webp'
+    ]
+  },
   'return-to-the-peach-blossom-wonderland': {
     ratio: '16/9',
     speed: 6,

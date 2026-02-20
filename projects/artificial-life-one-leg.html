@@ -10,28 +10,48 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500&family=IBM+Plex+Mono:wght@350;400&family=Georgia:ital@0;1&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="project-page-one-leg">
   <div id="header-placeholder"></div>
 
-  <main class="page-wrapper">
-  <div class="content content-wide">
-    <article class="project-detail" data-project="artificial-life-one-leg">
-      <h2 class="project-detail-title">Artificial Life: One Leg at a Time</h2>
-      <div class="project-detail-meta">2022 · Dimension and Time are variable · Unity Engine, Reinforcement Learning, Screens</div>
-      
-      <h3 class="subsection-title">Brief</h3>
-      <p>Artificial Life: One Leg at a Time, a machine learning artwork that deploys reinforcement learning (RL)—a paradigm central to robot learning, autonomous systems, and Large Language Model(LLM)—to reframe AI's black box through a lens of humanized vulnerability. Simulating an RL agent's training process within a virtual environment, the work aestheticizes algorithmic iterations as a narrative of becoming. The agent's comedic failures—spasmodic flailing, mid-air tumbles, and asymmetrical crawling—are not merely technical artifacts but deliberate mediations of agent childhood. These moments of endearing clumsiness, reminiscent of biological learning processes, elicit audience empathy. By revealing these intermediate stages that are usually concealed by optimized interfaces, the work disrupts the seamless narrative of artificial intelligence efficiency and invites the audience to witness the material struggles of learning.</p>
-      
-      <p>Artificial Life: One Leg at a Time is a multimedia art installation designed to showcase the process of an agent learning to walk and run within a virtual environment through the framework of Reinforcement Learning (RL). The core objective of the work is to provide the audience with an intuitive experience of the dynamic process of machine learning, particularly highlighting the trial-and-error and failures that the agent undergoes during training, thereby offering a glimpse into the internal mechanisms of machine learning. Initially, the agent is unable to maintain basic standing and balance, exhibiting clumsy and frequent falls reminiscent of a baby learning to walk. The artwork not only demonstrates the learning mechanisms inherent in AI's learning process but also endows the agent with a relatable, humanized quality.</p>
-      
-      <p>In various training variants, the artist imposes different constraints and adjustments on the agent. For instance, in one variant, the punishment for the agent touching the ground is removed, causing it to evolve a mode of locomotion where it crawls on its hands and knees. In another variant, the track is placed at a high altitude; if the agent deviates from the track, it falls and is penalized, encouraging it to learn to walk in a straight line. Additionally, the artist restricts the mobility of the agent's arms, causing them to spread out like an acrobat to maintain balance. These design choices not only showcase the agent's adaptation and evolution under different training conditions but also use visual humor and absurdity to provoke the audience's reflection on the AI training process.</p>
-      
-      <a href="../index.html" class="back-link">← Back to Projects</a>
-    </article>
-  </div>
+  <main class="page-wrapper project-page-one-leg-main">
+    <div class="content content-wide project-one-leg">
+      <article class="project-one-leg-article">
+        <section class="project-one-leg-hero">
+          <h1 class="project-one-leg-title">Artificial Life: One Leg at a Time</h1>
+          <div class="project-one-leg-meta">2022 · Dimension and Time are variable · Unity Engine, Reinforcement Learning, Screens</div>
+          <div class="project-gallery project-one-leg-hero-gallery" data-gallery="artificial-life-one-leg-top" aria-hidden="true"></div>
+        </section>
+
+        <section class="project-one-leg-grid project-one-leg-grid-top">
+          <div class="project-one-leg-brief-wrap">
+            <h2 class="project-one-leg-brief-title">Brief</h2>
+          </div>
+          <div class="project-one-leg-right-content">
+            <p>Artificial Life: One Leg at a Time, a machine learning artwork that deploys reinforcement learning (RL)—a paradigm central to robot learning, autonomous systems, and Large Language Model(LLM)—to reframe AI's black box through a lens of humanized vulnerability. Simulating an RL agent's training process within a virtual environment, the work aestheticizes algorithmic iterations as a narrative of becoming. The agent's comedic failures—spasmodic flailing, mid-air tumbles, and asymmetrical crawling—are not merely technical artifacts but deliberate mediations of agent childhood. These moments of endearing clumsiness, reminiscent of biological learning processes, elicit audience empathy. By revealing these intermediate stages that are usually concealed by optimized interfaces, the work disrupts the seamless narrative of artificial intelligence efficiency and invites the audience to witness the material struggles of learning.</p>
+            <div class="project-gallery project-one-leg-mid-gallery" data-gallery="artificial-life-one-leg-body" aria-hidden="true"></div>
+          </div>
+        </section>
+
+        <section class="project-one-leg-video">
+          <iframe src="https://player.vimeo.com/video/1059634814?title=0&byline=0&portrait=0" allowfullscreen allow="autoplay; fullscreen; picture-in-picture"></iframe>
+        </section>
+
+        <section class="project-one-leg-grid project-one-leg-grid-bottom">
+          <div class="project-one-leg-left-content">
+            <p>Artificial Life: One Leg at a Time is a multimedia art installation designed to showcase the process of an agent learning to walk and run within a virtual environment through the framework of Reinforcement Learning (RL). The core objective of the work is to provide the audience with an intuitive experience of the dynamic process of machine learning, particularly highlighting the trial-and-error and failures that the agent undergoes during training, thereby offering a glimpse into the internal mechanisms of machine learning. Initially, the agent is unable to maintain basic standing and balance, exhibiting clumsy and frequent falls reminiscent of a baby learning to walk. The artwork not only demonstrates the learning mechanisms inherent in AI's learning process but also endows the agent with a relatable, humanized quality.</p>
+            <p>In various training variants, the artist imposes different constraints and adjustments on the agent. For instance, in one variant, the punishment for the agent touching the ground is removed, causing it to evolve a mode of locomotion where it crawls on its hands and knees. In another variant, the track is placed at a high altitude; if the agent deviates from the track, it falls and is penalized, encouraging it to learn to walk in a straight line. Additionally, the artist restricts the mobility of the agent's arms, causing them to spread out like an acrobat to maintain balance. These design choices not only showcase the agent's adaptation and evolution under different training conditions but also use visual humor and absurdity to provoke the audience's reflection on the AI training process.</p>
+          </div>
+          <div class="project-gallery project-one-leg-bottom-gallery" data-gallery="artificial-life-one-leg-bottom" aria-hidden="true"></div>
+        </section>
+
+        <a href="../index.html" class="project-one-leg-back">← Back to Projects</a>
+      </article>
+    </div>
   </main>
 
   <div id="footer-placeholder"></div>
   <script src="../js/include.js"></script>
+  <script src="../js/gallery-config.js"></script>
+  <script src="../js/project-gallery.js"></script>
 </body>
 </html>
