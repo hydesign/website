@@ -1030,6 +1030,13 @@ body.project-page-one-leg {
   margin-bottom: 2.5rem;
 }
 
+.project-one-leg-hero-gallery {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
 .project-one-leg-grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
