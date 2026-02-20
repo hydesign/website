@@ -611,7 +611,7 @@ em.series-tag {
   --drift-bg: #000000;
   --drift-text: #ffffff;
   --drift-font-title: 'ABC Arizona Serif', Georgia, 'Times New Roman', serif;
-  --drift-font-body: 'ABC Diatype Semi-Mono', 'IBM Plex Mono', 'JetBrains Mono', monospace;
+  --drift-font-body: 'Open Sans', sans-serif;
 }
 
 body.project-page-drift,
