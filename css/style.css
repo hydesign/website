@@ -1195,12 +1195,13 @@ body.project-page-peach {
   border: none;
 }
 
-.project-peach-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(1.5rem, 4vw, 2.5rem);
-  align-items: start;
-  margin-bottom: 2.5rem;
+.project-peach-body {
+  max-width: 66.67%;
+  margin: 0 auto 2.5rem;
+}
+
+.project-peach-text {
+  margin-bottom: 2rem;
 }
 
 .project-peach-text p {
@@ -1268,9 +1269,8 @@ body.project-page-peach .footer {
     font-size: 0.95rem;
   }
 
-  .project-peach-grid {
-    grid-template-columns: 1fr;
-    margin-bottom: 2rem;
+  .project-peach-body {
+    max-width: 100%;
   }
 
   .project-peach-text p {
