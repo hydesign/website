@@ -114,13 +114,22 @@ body {
 
 @media (max-width: 768px) {
   .site-header {
-    grid-template-columns: 1fr;
-    padding: 1rem clamp(0.75rem, 4vw, 1.25rem) 0.75rem;
-    gap: 0.75rem;
+    grid-template-columns: 1fr 2.5fr;
+    padding: 0.6rem clamp(0.5rem, 3vw, 1rem) 0.5rem;
+    gap: 0.5rem;
+    align-items: center;
   }
 
   .nav-link {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+  }
+
+  .hero-title {
+    font-size: 0.7rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.6rem;
   }
 }
 
@@ -170,16 +179,16 @@ body {
 
 @media (max-width: 768px) {
   .hero {
-    justify-self: start;
-    text-align: left;
+    justify-self: end;
+    text-align: right;
   }
 
   .hero-title {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 
   .hero-subtitle {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
 }
 
@@ -620,6 +629,10 @@ body.project-page-drift .page-wrapper,
   background: var(--drift-bg) !important;
 }
 
+body.project-page-drift {
+  overflow-x: hidden;
+}
+
 .project-drift {
   color: var(--drift-text);
 }
@@ -648,7 +661,7 @@ body.project-page-drift .page-wrapper,
 
 .project-drift-hero-row {
   display: grid;
-  grid-template-columns: 1fr 1.8fr;
+  grid-template-columns: 1fr 2.5fr;
   gap: clamp(2rem, 5vw, 4rem);
   align-items: start;
 }
@@ -656,6 +669,7 @@ body.project-page-drift .page-wrapper,
 .project-drift-hero-img {
   width: 100%;
   overflow: hidden;
+  position: relative;
 }
 
 .project-drift-hero-img img {
@@ -664,9 +678,41 @@ body.project-page-drift .page-wrapper,
   display: block;
 }
 
+/* 图片滚动淡入 + 悬停放大图标 */
+.project-drift-img-wrap {
+  position: relative;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.project-drift-img-wrap.project-drift-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-drift-img-wrap .project-drift-zoom {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: 2.5rem;
+  opacity: 0;
+  transition: opacity 0.25s;
+  pointer-events: none;
+}
+
+.project-drift-img-wrap:hover .project-drift-zoom {
+  opacity: 1;
+}
+
 .project-drift-intro {
   display: grid;
-  grid-template-columns: 1fr 1.6fr;
+  grid-template-columns: 1fr 2.2fr;
   gap: clamp(2rem, 5vw, 4rem);
   align-items: start;
   margin-bottom: 3rem;
@@ -690,6 +736,7 @@ body.project-page-drift .page-wrapper,
   width: 100%;
   padding-bottom: 56.25%;
   overflow: hidden;
+  background: #000;
 }
 
 .project-drift-video iframe {
@@ -698,14 +745,17 @@ body.project-page-drift .page-wrapper,
   left: 0;
   width: 100%;
   height: 100%;
+  border: none;
 }
 
 .project-drift-context {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(2rem, 5vw, 4rem);
-  align-items: start;
   margin-bottom: 3rem;
+}
+
+.project-drift-context-text {
+  max-width: 75%;
+  text-align: left;
+  margin-right: auto;
 }
 
 .project-drift-grid {
@@ -723,31 +773,87 @@ body.project-page-drift .page-wrapper,
 
 .project-drift-maps {
   margin-bottom: 3rem;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
 .project-drift-maps-row {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: stretch;
 }
 
-.project-drift-maps-row img {
+.project-drift-maps-row .project-drift-img-wrap {
+  height: 100%;
+  min-height: 260px;
+}
+
+.project-drift-maps-row .project-drift-img-wrap img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   display: block;
 }
 
 .project-drift-gallery {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   gap: 1rem;
   margin-bottom: 2rem;
 }
 
-.project-drift-gallery img {
+.project-drift-gallery .project-drift-img-wrap {
+  width: 75%;
+}
+
+.project-drift-gallery .project-drift-img-wrap img {
   width: 100%;
   height: auto;
   display: block;
+}
+
+/* Lightbox */
+.project-drift-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.project-drift-lightbox[aria-hidden="true"] {
+  display: none;
+}
+
+.project-drift-lightbox img {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  cursor: default;
+}
+
+.project-drift-lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2.5rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0.25rem;
 }
 
 .project-drift-back {
@@ -791,13 +897,12 @@ body.project-page-drift .footer {
     font-size: 0.95rem;
   }
 
-  .project-drift-text p {
-    font-size: 0.95rem;
+  .project-drift-context-text {
+    max-width: 100%;
   }
 
-  .project-drift-context {
-    grid-template-columns: 1fr;
-    margin-bottom: 2rem;
+  .project-drift-text p {
+    font-size: 0.95rem;
   }
 
   .project-drift-grid {
@@ -808,8 +913,18 @@ body.project-page-drift .footer {
 
   .project-drift-maps-row {
     grid-template-columns: 1fr;
-    gap: 0.5rem;
-    margin-bottom: 2rem;
+  }
+
+  .project-drift-maps-row .project-drift-img-wrap {
+    min-height: 180px;
+  }
+
+  .project-drift-gallery {
+    align-items: stretch;
+  }
+
+  .project-drift-gallery .project-drift-img-wrap {
+    width: 100%;
   }
 
   .project-drift-gallery {
