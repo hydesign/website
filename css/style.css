@@ -729,11 +729,11 @@ body.project-page-drift {
 }
 
 .project-drift-intro {
-  display: grid;
-  grid-template-columns: 1fr 2.2fr;
-  gap: clamp(2rem, 5vw, 4rem);
-  align-items: start;
   margin-bottom: 3rem;
+}
+
+.project-drift-video {
+  margin-bottom: 2rem;
 }
 
 .project-drift-text p {
@@ -899,8 +899,11 @@ body.project-page-drift .footer {
   }
 
   .project-drift-intro {
-    grid-template-columns: 1fr;
     margin-bottom: 2rem;
+  }
+
+  .project-drift-video {
+    margin-bottom: 1.5rem;
   }
 
   .project-drift-title {
