@@ -68,9 +68,20 @@ window.PROJECT_GALLERIES = {
   'return-to-the-peach-blossom-wonderland': {
     ratio: '16/9',
     speed: 6,
-    fit: 'contain',  /* 宽图：宽度对齐 gallery，高度等比例缩小 */
+    fit: 'contain',
     images: [
       'images/return-to-the-peach-blossom-wonderland/cover.webp',
+      'images/return-to-the-peach-blossom-wonderland/return-1.gif'
+    ]
+  },
+  'return-to-the-peach-blossom-wonderland-body': {
+    ratio: '16/9',
+    speed: 6,
+    fit: 'contain',
+    images: [
+      'images/return-to-the-peach-blossom-wonderland/return-2.png',
+      'images/return-to-the-peach-blossom-wonderland/return-3.png',
+      'images/return-to-the-peach-blossom-wonderland/return-4.jpg',
       'images/return-to-the-peach-blossom-wonderland/return-1.gif'
     ]
   },

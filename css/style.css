@@ -26,8 +26,8 @@
   --tag-text: #000000;
   --tag-border: #A7B3BF;
   --font-caption: 'DM Sans', 'Source Sans 3', -apple-system, sans-serif;
-  /* 项目详情页：标题 Arizona Serif Regular，正文 Arizona Sans Light */
-  --font-project-body: 'ABC Arizona Sans', 'DM Sans', 'Source Sans 3', -apple-system, sans-serif;
+  /* 项目详情页：标题 Arizona Serif，正文 Open Sans（与 drift 对齐） */
+  --font-project-body: 'Open Sans', 'DM Sans', 'Source Sans 3', -apple-system, sans-serif;
   --font-project-title: 'ABC Arizona Serif', Georgia, 'Times New Roman', serif;
   --font-subcaption: 'IBM Plex Mono', 'JetBrains Mono', monospace;
   --font-body: 'IBM Plex Mono', 'JetBrains Mono', monospace;
@@ -1117,6 +1117,144 @@ body.project-page-one-leg .footer {
   color: rgba(255, 255, 255, 0.65);
 }
 
+/* ============================================
+   Return to the Peach Blossom Wonderland — 黑底
+   ============================================ */
+.project-page-peach {
+  --peach-bg: #000000;
+  --peach-text: rgba(255, 255, 255, 0.9);
+  --peach-font: 'Open Sans', sans-serif;
+}
+
+body.project-page-peach,
+body.project-page-peach .page-wrapper,
+.project-page-peach-main {
+  background: var(--peach-bg) !important;
+}
+
+body.project-page-peach {
+  overflow-x: hidden;
+}
+
+.project-peach {
+  color: var(--peach-text);
+}
+
+.project-peach-title {
+  font-family: 'ABC Arizona Serif', Georgia, 'Times New Roman', serif;
+  font-size: 2.9rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 2.5rem 0 1.5rem 0;
+}
+
+.project-peach-meta {
+  font-family: var(--peach-font);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--peach-text);
+  text-align: center;
+  margin: 0 0 2rem 0;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.project-peach-video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+  background: #000;
+}
+
+.project-peach-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.project-peach-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  align-items: start;
+  margin-bottom: 2.5rem;
+}
+
+.project-peach-text p {
+  font-family: var(--peach-font);
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--peach-text);
+  margin: 0;
+  opacity: 0.9;
+}
+
+.project-peach-poster {
+  margin-bottom: 2rem;
+}
+
+.project-peach-poster img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-peach-back {
+  display: inline-block;
+  font-family: var(--peach-font);
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.project-peach-back:hover {
+  color: #ffffff;
+}
+
+body.project-page-peach .project-gallery,
+body.project-page-peach .project-gallery .gallery-slide {
+  background: #000;
+}
+
+body.project-page-peach .project-gallery .gallery-arrow {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+body.project-page-peach .project-gallery .gallery-arrow:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+body.project-page-peach .footer {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+@media (max-width: 768px) {
+  .project-peach-title {
+    font-size: 1.8rem;
+  }
+
+  .project-peach-meta {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .project-peach-grid {
+    grid-template-columns: 1fr;
+    margin-bottom: 2rem;
+  }
+
+  .project-peach-text p {
+    font-size: 0.95rem;
+  }
+}
+
 @media (max-width: 768px) {
   .project-one-leg-title {
     font-size: 1.8rem;
@@ -1345,7 +1483,7 @@ body.project-page-one-leg .footer {
 
   .hero {
     padding: 0;
-    text-align: left;
+    text-align: right;
   }
 
   .content,
