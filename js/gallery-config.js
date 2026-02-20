@@ -19,6 +19,14 @@ window.PROJECT_GALLERIES = {
       'images/drift-of-the-uncharted/DOU-3.webp'
     ]
   },
+  'drift-of-the-uncharted-hero': {
+    ratio: '16/9',
+    speed: 5,
+    images: [
+      'images/drift-of-the-uncharted/DOU-4.jpg',
+      'images/drift-of-the-uncharted/DOU-1.webp'
+    ]
+  },
   'artificial-life-one-leg': {
     ratio: '4/3',
     speed: 4,

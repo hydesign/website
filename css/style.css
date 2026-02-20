@@ -645,9 +645,8 @@ body.project-page-drift {
   font-family: 'ABC Arizona Serif', Georgia, 'Times New Roman', serif;
   font-size: 2.9rem;
   font-weight: 400;
-  color: var(--drift-text);
+  color: #ffffff;
   margin: 2.5rem 0 1.5rem 0;
-  opacity: 0.9;
 }
 
 .project-drift-year {
@@ -676,6 +675,13 @@ body.project-page-drift {
 
 .project-drift-meta-block {
   margin-bottom: 2rem;
+}
+
+.project-drift-hero-gallery {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }
 
 .project-drift-hero-img {
