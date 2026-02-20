@@ -1,0 +1,10 @@
+/**
+ * Favorit Mono Book — 全局 nav 字体
+ */
+@font-face {
+  font-family: 'Favorit Mono Book';
+  src: url('favorit-font-family/ABCFavoritMono-Book-Trial.otf') format('opentype');
+  font-weight: 350;
+  font-style: normal;
+  font-display: swap;
+}

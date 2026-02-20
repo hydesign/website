@@ -61,8 +61,8 @@ window.PROJECT_GALLERIES = {
     ratio: '4/3',
     speed: 5,
     images: [
-      'images/artificial-life-one-leg/1leg-4.webp',
-      'images/artificial-life-one-leg/1leg-3.webp'
+      'images/artificial-life-one-leg/1leg-4-1.webp',
+      'images/artificial-life-one-leg/1leg-3-1.webp'
     ]
   },
   'return-to-the-peach-blossom-wonderland': {
