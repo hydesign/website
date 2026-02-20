@@ -117,11 +117,17 @@ body {
     grid-template-columns: 1fr 2.5fr;
     padding: 0.6rem clamp(0.5rem, 3vw, 1rem) 0.5rem;
     gap: 0.5rem;
-    align-items: center;
+    align-items: start;
   }
 
   .nav-link {
-    font-size: 0.7rem;
+    font-size: 0.58rem;
+  }
+
+  .hero {
+    text-align: right;
+    justify-self: end;
+    align-self: start;
   }
 
   .hero-title {
@@ -618,9 +624,8 @@ em.series-tag {
    ============================================ */
 .project-page-drift {
   --drift-bg: #000000;
-  --drift-text: #ffffff;
-  --drift-font-title: 'ABC Arizona Serif', Georgia, 'Times New Roman', serif;
-  --drift-font-body: 'Open Sans', sans-serif;
+  --drift-text: rgba(255, 255, 255, 0.9);
+  --drift-font: 'Open Sans', sans-serif;
 }
 
 body.project-page-drift,
@@ -638,21 +643,32 @@ body.project-page-drift {
 }
 
 .project-drift-title {
-  font-family: var(--drift-font-title);
+  font-family: var(--drift-font);
   font-size: 2.9rem;
   font-weight: 400;
   color: var(--drift-text);
-  margin: 0 0 0.5rem 0;
+  margin: 2.5rem 0 1.5rem 0;
+  opacity: 0.9;
 }
 
-.project-drift-year,
-.project-drift-keywords {
-  font-family: var(--drift-font-body);
+.project-drift-year {
+  font-family: var(--drift-font);
   font-size: 1.2rem;
   font-weight: 400;
   color: var(--drift-text);
-  margin: 0 0 0.25rem 0;
+  margin: 0 0 0.6rem 0;
   line-height: 1.4;
+  opacity: 0.9;
+}
+
+.project-drift-keywords {
+  font-family: var(--drift-font);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--drift-text);
+  margin: 0;
+  line-height: 1.4;
+  opacity: 0.9;
 }
 
 .project-drift-hero {
@@ -719,12 +735,13 @@ body.project-page-drift {
 }
 
 .project-drift-text p {
-  font-family: var(--drift-font-body);
+  font-family: var(--drift-font);
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.6;
   color: var(--drift-text);
   margin: 0 0 1.25rem 0;
+  opacity: 0.9;
 }
 
 .project-drift-text p:last-child {
@@ -858,9 +875,9 @@ body.project-page-drift {
 
 .project-drift-back {
   display: inline-block;
-  font-family: var(--drift-font-body);
+  font-family: var(--drift-font);
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -871,6 +888,7 @@ body.project-page-drift {
 
 body.project-page-drift .footer {
   color: rgba(255, 255, 255, 0.6);
+  opacity: 0.9;
 }
 
 @media (max-width: 768px) {
@@ -921,14 +939,14 @@ body.project-page-drift .footer {
 
   .project-drift-gallery {
     align-items: stretch;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    gap: 0.75rem;
   }
 
   .project-drift-gallery .project-drift-img-wrap {
     width: 100%;
-  }
-
-  .project-drift-gallery {
-    gap: 0.75rem;
   }
 }
 
