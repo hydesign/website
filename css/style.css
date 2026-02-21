@@ -481,6 +481,12 @@ em.series-tag {
   color: var(--text-on-light);
 }
 
+.pub-authors {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+
 .pub-venue {
   font-size: 0.9rem;
   color: var(--text-muted);
@@ -2092,7 +2098,8 @@ body.project-page-phalaenopsis .page-wrapper,
 }
 
 .phala-cell-img {
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
   min-height: 0;
   overflow: hidden;
   background: #f5f5f5;
