@@ -613,6 +613,11 @@ em.series-tag {
 .content-wide .project-detail[data-project="phalaenopsis-and-their-friends-whisper-their-tales"] {
   grid-template-columns: 2.5fr 1fr 8.5fr;
 }
+
+.content-wide .project-detail[data-project="phalaenopsis-and-their-friends-whisper-their-tales"] p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
 .content-wide .project-detail[data-project="fish-tree-rings-and-memory"] {
   grid-template-columns: 1fr 1fr 10fr;
 }
@@ -1887,9 +1892,9 @@ body.project-page-fish .page-wrapper,
 
 .project-fish-text p {
   font-family: var(--fish-font);
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 400;
-  line-height: 1.65;
+  line-height: 1.6;
   color: #333;
   margin: 0;
 }
@@ -1922,7 +1927,7 @@ body.project-page-fish .page-wrapper,
   }
 
   .project-fish-text p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -2293,6 +2298,10 @@ body.project-page-fish .page-wrapper,
     font-size: 0.95rem;
     line-height: 1.65;
     margin-bottom: 1rem;
+  }
+
+  .content-wide .project-detail[data-project="phalaenopsis-and-their-friends-whisper-their-tales"] p {
+    font-size: 0.9rem;
   }
 
   .subsection-title {
