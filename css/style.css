@@ -78,6 +78,45 @@ body {
   }
 }
 
+/* Index 页：语言切换条，与 nav 同高、随页面滚动消失（不与 header 同 grid） */
+.index-lang-bar {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: -11.5rem;
+  margin-bottom: 1rem;
+  margin-left: -4rem;
+  padding-left: clamp(2.5rem, 6vw, 4rem);
+}
+
+@media (max-width: 768px) {
+  .index-lang-bar {
+    margin-top: -8.5rem;
+    margin-left: -1.25rem;
+  }
+}
+
+.index-lang-btn {
+  font-family: 'ABC Arizona Sans', Georgia, sans-serif;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #999;
+  background: #fff;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.index-lang-btn:hover {
+  border-color: #333;
+  color: #000;
+}
+
+.index-lang-btn.active {
+  background: #333;
+  color: #fff;
+  border-color: #333;
+}
+
 /* 顶部固定栏 - 网格：左列 nav，右列 名字 */
 .site-header {
   position: fixed;
