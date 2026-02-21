@@ -322,17 +322,17 @@ em.series-tag {
   color: var(--text-on-light);
 }
 
-/* 标签 pill - 灰蓝渐变圆角框 */
+/* 标签 pill - 灰蓝渐变圆角框，hashtag 小尺寸 */
 .tag {
   display: inline-block;
-  padding: 4px 12px;
+  padding: 2px 8px;
   background: linear-gradient(#fff, #fff) padding-box,
               linear-gradient(to right, #7898af, #8c8c8c, #6a6a6f, #7898af) border-box;
   border: 1px solid transparent;
-  border-radius: 24px;
-  font-family: var(--font-caption);
-  font-size: 1em;
-  font-weight: 400;
+  border-radius: 12px;
+  font-family: 'ABC Arizona Sans', Georgia, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 300;
   color: var(--tag-text);
 }
 
@@ -367,7 +367,7 @@ em.series-tag {
 
 .project-title {
   font-family: 'ABC Arizona Sans', Georgia, sans-serif;
-  font-size: 2.05rem;
+  font-size: 1.6rem;
   font-weight: 300;
   line-height: 1.3;
   color: var(--text-on-light);
@@ -381,7 +381,7 @@ em.series-tag {
 
 .project-year {
   font-family: 'ABC Arizona Sans', Georgia, sans-serif;
-  font-size: 2.05rem;
+  font-size: 1rem;
   font-weight: 300;
   line-height: 1.3;
   color: var(--text-on-light);
@@ -397,7 +397,7 @@ em.series-tag {
 
 .project-meta {
   font-family: 'ABC Arizona Sans', Georgia, sans-serif;
-  font-size: 2.05rem;
+  font-size: 0.95rem;
   font-weight: 300;
   color: var(--text-on-light);
   line-height: 1.3;
@@ -408,7 +408,7 @@ em.series-tag {
   display: block;
   margin-right: 0;
   margin-bottom: 0.25rem;
-  font-size: 2.05rem;
+  font-size: 0.75rem;
   font-weight: 300;
 }
 
