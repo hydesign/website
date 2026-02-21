@@ -1931,6 +1931,128 @@ body.project-page-fish .page-wrapper,
   }
 }
 
+/* ============================================
+   Phalaenopsis and their Friends — 白底
+   ============================================ */
+.project-page-phalaenopsis {
+  --phalaenopsis-font: 'Open Sans', sans-serif;
+}
+
+body.project-page-phalaenopsis,
+body.project-page-phalaenopsis .page-wrapper,
+.project-page-phalaenopsis-main {
+  background: #ffffff !important;
+}
+
+.project-phalaenopsis {
+  color: #333;
+}
+
+.project-phalaenopsis-title {
+  font-family: 'ABC Arizona Serif', Georgia, 'Times New Roman', serif;
+  font-size: 2.9rem;
+  font-weight: 400;
+  color: #111;
+  margin: 2.5rem 0 0.5rem 0;
+}
+
+.project-phalaenopsis-subtitle {
+  font-family: 'ABC Arizona Serif', Georgia, 'Times New Roman', serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #555;
+  margin: 0 0 2rem 0;
+}
+
+.project-phalaenopsis-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: clamp(1rem, 3vw, 2rem);
+  align-items: start;
+  margin-bottom: 2.5rem;
+}
+
+.project-phalaenopsis-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-family: var(--phalaenopsis-font);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #555;
+}
+
+.project-phalaenopsis-right {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project-phalaenopsis-video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  background: #000;
+}
+
+.project-phalaenopsis-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.project-phalaenopsis-text p {
+  font-family: var(--phalaenopsis-font);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #333;
+  margin: 0 0 1rem 0;
+}
+
+.project-phalaenopsis-text p:last-child {
+  margin-bottom: 0;
+}
+
+.project-phalaenopsis-back {
+  display: inline-block;
+  font-family: var(--phalaenopsis-font);
+  font-size: 1rem;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.project-phalaenopsis-back:hover {
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .project-phalaenopsis-title {
+    font-size: 1.8rem;
+  }
+
+  .project-phalaenopsis-subtitle {
+    font-size: 1rem;
+  }
+
+  .project-phalaenopsis-grid {
+    grid-template-columns: 1fr;
+    margin-bottom: 2rem;
+  }
+
+  .project-phalaenopsis-meta {
+    font-size: 0.95rem;
+  }
+
+  .project-phalaenopsis-text p {
+    font-size: 0.9rem;
+  }
+}
+
 @media (max-width: 768px) {
   .project-amphibious-title {
     font-size: 1.8rem;
