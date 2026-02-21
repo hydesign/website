@@ -238,6 +238,27 @@ body {
   margin: 0 auto;
 }
 
+/* About / Contact / Publications — Arizona Sans Light 全页 */
+body.page-arizona-sans {
+  font-family: 'ABC Arizona Sans', Georgia, sans-serif;
+  font-weight: 300;
+}
+body.page-arizona-sans .about-intro,
+body.page-arizona-sans .about-bio,
+body.page-arizona-sans .section-title,
+body.page-arizona-sans .cv-category,
+body.page-arizona-sans .cv-list,
+body.page-arizona-sans .contact-label,
+body.page-arizona-sans .contact-value,
+body.page-arizona-sans .publication,
+body.page-arizona-sans .pub-title,
+body.page-arizona-sans .pub-venue,
+body.page-arizona-sans .pub-authors,
+body.page-arizona-sans .pub-year {
+  font-family: 'ABC Arizona Sans', Georgia, sans-serif;
+  font-weight: 300;
+}
+
 /* Caption - 主文案：Arizona Sans Light 风格 */
 .caption {
   font-family: var(--font-caption);
@@ -331,11 +352,11 @@ em.series-tag {
 }
 
 .project-quote {
-  font-family: var(--font-subcaption);
-  font-size: 1.15em;
-  font-weight: 400;
+  font-family: 'ABC Arizona Sans', Georgia, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 300;
   line-height: 1.3;
-  letter-spacing: 0;
+  letter-spacing: 0.05em;
   color: var(--text-on-light);
   margin-bottom: 0.75rem;
 }
@@ -345,9 +366,10 @@ em.series-tag {
 }
 
 .project-title {
-  font-family: var(--font-caption);
-  font-size: 2.05em;
+  font-family: 'ABC Arizona Sans', Georgia, sans-serif;
+  font-size: 2.05rem;
   font-weight: 300;
+  line-height: 1.3;
   color: var(--text-on-light);
   text-decoration: none;
   transition: opacity 0.2s;
@@ -358,9 +380,10 @@ em.series-tag {
 }
 
 .project-year {
-  font-family: var(--font-caption);
-  font-size: 0.85em;
-  font-weight: 400;
+  font-family: 'ABC Arizona Sans', Georgia, sans-serif;
+  font-size: 2.05rem;
+  font-weight: 300;
+  line-height: 1.3;
   color: var(--text-on-light);
   display: inline;
   margin-left: 0.35em;
@@ -373,16 +396,20 @@ em.series-tag {
 }
 
 .project-meta {
-  font-family: var(--font-caption);
-  font-size: 1.15em;
-  font-weight: 400;
+  font-family: 'ABC Arizona Sans', Georgia, sans-serif;
+  font-size: 2.05rem;
+  font-weight: 300;
   color: var(--text-on-light);
   line-height: 1.3;
   margin-top: 0.4em;
 }
 
 .project-meta .tag {
-  margin-right: 0.25em;
+  display: block;
+  margin-right: 0;
+  margin-bottom: 0.25rem;
+  font-size: 2.05rem;
+  font-weight: 300;
 }
 
 /* 项目图片占位 - 可选嵌入 Cargo CDN 图片 */
@@ -2364,6 +2391,17 @@ body.project-page-phalaenopsis .page-wrapper,
   opacity: 0;
   transform: translateY(120px);
   transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+/* 首页 index：gallery 全页面宽 16:9 */
+body.page-index {
+  overflow-x: hidden;
+}
+body.page-index .project-gallery {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: 0;
+  margin-bottom: 1.5rem;
 }
 
 .project-gallery.gallery-visible {
