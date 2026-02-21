@@ -1954,7 +1954,7 @@ body.project-page-phalaenopsis .page-wrapper,
   font-weight: 400;
   color: #111;
   margin: 2.5rem 0 0.5rem 0;
-  text-align: center;
+  text-align: left;
 }
 
 .project-phalaenopsis-subtitle {
@@ -1963,7 +1963,7 @@ body.project-page-phalaenopsis .page-wrapper,
   font-weight: 400;
   color: #555;
   margin: 0 0 2rem 0;
-  text-align: center;
+  text-align: left;
 }
 
 .project-phalaenopsis-grid {
@@ -1982,7 +1982,7 @@ body.project-page-phalaenopsis .page-wrapper,
   font-size: 1.1rem;
   font-weight: 400;
   color: #555;
-  text-align: center;
+  text-align: left;
 }
 
 .project-phalaenopsis-right {
@@ -2008,7 +2008,7 @@ body.project-page-phalaenopsis .page-wrapper,
 }
 
 .project-phalaenopsis-text {
-  text-align: center;
+  text-align: left;
 }
 
 .project-phalaenopsis-text p {
@@ -2051,15 +2051,15 @@ body.project-page-phalaenopsis .page-wrapper,
 
 .project-phalaenopsis-lang {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0.5rem;
   margin-bottom: 1.5rem;
 }
 
 .phala-lang-btn {
   font-family: var(--phalaenopsis-font);
-  font-size: 0.95rem;
-  padding: 0.35rem 0.75rem;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
   border: 1px solid #999;
   background: #fff;
   color: #333;
@@ -2184,7 +2184,7 @@ body.project-page-phalaenopsis .page-wrapper,
   font-weight: 400;
   color: #111;
   margin: 0 0 1.25rem 0;
-  text-align: center;
+  text-align: left;
 }
 
 .phala-reference-list {
