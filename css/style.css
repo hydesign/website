@@ -1679,6 +1679,161 @@ body.project-page-i-just-stay .footer {
   }
 }
 
+/* ============================================
+   Amphibious Rover LDN2030 Scouting Log — 黑底
+   ============================================ */
+.project-page-amphibious {
+  --amphibious-bg: #000000;
+  --amphibious-text: rgba(255, 255, 255, 0.9);
+  --amphibious-font: 'Open Sans', sans-serif;
+}
+
+body.project-page-amphibious,
+body.project-page-amphibious .page-wrapper,
+.project-page-amphibious-main {
+  background: var(--amphibious-bg) !important;
+}
+
+body.project-page-amphibious {
+  overflow-x: hidden;
+}
+
+.project-amphibious {
+  color: var(--amphibious-text);
+}
+
+.project-amphibious-title {
+  font-family: 'ABC Arizona Serif', Georgia, 'Times New Roman', serif;
+  font-size: 2.9rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 2.5rem 0 2rem 0;
+}
+
+.project-amphibious-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: clamp(1rem, 3vw, 2rem);
+  align-items: start;
+  margin-bottom: 2.5rem;
+}
+
+.project-amphibious-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-family: var(--amphibious-font);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--amphibious-text);
+  opacity: 0.9;
+}
+
+.project-amphibious-collab {
+  font-family: var(--amphibious-font);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--amphibious-text);
+  margin: 1rem 0 0 0;
+  opacity: 0.9;
+}
+
+.project-amphibious-collab a {
+  color: rgba(255, 255, 255, 0.95);
+  text-decoration: underline;
+}
+
+.project-amphibious-collab a:hover {
+  color: #ffffff;
+}
+
+.project-amphibious-text p {
+  font-family: var(--amphibious-font);
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--amphibious-text);
+  margin: 0 0 1rem 0;
+  opacity: 0.9;
+}
+
+.project-amphibious-text p:last-child {
+  margin-bottom: 0;
+}
+
+.project-amphibious-text a {
+  color: rgba(255, 255, 255, 0.95);
+  text-decoration: underline;
+}
+
+.project-amphibious-text a:hover {
+  color: #ffffff;
+}
+
+.project-amphibious-ref {
+  font-size: 0.95rem !important;
+  opacity: 0.85 !important;
+}
+
+.project-amphibious-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-amphibious-video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  background: #000;
+}
+
+.project-amphibious-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.project-amphibious-back {
+  display: inline-block;
+  font-family: var(--amphibious-font);
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.project-amphibious-back:hover {
+  color: #ffffff;
+}
+
+body.project-page-amphibious .footer {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+@media (max-width: 768px) {
+  .project-amphibious-title {
+    font-size: 1.8rem;
+  }
+
+  .project-amphibious-grid {
+    grid-template-columns: 1fr;
+    margin-bottom: 2rem;
+  }
+
+  .project-amphibious-meta {
+    font-size: 0.95rem;
+  }
+
+  .project-amphibious-text p {
+    font-size: 0.95rem;
+  }
+}
+
 @media (max-width: 768px) {
   .project-nomadic-title {
     font-size: 1.8rem;
