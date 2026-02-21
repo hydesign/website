@@ -1615,6 +1615,10 @@ body.project-page-i-just-stay {
   border: none;
 }
 
+.project-i-just-stay-text {
+  padding-top: 6em;
+}
+
 .project-i-just-stay-text p {
   font-family: var(--ijuststay-font);
   font-size: 1.15rem;
