@@ -1321,7 +1321,7 @@ body.project-page-buffer {
 .project-buffer-video {
   position: relative;
   width: 100%;
-  min-height: 55vh;
+  min-height: 80vh;
   aspect-ratio: 16 / 9;
   overflow: hidden;
   background: #000;
