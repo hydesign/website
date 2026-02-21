@@ -1149,6 +1149,9 @@ body.project-page-peach {
 }
 
 .project-peach-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
   font-family: var(--peach-font);
   font-size: 1.2rem;
   font-weight: 400;
@@ -1161,6 +1164,7 @@ body.project-page-peach {
 
 .project-peach-quote {
   text-align: center;
+  margin-top: 2.5rem;
   margin-bottom: 2.5rem;
 }
 
@@ -1215,7 +1219,7 @@ body.project-page-peach {
 }
 
 .project-peach-poster {
-  margin-top: 5rem;
+  margin-top: 8rem;
   margin-bottom: 2rem;
 }
 
@@ -1292,7 +1296,11 @@ body.project-page-buffer {
   grid-template-columns: 1fr 1fr 1fr;
   gap: clamp(1rem, 3vw, 2rem);
   align-items: start;
-  margin-bottom: 2.5rem;
+  margin-bottom: 6rem;
+}
+
+.project-buffer-grid-1 {
+  grid-template-columns: 1fr 1.5fr 1fr;
 }
 
 .project-buffer-grid-2 {
@@ -1386,9 +1394,10 @@ body.project-page-buffer .footer {
   }
 
   .project-buffer-grid,
+  .project-buffer-grid-1,
   .project-buffer-grid-2 {
     grid-template-columns: 1fr;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
   }
 
   .project-buffer-meta {
