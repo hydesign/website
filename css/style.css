@@ -325,13 +325,13 @@ em.series-tag {
 /* 标签 pill - 灰蓝渐变圆角框，hashtag 小尺寸 */
 .tag {
   display: inline-block;
-  padding: 2px 8px;
+  padding: 1px 6px;
   background: linear-gradient(#fff, #fff) padding-box,
               linear-gradient(to right, #7898af, #8c8c8c, #6a6a6f, #7898af) border-box;
   border: 1px solid transparent;
-  border-radius: 12px;
+  border-radius: 10px;
   font-family: 'ABC Arizona Sans', Georgia, sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   font-weight: 300;
   color: var(--tag-text);
 }
@@ -358,6 +358,7 @@ em.series-tag {
   line-height: 1.3;
   letter-spacing: 0.05em;
   color: var(--text-on-light);
+  opacity: 0.8;
   margin-bottom: 0.75rem;
 }
 
@@ -405,10 +406,10 @@ em.series-tag {
 }
 
 .project-meta .tag {
-  display: block;
-  margin-right: 0;
-  margin-bottom: 0.25rem;
-  font-size: 0.75rem;
+  display: inline;
+  margin-right: 0.35em;
+  margin-bottom: 0;
+  font-size: 0.7rem;
   font-weight: 300;
 }
 
@@ -433,8 +434,8 @@ em.series-tag {
 }
 
 .about-intro {
-  font-family: var(--font-caption);
-  font-size: 2.05em;
+  font-family: 'ABC Arizona Sans', Georgia, sans-serif;
+  font-size: 1.5rem;
   font-weight: 300;
   line-height: 1.3;
   letter-spacing: 0;
@@ -445,7 +446,12 @@ em.series-tag {
 /* about-intro em 在 Intro 统一样式中 */
 
 .about-bio {
+  font-family: 'ABC Arizona Sans', Georgia, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.3;
   margin-bottom: 2.5rem;
+  color: var(--text-on-light);
 }
 
 .section-title {
@@ -456,6 +462,37 @@ em.series-tag {
   letter-spacing: 0;
   color: var(--text-on-light);
 }
+
+.cv-lang-toggle {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  margin: 1rem 0 1rem 0;
+}
+
+.cv-lang-btn {
+  font-family: 'ABC Arizona Sans', Georgia, sans-serif;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #999;
+  background: #fff;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cv-lang-btn:hover {
+  border-color: #333;
+  color: #000;
+}
+
+.cv-lang-btn.active {
+  background: #333;
+  color: #fff;
+  border-color: #333;
+}
+
+.cv-label-zh { display: none; }
 
 .cv-category {
   font-size: 0.95rem;
@@ -2393,13 +2430,19 @@ body.project-page-phalaenopsis .page-wrapper,
   transition: opacity 2s ease-out, transform 2s ease-out;
 }
 
-/* 首页 index：gallery 全页面宽 16:9 */
+/* 首页 index：gallery 全页面宽 16:9，居中 */
 body.page-index {
   overflow-x: hidden;
 }
+body.page-index .content {
+  position: relative;
+}
 body.page-index .project-gallery {
   width: 100vw;
-  margin-left: calc(50% - 50vw);
+  max-width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
   margin-right: 0;
   margin-bottom: 1.5rem;
 }
@@ -2634,8 +2677,8 @@ body.page-index .project-gallery {
   }
 
   .project-meta .tag {
-    font-size: 0.7em;
-    padding: 2px 8px;
+    font-size: 0.65rem;
+    padding: 1px 6px;
   }
 
   .project-info {
