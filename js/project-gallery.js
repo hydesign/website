@@ -10,6 +10,10 @@
     if (el.dataset.galleryInited === '1') return;
     var key = el.dataset.gallery;
     var config = window.PROJECT_GALLERIES && window.PROJECT_GALLERIES[key];
+    var override = window.PAGE_GALLERY_OVERRIDES && window.PAGE_GALLERY_OVERRIDES[key];
+    if (override) {
+      config = config ? Object.assign({}, config, override) : override;
+    }
     if (!config || !config.images || config.images.length === 0) return;
 
     el.dataset.galleryInited = '1';
