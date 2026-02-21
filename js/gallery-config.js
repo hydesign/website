@@ -147,6 +147,16 @@ window.PROJECT_GALLERIES = {
       'images/i-just-stay-in-my-home-not-go-anywhere/notgoanywhere-2.webp'
     ]
   },
+  'i-just-stay-in-my-home-not-go-anywhere-body': {
+    ratio: '16/9',
+    speed: 5,
+    fit: 'contain',
+    images: [
+      'images/i-just-stay-in-my-home-not-go-anywhere/notgoanywhere-2.webp',
+      'images/i-just-stay-in-my-home-not-go-anywhere/notgoanywhere-3.webp',
+      'images/i-just-stay-in-my-home-not-go-anywhere/notgoanywhere-4.webp'
+    ]
+  },
   'phalaenopsis-and-their-friends-whisper-their-tales': {
     ratio: '16/9',
     speed: 6,

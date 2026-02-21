@@ -1549,6 +1549,132 @@ body.project-page-nomadic .footer {
   color: rgba(255, 255, 255, 0.65);
 }
 
+/* ============================================
+   I Just Stay in My Home, Not Go Anywhere — 黑底
+   ============================================ */
+.project-page-i-just-stay {
+  --ijuststay-bg: #000000;
+  --ijuststay-text: rgba(255, 255, 255, 0.9);
+  --ijuststay-font: 'Open Sans', sans-serif;
+}
+
+body.project-page-i-just-stay,
+body.project-page-i-just-stay .page-wrapper,
+.project-page-i-just-stay-main {
+  background: var(--ijuststay-bg) !important;
+}
+
+body.project-page-i-just-stay {
+  overflow-x: hidden;
+}
+
+.project-i-just-stay {
+  color: var(--ijuststay-text);
+}
+
+.project-i-just-stay-title {
+  font-family: 'ABC Arizona Serif', Georgia, 'Times New Roman', serif;
+  font-size: 2.9rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 2.5rem 0 2rem 0;
+}
+
+.project-i-just-stay-grid {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: clamp(1rem, 3vw, 2rem);
+  align-items: start;
+  margin-bottom: 2.5rem;
+}
+
+.project-i-just-stay-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-family: var(--ijuststay-font);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--ijuststay-text);
+  opacity: 0.9;
+}
+
+.project-i-just-stay-video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  background: #000;
+}
+
+.project-i-just-stay-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.project-i-just-stay-text p {
+  font-family: var(--ijuststay-font);
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--ijuststay-text);
+  margin: 0;
+  opacity: 0.9;
+}
+
+.project-i-just-stay-back {
+  display: inline-block;
+  font-family: var(--ijuststay-font);
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.project-i-just-stay-back:hover {
+  color: #ffffff;
+}
+
+body.project-page-i-just-stay .project-gallery,
+body.project-page-i-just-stay .project-gallery .gallery-slide {
+  background: #000;
+}
+
+body.project-page-i-just-stay .project-gallery .gallery-arrow {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+body.project-page-i-just-stay .project-gallery .gallery-arrow:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+body.project-page-i-just-stay .footer {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+@media (max-width: 768px) {
+  .project-i-just-stay-title {
+    font-size: 1.8rem;
+  }
+
+  .project-i-just-stay-grid {
+    grid-template-columns: 1fr;
+    margin-bottom: 2rem;
+  }
+
+  .project-i-just-stay-meta {
+    font-size: 0.95rem;
+  }
+
+  .project-i-just-stay-text p {
+    font-size: 0.95rem;
+  }
+}
+
 @media (max-width: 768px) {
   .project-nomadic-title {
     font-size: 1.8rem;
