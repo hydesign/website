@@ -2122,6 +2122,95 @@ body.project-page-phalaenopsis .page-wrapper,
   margin-bottom: 0.25rem;
 }
 
+/* Essay 2-column: EN left, CH right */
+.project-phalaenopsis-essay {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.phala-essay-col {
+  font-family: var(--phalaenopsis-font);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #333;
+  text-align: left;
+}
+
+.phala-essay-col p {
+  margin: 0 0 1rem 0;
+}
+
+.phala-essay-col p:last-child {
+  margin-bottom: 0;
+}
+
+.phala-essay-title {
+  font-family: 'ABC Arizona Serif', Georgia, 'Times New Roman', serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #111;
+  margin: 0 0 1rem 0;
+}
+
+.phala-essay-lang-en .phala-essay-zh {
+  display: none;
+}
+
+.phala-essay-lang-zh .phala-essay-en {
+  display: none;
+}
+
+/* Reference 占全页面 - 负边距延伸到 viewport 边缘 */
+.project-phalaenopsis-reference {
+  width: calc(100% + 4rem);
+  margin-left: -2rem;
+  margin-right: -2rem;
+  padding: 2.5rem 2rem;
+  background: #f8f8f8;
+  margin-bottom: 0;
+  margin-top: 2rem;
+  box-sizing: border-box;
+}
+
+.phala-reference-title {
+  font-family: 'ABC Arizona Serif', Georgia, 'Times New Roman', serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #111;
+  margin: 0 0 0.5rem 0;
+  text-align: center;
+}
+
+.phala-reference-bib {
+  font-family: var(--phalaenopsis-font);
+  font-size: 1rem;
+  font-weight: 500;
+  color: #555;
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+
+.phala-reference-list {
+  font-family: var(--phalaenopsis-font);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #444;
+  margin: 0;
+  padding-left: 1.5rem;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.phala-reference-list li {
+  margin-bottom: 0.5rem;
+}
+
+.phala-reference-list li:last-child {
+  margin-bottom: 0;
+}
+
 @media (max-width: 1024px) {
   .project-phalaenopsis-grid-4 {
     grid-template-columns: repeat(2, 1fr);
@@ -2155,6 +2244,27 @@ body.project-page-phalaenopsis .page-wrapper,
 
   .project-phalaenopsis-text p {
     font-size: 0.9rem;
+  }
+
+  .project-phalaenopsis-essay {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .phala-essay-col {
+    font-size: 0.9rem;
+  }
+
+  .phala-reference-list {
+    font-size: 0.85rem;
+  }
+
+  .project-phalaenopsis-reference {
+    width: calc(100% + 2.5rem);
+    margin-left: -1.25rem;
+    margin-right: -1.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
   }
 }
 

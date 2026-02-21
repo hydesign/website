@@ -50,21 +50,38 @@
         <!-- filled by JS -->
       </section>
 
+      <section class="project-phalaenopsis-essay" id="phala-essay">
+        <div class="phala-essay-col phala-essay-en" id="phala-essay-en"></div>
+        <div class="phala-essay-col phala-essay-zh" id="phala-essay-zh"></div>
+      </section>
+
       <a href="../index.html" class="project-phalaenopsis-back">← Back to Projects</a>
     </article>
   </div>
+  <section class="project-phalaenopsis-reference">
+    <h3 class="phala-reference-title">Reference</h3>
+    <h4 class="phala-reference-bib">Bibliography</h4>
+    <ul class="phala-reference-list" id="phala-reference-list"></ul>
+  </section>
   </main>
 
   <div id="footer-placeholder"></div>
   <script src="../js/include.js"></script>
   <script src="../js/phalaenopsis-poetry.js"></script>
+  <script src="../js/phalaenopsis-essay.js"></script>
   <script>
   (function() {
     var data = window.PHALAENOPSIS_GRID;
+    var essayData = window.PHALAENOPSIS_ESSAY;
+    var refData = window.PHALAENOPSIS_REFERENCE;
     var grid = document.getElementById('phala-poetry-grid');
+    var essayEn = document.getElementById('phala-essay-en');
+    var essayZh = document.getElementById('phala-essay-zh');
+    var essaySection = document.getElementById('phala-essay');
+    var refList = document.getElementById('phala-reference-list');
     var lang = 'en';
 
-    function render() {
+    function renderGrid() {
       grid.innerHTML = data.map(function(item) {
         var text = lang === 'zh' ? item.zh : item.en;
         var lines = text.split('\n').filter(Boolean);
@@ -78,6 +95,28 @@
       }).join('');
     }
 
+    function renderEssay() {
+      var en = essayData.en;
+      var zh = essayData.zh;
+      essayEn.innerHTML = '<h3 class="phala-essay-title">' + en.title + '</h3>' +
+        en.paragraphs.map(function(p) { return '<p>' + p + '</p>'; }).join('');
+      essayZh.innerHTML = '<h3 class="phala-essay-title">' + zh.title + '</h3>' +
+        zh.paragraphs.map(function(p) { return '<p>' + p + '</p>'; }).join('');
+      essaySection.classList.toggle('phala-essay-lang-en', lang === 'en');
+      essaySection.classList.toggle('phala-essay-lang-zh', lang === 'zh');
+    }
+
+    function renderReference() {
+      refList.innerHTML = refData.map(function(item) {
+        return '<li>' + item + '</li>';
+      }).join('');
+    }
+
+    function render() {
+      renderGrid();
+      renderEssay();
+    }
+
     document.querySelectorAll('.phala-lang-btn').forEach(function(btn) {
       btn.addEventListener('click', function() {
         lang = this.dataset.lang;
@@ -88,6 +127,7 @@
     });
 
     render();
+    renderReference();
   })();
   </script>
 </body>
