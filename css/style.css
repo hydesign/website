@@ -126,7 +126,7 @@ body.page-index .index-lang-bar {
   }
   .index-lang-btn,
   .index-lang-sep {
-    font-size: 1rem;
+    font-size: 0.5rem;
   }
 }
 
@@ -172,7 +172,7 @@ body.page-index .index-lang-bar {
   }
 
   .nav-link {
-    font-size: 0.58rem;
+    font-size: 0.29rem;
   }
 
   .hero {
@@ -182,11 +182,11 @@ body.page-index .index-lang-bar {
   }
 
   .hero-title {
-    font-size: 0.7rem;
+    font-size: 0.35rem;
   }
 
   .hero-subtitle {
-    font-size: 1.15rem;
+    font-size: 0.575rem;
   }
 }
 
@@ -243,11 +243,11 @@ body.page-index .index-lang-bar {
   }
 
   .hero-title {
-    font-size: 0.7rem;
+    font-size: 0.35rem;
   }
 
   .hero-subtitle {
-    font-size: 1.15rem;
+    font-size: 0.575rem;
   }
 }
 
