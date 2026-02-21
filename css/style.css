@@ -1826,6 +1826,106 @@ body.project-page-amphibious .footer {
   color: rgba(255, 255, 255, 0.65);
 }
 
+/* ============================================
+   Fish, Tree Rings and Memory Technology — 白底
+   ============================================ */
+.project-page-fish {
+  --fish-font: 'Open Sans', sans-serif;
+}
+
+body.project-page-fish,
+body.project-page-fish .page-wrapper,
+.project-page-fish-main {
+  background: #ffffff !important;
+}
+
+.project-fish {
+  color: #333;
+}
+
+.project-fish-title {
+  font-family: 'ABC Arizona Serif', Georgia, 'Times New Roman', serif;
+  font-size: 2.9rem;
+  font-weight: 400;
+  color: #111;
+  margin: 2.5rem 0 2rem 0;
+}
+
+.project-fish-grid {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  gap: clamp(1rem, 3vw, 2rem);
+  align-items: start;
+  margin-bottom: 2.5rem;
+}
+
+.project-fish-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-family: var(--fish-font);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #555;
+}
+
+.project-fish-video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  background: #000;
+}
+
+.project-fish-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.project-fish-text p {
+  font-family: var(--fish-font);
+  font-size: 1.1rem;
+  font-weight: 400;
+  line-height: 1.65;
+  color: #333;
+  margin: 0;
+}
+
+.project-fish-back {
+  display: inline-block;
+  font-family: var(--fish-font);
+  font-size: 1rem;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.project-fish-back:hover {
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .project-fish-title {
+    font-size: 1.8rem;
+  }
+
+  .project-fish-grid {
+    grid-template-columns: 1fr;
+    margin-bottom: 2rem;
+  }
+
+  .project-fish-meta {
+    font-size: 0.95rem;
+  }
+
+  .project-fish-text p {
+    font-size: 0.95rem;
+  }
+}
+
 @media (max-width: 768px) {
   .project-amphibious-title {
     font-size: 1.8rem;

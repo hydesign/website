@@ -178,5 +178,14 @@ window.PROJECT_GALLERIES = {
       'images/fish-tree-rings-and-memory/fish-1.webp',
       'images/fish-tree-rings-and-memory/fish-2.webp'
     ]
+  },
+  'fish-tree-rings-and-memory-body': {
+    ratio: '16/9',
+    speed: 5,
+    fit: 'contain',
+    images: [
+      'images/fish-tree-rings-and-memory/fish-2.webp',
+      'images/fish-tree-rings-and-memory/fish-1.webp'
+    ]
   }
 };
