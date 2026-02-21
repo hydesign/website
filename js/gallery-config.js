@@ -31,6 +31,7 @@ window.PROJECT_GALLERIES = {
     ratio: '4/3',
     speed: 4,
     images: [
+      'images/artificial-life-one-leg/1leg-5.jpg',
       'images/artificial-life-one-leg/1leg-1.webp',
       'images/artificial-life-one-leg/1leg-2.webp',
       'images/artificial-life-one-leg/1leg-3.webp',
