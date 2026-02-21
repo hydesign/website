@@ -1731,7 +1731,7 @@ body.project-page-amphibious {
 
 .project-amphibious-collab {
   font-family: var(--amphibious-font);
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 400;
   line-height: 1.5;
   color: var(--amphibious-text);
@@ -1750,9 +1750,9 @@ body.project-page-amphibious {
 
 .project-amphibious-text p {
   font-family: var(--amphibious-font);
-  font-size: 1.15rem;
+  font-size: 1rem;
   font-weight: 400;
-  line-height: 1.65;
+  line-height: 1.6;
   color: var(--amphibious-text);
   margin: 0 0 1rem 0;
   opacity: 0.9;
@@ -1772,8 +1772,19 @@ body.project-page-amphibious {
 }
 
 .project-amphibious-ref {
-  font-size: 0.95rem !important;
+  font-size: 0.9rem !important;
   opacity: 0.85 !important;
+}
+
+.project-amphibious-img.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(120px);
+  transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.project-amphibious-img.reveal-on-scroll.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .project-amphibious-img img {
@@ -1830,7 +1841,7 @@ body.project-page-amphibious .footer {
   }
 
   .project-amphibious-text p {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
 }
 

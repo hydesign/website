@@ -28,7 +28,7 @@
           </div>
           <p class="project-amphibious-collab">Collaborative with <a href="https://qqiinng.com/amphibious-rover-ldn2030-scouting-log" target="_blank" rel="noopener">Qing Qin</a>, Yili Zhao, Yue Wang, Xinyun Huang</p>
         </div>
-        <div class="project-amphibious-img">
+        <div class="project-amphibious-img reveal-on-scroll">
           <img src="../images/amphibious-rover-ldn2030-scouting-log/amphibious-1.webp" alt="Amphibious Rover LDN2030">
         </div>
       </section>
@@ -47,28 +47,28 @@
           <p>On the interactive map of web page, you can check the mapping of the simulated land model after sea level rise in 2030 (Climate Central, 2021), which is based on the data provided by the Intergovernmental Panel on Climate Change (IPCC), the United Nations agency for evaluating science related to climate change in 2021.</p>
           <p class="project-amphibious-ref">Climate Central (2021) Coastal Risk Screening Tool. Available at: <a href="https://coastal.climatecentral.org/mapview/12/-0.1382/51.4889/0535e2f64b95c4cee465eb8e31859e27b938e3e114611ffedae393b175c5fa08" target="_blank" rel="noopener">coastal.climatecentral.org</a> (Accessed: 8 March 2022).</p>
         </div>
-        <div class="project-amphibious-img">
+        <div class="project-amphibious-img reveal-on-scroll">
           <img src="../images/amphibious-rover-ldn2030-scouting-log/amphibious-2.webp" alt="London flood map">
         </div>
       </section>
 
       <section class="project-amphibious-grid project-amphibious-grid-img-only">
         <div class="project-amphibious-empty"></div>
-        <div class="project-amphibious-img">
+        <div class="project-amphibious-img reveal-on-scroll">
           <img src="../images/amphibious-rover-ldn2030-scouting-log/amphibious-3.webp" alt="Amphibious Rover installation">
         </div>
       </section>
 
       <section class="project-amphibious-grid project-amphibious-grid-img-only">
         <div class="project-amphibious-empty"></div>
-        <div class="project-amphibious-img">
+        <div class="project-amphibious-img reveal-on-scroll">
           <img src="../images/amphibious-rover-ldn2030-scouting-log/amphibious-4.webp" alt="Rover and projection">
         </div>
       </section>
 
       <section class="project-amphibious-grid project-amphibious-grid-img-only">
         <div class="project-amphibious-empty"></div>
-        <div class="project-amphibious-img">
+        <div class="project-amphibious-img reveal-on-scroll">
           <img src="../images/amphibious-rover-ldn2030-scouting-log/amphibious-5.webp" alt="Rover in exhibition">
         </div>
       </section>
@@ -80,5 +80,17 @@
 
   <div id="footer-placeholder"></div>
   <script src="../js/include.js"></script>
+  <script>
+  (function() {
+    var els = document.querySelectorAll('.reveal-on-scroll');
+    if (!els.length) return;
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) e.target.classList.add('reveal-visible');
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+    els.forEach(function(el) { io.observe(el); });
+  })();
+  </script>
 </body>
 </html>
