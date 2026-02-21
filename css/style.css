@@ -2434,16 +2434,11 @@ body.project-page-phalaenopsis .page-wrapper,
 body.page-index {
   overflow-x: hidden;
 }
-body.page-index .content {
-  position: relative;
-}
 body.page-index .project-gallery {
   width: 100vw;
   max-width: 100vw;
-  position: relative;
-  left: 50%;
-  margin-left: -50vw;
-  margin-right: 0;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   margin-bottom: 1.5rem;
 }
 
