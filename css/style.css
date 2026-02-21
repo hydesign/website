@@ -1954,6 +1954,7 @@ body.project-page-phalaenopsis .page-wrapper,
   font-weight: 400;
   color: #111;
   margin: 2.5rem 0 0.5rem 0;
+  text-align: center;
 }
 
 .project-phalaenopsis-subtitle {
@@ -1962,6 +1963,7 @@ body.project-page-phalaenopsis .page-wrapper,
   font-weight: 400;
   color: #555;
   margin: 0 0 2rem 0;
+  text-align: center;
 }
 
 .project-phalaenopsis-grid {
@@ -1980,6 +1982,7 @@ body.project-page-phalaenopsis .page-wrapper,
   font-size: 1.1rem;
   font-weight: 400;
   color: #555;
+  text-align: center;
 }
 
 .project-phalaenopsis-right {
@@ -2002,6 +2005,10 @@ body.project-page-phalaenopsis .page-wrapper,
   width: 100%;
   height: 100%;
   border: none;
+}
+
+.project-phalaenopsis-text {
+  text-align: center;
 }
 
 .project-phalaenopsis-text p {
@@ -2044,6 +2051,7 @@ body.project-page-phalaenopsis .page-wrapper,
 
 .project-phalaenopsis-lang {
   display: flex;
+  justify-content: center;
   gap: 0.5rem;
   margin-bottom: 1.5rem;
 }
@@ -2085,15 +2093,16 @@ body.project-page-phalaenopsis .page-wrapper,
 
 .phala-cell-img {
   width: 100%;
-  aspect-ratio: 1;
+  min-height: 0;
   overflow: hidden;
   background: #f5f5f5;
 }
 
 .phala-cell-img img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
   display: block;
 }
 
@@ -2102,6 +2111,7 @@ body.project-page-phalaenopsis .page-wrapper,
   font-size: 0.9rem;
   line-height: 1.6;
   color: #444;
+  text-align: center;
 }
 
 .phala-cell-poem .phala-line {
