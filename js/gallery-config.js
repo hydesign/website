@@ -114,6 +114,31 @@ window.PROJECT_GALLERIES = {
       'images/nomadic-annotators/nomadic-3.webp'
     ]
   },
+  'nomadic-annotators-body': {
+    ratio: '16/9',
+    speed: 5,
+    fit: 'contain',
+    images: [
+      'images/nomadic-annotators/nomadic-2.webp',
+      'images/nomadic-annotators/nomadic-4.webp',
+      'images/nomadic-annotators/nomadic-5.webp',
+      'images/nomadic-annotators/nomadic-6.webp',
+      'images/nomadic-annotators/nomadic-7.webp',
+      'images/nomadic-annotators/nomadic-8.webp',
+      'images/nomadic-annotators/nomadic-9.webp'
+    ]
+  },
+  'nomadic-annotators-bottom': {
+    ratio: '16/9',
+    speed: 5,
+    fit: 'contain',
+    images: [
+      'images/nomadic-annotators/nomadic-10.webp',
+      'images/nomadic-annotators/nomadic-11.webp',
+      'images/nomadic-annotators/nomadic-12.webp',
+      'images/nomadic-annotators/nomadic-13.webp'
+    ]
+  },
   'i-just-stay-in-my-home-not-go-anywhere': {
     ratio: '16/9',
     speed: 5,

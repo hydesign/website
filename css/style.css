@@ -1164,8 +1164,8 @@ body.project-page-peach {
 
 .project-peach-quote {
   text-align: center;
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .project-peach-quote p {
@@ -1187,7 +1187,7 @@ body.project-page-peach {
   width: 100%;
   padding-bottom: 56.25%;
   overflow: hidden;
-  margin-bottom: 2.5rem;
+  margin-bottom: 20rem;
   background: #000;
 }
 
@@ -1201,7 +1201,7 @@ body.project-page-peach {
 
 .project-peach-body {
   max-width: 66.67%;
-  margin: 0 auto 2.5rem;
+  margin: 0 auto 10rem;
 }
 
 .project-peach-text {
@@ -1219,7 +1219,7 @@ body.project-page-peach {
 }
 
 .project-peach-poster {
-  margin-top: 8rem;
+  margin-top: 20rem;
   margin-bottom: 2rem;
 }
 
@@ -1296,11 +1296,11 @@ body.project-page-buffer {
   grid-template-columns: 1fr 1fr 1fr;
   gap: clamp(1rem, 3vw, 2rem);
   align-items: start;
-  margin-bottom: 6rem;
+  margin-bottom: 20rem;
 }
 
 .project-buffer-grid-1 {
-  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-template-columns: 0.5fr 2.5fr 0.5fr;
 }
 
 .project-buffer-grid-2 {
@@ -1397,7 +1397,7 @@ body.project-page-buffer .footer {
   .project-buffer-grid-1,
   .project-buffer-grid-2 {
     grid-template-columns: 1fr;
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
   }
 
   .project-buffer-meta {
@@ -1405,6 +1405,166 @@ body.project-page-buffer .footer {
   }
 
   .project-buffer-text p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ============================================
+   Nomadic Annotators — 黑底
+   ============================================ */
+.project-page-nomadic {
+  --nomadic-bg: #000000;
+  --nomadic-text: rgba(255, 255, 255, 0.9);
+  --nomadic-font: 'Open Sans', sans-serif;
+}
+
+body.project-page-nomadic,
+body.project-page-nomadic .page-wrapper,
+.project-page-nomadic-main {
+  background: var(--nomadic-bg) !important;
+}
+
+body.project-page-nomadic {
+  overflow-x: hidden;
+}
+
+.project-nomadic {
+  color: var(--nomadic-text);
+}
+
+.project-nomadic-title {
+  font-family: 'ABC Arizona Serif', Georgia, 'Times New Roman', serif;
+  font-size: 2.9rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 2.5rem 0 2rem 0;
+}
+
+.project-nomadic-grid {
+  display: grid;
+  gap: clamp(1rem, 3vw, 2rem);
+  align-items: start;
+  margin-bottom: 2.5rem;
+}
+
+.project-nomadic-grid-1 {
+  grid-template-columns: 1fr 11fr;
+}
+
+.project-nomadic-grid-2,
+.project-nomadic-grid-3 {
+  grid-template-columns: 1fr 2fr;
+}
+
+.project-nomadic-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-family: var(--nomadic-font);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--nomadic-text);
+  opacity: 0.9;
+}
+
+.project-nomadic-hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-nomadic-video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  margin-bottom: 2.5rem;
+  background: #000;
+}
+
+.project-nomadic-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.project-nomadic-text p {
+  font-family: var(--nomadic-font);
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--nomadic-text);
+  margin: 0 0 1rem 0;
+  opacity: 0.9;
+}
+
+.project-nomadic-text p:last-child {
+  margin-bottom: 0;
+}
+
+.project-nomadic-text a {
+  color: rgba(255, 255, 255, 0.95);
+  text-decoration: underline;
+}
+
+.project-nomadic-text a:hover {
+  color: #ffffff;
+}
+
+.project-nomadic-gallery-bottom {
+  margin-bottom: 2rem;
+}
+
+.project-nomadic-back {
+  display: inline-block;
+  font-family: var(--nomadic-font);
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.project-nomadic-back:hover {
+  color: #ffffff;
+}
+
+body.project-page-nomadic .project-gallery,
+body.project-page-nomadic .project-gallery .gallery-slide {
+  background: #000;
+}
+
+body.project-page-nomadic .project-gallery .gallery-arrow {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+body.project-page-nomadic .project-gallery .gallery-arrow:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+body.project-page-nomadic .footer {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+@media (max-width: 768px) {
+  .project-nomadic-title {
+    font-size: 1.8rem;
+  }
+
+  .project-nomadic-grid-1,
+  .project-nomadic-grid-2,
+  .project-nomadic-grid-3 {
+    grid-template-columns: 1fr;
+    margin-bottom: 2rem;
+  }
+
+  .project-nomadic-meta {
+    font-size: 0.95rem;
+  }
+
+  .project-nomadic-text p {
     font-size: 0.95rem;
   }
 }

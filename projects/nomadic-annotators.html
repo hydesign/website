@@ -11,25 +11,52 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500&family=IBM+Plex+Mono:wght@350;400&family=Georgia:ital@0;1&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="project-page-nomadic">
   <div id="header-placeholder"></div>
 
-  <main class="page-wrapper">
-  <div class="content content-wide">
-    <article class="project-detail" data-project="nomadic-annotators">
-      <h2 class="project-detail-title">Nomadic Annotators</h2>
-      <div class="project-detail-meta">2023 · 17'49" Video</div>
-      
-      <p>Under China's "Data in the East, Computing in the West" program policy, Guizhou may in the future host numerous data centers built in valleys, with its abundant valley terrain potentially serving as training data for drones. Data annotators, wearing AR glasses, traverse nature to annotate data. As the infrastructure for the annotation system and the physical endpoint of cloud computing, Guizhou resembles a massive computing and storage stack.</p>
-      
-      <p>This project was inspired by Iris Long and Zike He's research project "Under the Cloud" and Bingqing Xia's study on digital labor.</p>
-      
-      <a href="../index.html" class="back-link">← Back to Projects</a>
+  <main class="page-wrapper project-page-nomadic-main">
+  <div class="content content-wide project-nomadic">
+    <article class="project-nomadic-article">
+      <h1 class="project-nomadic-title">Nomadic Annotators</h1>
+
+      <section class="project-nomadic-grid project-nomadic-grid-1">
+        <div class="project-nomadic-meta">
+          <span>2023</span>
+          <span>17'49"</span>
+          <span>Video</span>
+        </div>
+        <div class="project-nomadic-hero">
+          <img src="../images/nomadic-annotators/nomadic-3.webp" alt="Nomadic Annotators">
+        </div>
+      </section>
+
+      <section class="project-nomadic-video">
+        <iframe src="https://player.vimeo.com/video/774778177?title=0&byline=0&portrait=0" allowfullscreen allow="autoplay; fullscreen; picture-in-picture"></iframe>
+      </section>
+
+      <section class="project-nomadic-grid project-nomadic-grid-2">
+        <div class="project-nomadic-empty"></div>
+        <div class="project-gallery project-nomadic-gallery" data-gallery="nomadic-annotators-body" aria-hidden="true"></div>
+      </section>
+
+      <section class="project-nomadic-grid project-nomadic-grid-3">
+        <div class="project-nomadic-text">
+          <p>Under China's "Data in the East, Computing in the West" program policy, Guizhou may in the future host numerous data centers built in valleys, with its abundant valley terrain potentially serving as training data for drones. Data annotators, wearing AR glasses, traverse nature to annotate data. As the infrastructure for the annotation system and the physical endpoint of cloud computing, Guizhou resembles a massive computing and storage stack.</p>
+          <p>This project was inspired by Iris Long and Zike He's research project "Under the Cloud" and Bingqing Xia's study on digital labor.</p>
+        </div>
+        <div class="project-nomadic-empty"></div>
+      </section>
+
+      <div class="project-gallery project-nomadic-gallery-bottom" data-gallery="nomadic-annotators-bottom" aria-hidden="true"></div>
+
+      <a href="../index.html" class="project-nomadic-back">← Back to Projects</a>
     </article>
   </div>
   </main>
 
   <div id="footer-placeholder"></div>
   <script src="../js/include.js"></script>
+  <script src="../js/gallery-config.js"></script>
+  <script src="../js/project-gallery.js"></script>
 </body>
 </html>
