@@ -1300,7 +1300,7 @@ body.project-page-buffer {
 }
 
 .project-buffer-grid-1 {
-  grid-template-columns: 0.25fr 3.5fr 0.25fr;
+  grid-template-columns: 0.1fr 3.8fr 0.1fr;
 }
 
 .project-buffer-grid-2 {
@@ -1321,7 +1321,8 @@ body.project-page-buffer {
 .project-buffer-video {
   position: relative;
   width: 100%;
-  padding-bottom: 56.25%;
+  min-height: 55vh;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   background: #000;
 }
