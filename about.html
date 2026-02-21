@@ -18,23 +18,16 @@
   <main class="page-wrapper">
   <div class="content content-wide">
     <section class="about-section">
-      <h2 class="section-title"><span class="cv-label-en">BIO</span></h2>
-      <p class="about-bio">
-        Huang Yue is a media artist and researcher whose current work focuses on agent-based art, encompassing software agents and physical robots, with an interest in the modelling behavior, evolution, aesthetic of behavior of the agent. His earlier artistic practice centred around speculative fiction, kinetic installation, and machine learning. In recent years, his works have been exhibited at international venues and film festivals including Ars Electronica (Linz, Austria), Image Forum Festival (Japan), Slamdance Film Festival, GLAS Animation Festival (USA), Asia Digital Art Exhibition (China) etc. His research has been published at SIGGRAPH, ARTECH, VISAP, ISEA.
-      </p>
-
-      <h2 class="section-title"><span class="cv-label-en">My Practice</span></h2>
-      <p class="about-intro">
-        I am currently engaged in a research practice I call <em>Agent-Based Art</em> incorporating embodied robots and artificial life systems—unfolding through the infinite generative pulse of machine learning. Neural networks operate in ceaseless interaction, their transmissions resonating with latent vitality, mediated and manifested as behavioral aesthetics.This series asks: How can we create automated systems that allow humans to perceive a sense of living belief? How might agents evolve behaviors within computational ecosystems or the physical world? Can they actively learn, nurture beliefs, or cultivate aesthetic sensibilities? And how does such knowledge traverse media art, contemporary machine culture, human–computer interfaces, animation, and robotic systems?
-      </p>
-      <p class="about-intro">
-        In <em>Infinite Cinema</em>, I explore how to use artistic strategies to integrate the machine learning capacity for infinitely generating content into a framework constructed by an artist, thereby building a worldview—an infinite film. <em>Speculative Fiction</em> and <em>Software Aesthetic</em> are both about world-building. The former speculates on an alternative possible reality by combining technological development, computing culture, and the interconnections of human society; the latter takes place in the software world, viewing it as an intermediate, semi-finished space that bridges the real world and the virtual world (games, video, AI generation). <em>Trans-Species</em> showcases my interest in establishing dialogue across species, communicating signals, stories, and symbols among different species through interactive systems.
-      </p>
-
       <div class="cv-lang-toggle">
         <button type="button" class="cv-lang-btn active" data-lang="en">EN</button>
         <button type="button" class="cv-lang-btn" data-lang="zh">CH</button>
       </div>
+
+      <h2 class="section-title" id="about-bio-title"></h2>
+      <p class="about-bio" id="about-bio-text"></p>
+
+      <h2 class="section-title" id="about-practice-title"></h2>
+      <div id="about-practice-text"></div>
 
       <h2 class="section-title"><span class="cv-label-en">CV</span><span class="cv-label-zh">简历</span></h2>
       
@@ -55,18 +48,34 @@
   <script src="js/cv-data.js"></script>
   <script>
   (function() {
+    var aboutData = window.CV_ABOUT;
     var educationData = window.CV_EDUCATION;
     var exhibitionData = window.CV_EXHIBITION;
     var honorsData = window.CV_HONORS;
+    var bioTitleEl = document.getElementById('about-bio-title');
+    var bioTextEl = document.getElementById('about-bio-text');
+    var practiceTitleEl = document.getElementById('about-practice-title');
+    var practiceTextEl = document.getElementById('about-practice-text');
     var educationList = document.getElementById('cv-education-list');
     var exhibitionList = document.getElementById('cv-exhibition-list');
     var honorsList = document.getElementById('cv-honors-list');
     var lang = 'en';
 
     function render() {
+      var about = aboutData[lang];
       var edu = educationData[lang];
       var ex = exhibitionData[lang];
       var hon = honorsData[lang];
+
+      if (bioTitleEl) bioTitleEl.textContent = about.bioTitle;
+      if (bioTextEl) bioTextEl.textContent = about.bio;
+      if (practiceTitleEl) practiceTitleEl.textContent = about.practiceTitle;
+      if (practiceTextEl) {
+        practiceTextEl.innerHTML = about.practice.map(function(p) {
+          return '<p class="about-intro">' + p + '</p>';
+        }).join('');
+      }
+
       educationList.innerHTML = edu.map(function(item) {
         return '<li><strong>' + item.period + '</strong> — ' + item.text + '</li>';
       }).join('');
