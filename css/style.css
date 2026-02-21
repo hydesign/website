@@ -78,43 +78,48 @@ body {
   }
 }
 
-/* Index 页：语言切换条，与 nav 同高、随页面滚动消失（不与 header 同 grid） */
+/* Index 页：语言切换条，居中、与 header 同字体、无边框、随页面滚动消失 */
 .index-lang-bar {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   margin-top: -11.5rem;
   margin-bottom: 1rem;
-  margin-left: -4rem;
-  padding-left: clamp(2.5rem, 6vw, 4rem);
 }
 
 @media (max-width: 768px) {
   .index-lang-bar {
     margin-top: -8.5rem;
-    margin-left: -1.25rem;
   }
 }
 
 .index-lang-btn {
-  font-family: 'ABC Arizona Sans', Georgia, sans-serif;
-  font-size: 0.75rem;
-  padding: 0.25rem 0.5rem;
-  border: 1px solid #999;
-  background: #fff;
-  color: #333;
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 350;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--text-on-light);
   cursor: pointer;
-  transition: all 0.2s;
+  transition: font-weight 0.2s;
 }
 
 .index-lang-btn:hover {
-  border-color: #333;
-  color: #000;
+  opacity: 0.85;
 }
 
 .index-lang-btn.active {
-  background: #333;
-  color: #fff;
-  border-color: #333;
+  font-weight: 600;
+}
+
+.index-lang-sep {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 350;
+  color: var(--text-on-light);
+  opacity: 0.6;
 }
 
 /* 顶部固定栏 - 网格：左列 nav，右列 名字 */
@@ -318,9 +323,14 @@ body.page-arizona-sans .pub-year {
   color: var(--text-on-light);
 }
 
-/* Intro */
+/* Intro - 在 Contact/nav 下方，留足空间 */
 .intro {
+  margin-top: 8rem;
   margin-bottom: 3rem;
+}
+
+body.page-index .intro {
+  margin-top: 10rem;
 }
 
 /* intro-text 字号 */
