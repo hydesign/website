@@ -56,12 +56,15 @@
     });
   }
 
-  document.querySelectorAll('.index-lang-btn').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      lang = this.dataset.lang;
+  document.addEventListener('click', function(e) {
+    var btn = e.target.closest('.index-lang-btn');
+    if (btn) {
+      e.preventDefault();
+      lang = btn.dataset.lang;
       render();
-    });
+    }
   });
 
   render();
+  document.addEventListener('headerLoaded', render);
 })();

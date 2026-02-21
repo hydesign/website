@@ -48,6 +48,7 @@
         if (header) {
           setActiveLink(header);
           fixRelativeLinks(header, base);
+          document.dispatchEvent(new CustomEvent('headerLoaded'));
         }
       })
       .catch(function () {
