@@ -1164,7 +1164,7 @@ body.project-page-peach {
 
 .project-peach-quote {
   text-align: center;
-  margin-top: 4rem;
+  margin-top: 6rem;
   margin-bottom: 4rem;
 }
 
@@ -1300,7 +1300,7 @@ body.project-page-buffer {
 }
 
 .project-buffer-grid-1 {
-  grid-template-columns: 0.5fr 2.5fr 0.5fr;
+  grid-template-columns: 0.25fr 3.5fr 0.25fr;
 }
 
 .project-buffer-grid-2 {
