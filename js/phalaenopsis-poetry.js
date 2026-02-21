@@ -1,0 +1,19 @@
+/**
+ * Phalaenopsis poetry grid data
+ * 从 list Paphiopedium.numbers 导出为 CSV 后填入完整 en/zh 诗文
+ * 每项: { img, en, zh } — 每行用 \n 分隔
+ */
+window.PHALAENOPSIS_GRID = [
+  { img: 'p-2.jpg', en: 'Before the Victorian age,\nour ancestors lived\nin another warm continent.\nHunters setting out from Britain\njungles with machetes.\nObsession and violence\nhave always been\ntwo sides of the same coin.\nThey placed us in transparent vessels\nand carried back to their land;\nour native habitat burned into ruin.\nWe were resettled inside vast houses of glass.\nThat became our new home\nunder European sky.', zh: '维多利亚时代之前，\n我们的祖先生活在\n另一片温暖的大陆。\n猎人们从英国出发\n手持砍刀深入丛林。\n痴迷与暴力\n向来是\n同一枚硬币的两面。' },
+  { img: 'p-3.jpg', en: 'We were separated in a plan.\nIn a medium.\nOnce together—siblings?\nTriplets?\nIn the beginning only...\nDiversity, evolution—\nlife is no longer necessary.\nIs it required to cultivate\nequally beautiful in different rooms?\nStabilized hybrid.\nThe chromosome, the lip—\nwe look familiar in frenzy.', zh: '我们在计划中被分离。\n在培养基中。\n曾为一体—— siblings？\n三胞胎？\n起初只有……\n多样性，进化——\n生命不再必要。\n是否需要在不同的房间里\n培育同样美丽？\n稳定的杂交种。\n染色体，唇瓣——\n我们在狂热中看起来熟悉。' },
+  { img: 'p-4.jpg', en: 'Tropical rainforest. Next door,\nCamellia, as enchanting as we are.\nPeople say it tastes pleasant.\nThe cinchona from South America—\nextract that saved many British soldiers.\nMedicine. Food. Database.\nInevitably drawn by humans.', zh: '热带雨林。隔壁，\n山茶花，和我们一样迷人。\n人们说它味道宜人。\n来自南美的金鸡纳——\n提取物拯救了许多英国士兵。\n药物。食物。数据库。\n 不可避免地被人类所吸引。' },
+  { img: 'p-5.jpg', en: 'Brazil. We often were invited\nto take part in germination.\nI can explain the role I now play.\nI speculate the effect\nof a certain hormone.\nBut I would—one must try.\nKnudson—sugarcane—\ndirectly participated in development.', zh: '巴西。我们常被邀请\n参与萌芽。\n我能解释我如今扮演的角色。\n我推测某种激素的效果。\n但我会——人必须尝试。\nKnudson——甘蔗——\n直接参与发展。' },
+  { img: 'p-6.jpg', en: 'Scientist of Cornell University\nbred for Cattleya.\nHe enabled—ambiguous—\nfungi—redefine its childhood.\nPrimitive environment.', zh: '康奈尔大学的科学家\n为卡特兰培育。\n他实现了——模糊——\n真菌——重新定义其童年。\n原始环境。' },
+  { img: 'p-7.jpg', en: 'Paphiopedilum. White Knight.\nIce Age.\nElements. Names. Pots. Petals.\nI am a theme.', zh: '兜兰。白骑士。\n冰河世纪。\n元素。名字。盆。花瓣。\n我是一个主题。' },
+  { img: 'p-8.jpg', en: 'Insect. Pollen.\nTechnology has served us.\nThey call me a slipper.\nBeauty. Offence.\nExquisite like Georges.\nWork on his village.', zh: '昆虫。花粉。\n技术为我们服务。\n他们称我为拖鞋。\n美。冒犯。\n像乔治一样精致。\n在他村庄的工作。' },
+  { img: 'p-9.jpg', en: 'Dutch. Travel. In Indonesia.\nWho would imagine beneath\nbrown fiber a mysterious liquid?\nSealed. Turned away.\nNatural. Self-replicating.', zh: '荷兰。旅行。在印度尼西亚。\n谁会想象在棕色纤维下\n有神秘的液体？\n密封。转身。\n自然。自我复制。' },
+  { img: 'p-10.jpg', en: 'Perhaps you might believe\nthree yellow—mosaic virus;\nit crept across leaves.\nToo troubled.\nAn orchid. Garden.\nMy shoot tip—a growth—\nI need. Optimistic. Claim. Romantic.', zh: '也许你会相信\n三黄——花叶病毒；\n它爬过叶片。\n太困扰了。\n兰花。花园。\n我的芽尖——生长——\n我需要。乐观。声称。浪漫。' },
+  { img: 'p-11.jpg', en: 'Paphiopedilum.\nSlipper orchid.\nWhite flower.\nThe gift of support.', zh: '兜兰。\n拖鞋兰。\n白花。\n支撑的礼物。' },
+  { img: 'p-12.jpg', en: 'When I was only two millimeters tall,\nfungi invaded my body.\nI grew translucent tentacles, like an octopus,\nlike the alien in that science fiction film.\nThey seemed to be mine,\nyet they did not belong to me alone.\nA strange blessing.\nI could feel all the energy\nsurging into my tissues.\nSome fused with them—new organs.\nPerhaps this is what they call symbiosis.', zh: '当我只有两毫米高时，\n真菌入侵了我的身体。\n我长出了半透明的触手，像章鱼，\n像那部科幻电影里的外星人。\n它们似乎是我的，\n却不只属于我。\n一种奇怪的祝福。\n我能感受到所有能量\n涌入我的组织。\n有些与它们融合——新的器官。\n也许这就是他们所说的共生。' },
+  { img: 'p-13.jpg', en: 'Coconut. Banana. Potato.\nWe are companions here.\nBrown fiber. Yellow skin. Earth.\nDifferent forms of life\nsharing one stage.', zh: '椰子。香蕉。土豆。\n我们是这里的伙伴。\n棕色纤维。黄色表皮。泥土。\n不同形式的生命\n共享一个舞台。' }
+];
