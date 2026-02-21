@@ -2162,14 +2162,18 @@ body.project-page-phalaenopsis .page-wrapper,
   display: none;
 }
 
-/* Reference 占全页面 - 负边距延伸到 viewport 边缘 */
+.phala-essay-lang {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Reference 占全页面，在 Back 前，无 Bibliography，无 bullets，全铺开 */
 .project-phalaenopsis-reference {
-  width: calc(100% + 4rem);
-  margin-left: -2rem;
-  margin-right: -2rem;
-  padding: 2.5rem 2rem;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding: 2.5rem 5vw;
   background: #f8f8f8;
-  margin-bottom: 0;
+  margin-bottom: 2.5rem;
   margin-top: 2rem;
   box-sizing: border-box;
 }
@@ -2179,35 +2183,26 @@ body.project-page-phalaenopsis .page-wrapper,
   font-size: 1.5rem;
   font-weight: 400;
   color: #111;
-  margin: 0 0 0.5rem 0;
-  text-align: center;
-}
-
-.phala-reference-bib {
-  font-family: var(--phalaenopsis-font);
-  font-size: 1rem;
-  font-weight: 500;
-  color: #555;
-  margin: 0 0 1rem 0;
+  margin: 0 0 1.25rem 0;
   text-align: center;
 }
 
 .phala-reference-list {
   font-family: var(--phalaenopsis-font);
   font-size: 0.9rem;
-  line-height: 1.7;
+  line-height: 1.8;
   color: #444;
   margin: 0;
-  padding-left: 1.5rem;
-  max-width: 720px;
-  margin: 0 auto;
+  padding: 0;
+  width: 100%;
 }
 
-.phala-reference-list li {
-  margin-bottom: 0.5rem;
+.phala-ref-item {
+  margin-bottom: 0.6rem;
+  padding: 0;
 }
 
-.phala-reference-list li:last-child {
+.phala-ref-item:last-child {
   margin-bottom: 0;
 }
 
@@ -2260,11 +2255,8 @@ body.project-page-phalaenopsis .page-wrapper,
   }
 
   .project-phalaenopsis-reference {
-    width: calc(100% + 2.5rem);
-    margin-left: -1.25rem;
-    margin-right: -1.25rem;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    margin-left: calc(50% - 50vw);
+    padding: 2rem 1.25rem;
   }
 }
 

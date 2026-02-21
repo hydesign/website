@@ -41,7 +41,7 @@
         <img src="../images/phalaenopsis-and-their-friends-whisper-their-tales/p-1.png" alt="Phalaenopsis installation">
       </div>
 
-      <div class="project-phalaenopsis-lang">
+      <div class="project-phalaenopsis-lang" data-target="grid">
         <button type="button" class="phala-lang-btn active" data-lang="en">EN</button>
         <button type="button" class="phala-lang-btn" data-lang="zh">CH</button>
       </div>
@@ -50,19 +50,24 @@
         <!-- filled by JS -->
       </section>
 
+      <div class="project-phalaenopsis-lang phala-essay-lang" data-target="essay">
+        <button type="button" class="phala-lang-btn active" data-lang="en">EN</button>
+        <button type="button" class="phala-lang-btn" data-lang="zh">CH</button>
+      </div>
+
       <section class="project-phalaenopsis-essay" id="phala-essay">
         <div class="phala-essay-col phala-essay-en" id="phala-essay-en"></div>
         <div class="phala-essay-col phala-essay-zh" id="phala-essay-zh"></div>
       </section>
 
+      <section class="project-phalaenopsis-reference">
+        <h3 class="phala-reference-title">Reference</h3>
+        <div class="phala-reference-list" id="phala-reference-list"></div>
+      </section>
+
       <a href="../index.html" class="project-phalaenopsis-back">← Back to Projects</a>
     </article>
   </div>
-  <section class="project-phalaenopsis-reference">
-    <h3 class="phala-reference-title">Reference</h3>
-    <h4 class="phala-reference-bib">Bibliography</h4>
-    <ul class="phala-reference-list" id="phala-reference-list"></ul>
-  </section>
   </main>
 
   <div id="footer-placeholder"></div>
@@ -79,18 +84,19 @@
     var essayZh = document.getElementById('phala-essay-zh');
     var essaySection = document.getElementById('phala-essay');
     var refList = document.getElementById('phala-reference-list');
-    var lang = 'en';
+    var gridLang = 'en';
+    var essayLang = 'en';
 
     function renderGrid() {
       grid.innerHTML = data.map(function(item) {
-        var text = lang === 'zh' ? item.zh : item.en;
+        var text = gridLang === 'zh' ? item.zh : item.en;
         var lines = text.split('\n').filter(Boolean);
         var linesHtml = lines.map(function(line) {
           return '<span class="phala-line">' + line + '</span>';
         }).join('');
         return '<div class="phala-grid-cell">' +
           '<div class="phala-cell-img"><img src="../images/phalaenopsis-and-their-friends-whisper-their-tales/' + item.img + '" alt=""></div>' +
-          '<div class="phala-cell-poem" data-lang="' + lang + '">' + linesHtml + '</div>' +
+          '<div class="phala-cell-poem" data-lang="' + gridLang + '">' + linesHtml + '</div>' +
         '</div>';
       }).join('');
     }
@@ -102,31 +108,36 @@
         en.paragraphs.map(function(p) { return '<p>' + p + '</p>'; }).join('');
       essayZh.innerHTML = '<h3 class="phala-essay-title">' + zh.title + '</h3>' +
         zh.paragraphs.map(function(p) { return '<p>' + p + '</p>'; }).join('');
-      essaySection.classList.toggle('phala-essay-lang-en', lang === 'en');
-      essaySection.classList.toggle('phala-essay-lang-zh', lang === 'zh');
+      essaySection.classList.toggle('phala-essay-lang-en', essayLang === 'en');
+      essaySection.classList.toggle('phala-essay-lang-zh', essayLang === 'zh');
     }
 
     function renderReference() {
       refList.innerHTML = refData.map(function(item) {
-        return '<li>' + item + '</li>';
+        return '<div class="phala-ref-item">' + item + '</div>';
       }).join('');
     }
 
-    function render() {
-      renderGrid();
-      renderEssay();
-    }
-
-    document.querySelectorAll('.phala-lang-btn').forEach(function(btn) {
+    document.querySelectorAll('.project-phalaenopsis-lang[data-target="grid"] .phala-lang-btn').forEach(function(btn) {
       btn.addEventListener('click', function() {
-        lang = this.dataset.lang;
-        document.querySelectorAll('.phala-lang-btn').forEach(function(b) { b.classList.remove('active'); });
+        gridLang = this.dataset.lang;
+        document.querySelectorAll('.project-phalaenopsis-lang[data-target="grid"] .phala-lang-btn').forEach(function(b) { b.classList.remove('active'); });
         this.classList.add('active');
-        render();
+        renderGrid();
       });
     });
 
-    render();
+    document.querySelectorAll('.project-phalaenopsis-lang[data-target="essay"] .phala-lang-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        essayLang = this.dataset.lang;
+        document.querySelectorAll('.project-phalaenopsis-lang[data-target="essay"] .phala-lang-btn').forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+        renderEssay();
+      });
+    });
+
+    renderGrid();
+    renderEssay();
     renderReference();
   })();
   </script>
