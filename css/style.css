@@ -1256,6 +1256,150 @@ body.project-page-peach .footer {
   color: rgba(255, 255, 255, 0.65);
 }
 
+/* ============================================
+   Buffer Beach: Let the Currents Render — 黑底
+   ============================================ */
+.project-page-buffer {
+  --buffer-bg: #000000;
+  --buffer-text: rgba(255, 255, 255, 0.9);
+  --buffer-font: 'Open Sans', sans-serif;
+}
+
+body.project-page-buffer,
+body.project-page-buffer .page-wrapper,
+.project-page-buffer-main {
+  background: var(--buffer-bg) !important;
+}
+
+body.project-page-buffer {
+  overflow-x: hidden;
+}
+
+.project-buffer {
+  color: var(--buffer-text);
+}
+
+.project-buffer-title {
+  font-family: 'ABC Arizona Serif', Georgia, 'Times New Roman', serif;
+  font-size: 2.9rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 2.5rem 0 2rem 0;
+}
+
+.project-buffer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: clamp(1rem, 3vw, 2rem);
+  align-items: start;
+  margin-bottom: 2.5rem;
+}
+
+.project-buffer-grid-2 {
+  grid-template-columns: 1fr 1.4fr 1fr;
+}
+
+.project-buffer-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-family: var(--buffer-font);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--buffer-text);
+  opacity: 0.9;
+}
+
+.project-buffer-video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  background: #000;
+}
+
+.project-buffer-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.project-buffer-text p {
+  font-family: var(--buffer-font);
+  font-size: 1.15rem;
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--buffer-text);
+  margin: 0 0 1rem 0;
+  opacity: 0.9;
+}
+
+.project-buffer-text p:last-child {
+  margin-bottom: 0;
+}
+
+.project-buffer-text a {
+  color: rgba(255, 255, 255, 0.95);
+  text-decoration: underline;
+}
+
+.project-buffer-text a:hover {
+  color: #ffffff;
+}
+
+.project-buffer-back {
+  display: inline-block;
+  font-family: var(--buffer-font);
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.project-buffer-back:hover {
+  color: #ffffff;
+}
+
+body.project-page-buffer .project-gallery,
+body.project-page-buffer .project-gallery .gallery-slide {
+  background: #000;
+}
+
+body.project-page-buffer .project-gallery .gallery-arrow {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+body.project-page-buffer .project-gallery .gallery-arrow:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+body.project-page-buffer .footer {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+@media (max-width: 768px) {
+  .project-buffer-title {
+    font-size: 1.8rem;
+  }
+
+  .project-buffer-grid,
+  .project-buffer-grid-2 {
+    grid-template-columns: 1fr;
+    margin-bottom: 2rem;
+  }
+
+  .project-buffer-meta {
+    font-size: 0.95rem;
+  }
+
+  .project-buffer-text p {
+    font-size: 0.95rem;
+  }
+}
+
 @media (max-width: 768px) {
   .project-peach-title {
     font-size: 1.8rem;

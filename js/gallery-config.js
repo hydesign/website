@@ -88,12 +88,22 @@ window.PROJECT_GALLERIES = {
   'buffer-beach-let-the-waves-render': {
     ratio: '16/9',
     speed: 5,
-    fit: 'contain',  /* 高图：高度对齐 gallery，宽度等比例缩小 */
+    fit: 'contain',
     images: [
       'images/buffer-beach-let-the-waves-render/sf2-1.webp',
       'images/buffer-beach-let-the-waves-render/sf2-2.webp',
       'images/buffer-beach-let-the-waves-render/sf2-3.webp',
       'images/buffer-beach-let-the-waves-render/sf2-4.webp'
+    ]
+  },
+  'buffer-beach-let-the-waves-render-body': {
+    ratio: '9/16',
+    speed: 5,
+    fit: 'contain',
+    images: [
+      'images/buffer-beach-let-the-waves-render/sf2-5.webp',
+      'images/buffer-beach-let-the-waves-render/sf2-6.webp',
+      'images/buffer-beach-let-the-waves-render/sf2-7.webp'
     ]
   },
   'nomadic-annotators': {
