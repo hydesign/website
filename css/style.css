@@ -149,46 +149,50 @@ body.page-index .index-lang-bar {
   mix-blend-mode: difference;
 }
 
-/* Index 页：header 一字排开、填满整行、字体统一为 nav */
+/* Index 页：7 等分网格，名字占最后 2 列合并，填满全页，字体偏细 */
 body.page-index .site-header {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
   gap: 0;
-  grid-template-columns: unset;
+  align-items: center;
   width: 100%;
+  max-width: 100vw;
+  padding-left: clamp(1rem, 4vw, 2.5rem);
+  padding-right: clamp(1rem, 4vw, 2.5rem);
+  grid-template-columns: repeat(7, 1fr);
 }
 
-body.page-index .site-header .nav {
-  flex-direction: row;
-  flex: 0 0 auto;
-  gap: 1.5rem;
-  align-items: center;
-}
-
+body.page-index .site-header .nav,
 body.page-index .site-header .hero {
+  display: contents;
+}
+
+body.page-index .site-header .nav-link:nth-child(1) { grid-column: 1; }
+body.page-index .site-header .nav-link:nth-child(2) { grid-column: 2; }
+body.page-index .site-header .nav-link:nth-child(3) { grid-column: 3; }
+body.page-index .site-header .nav-link:nth-child(4) { grid-column: 4; }
+body.page-index .site-header .index-lang-bar { grid-column: 5; }
+body.page-index .site-header .hero-name { grid-column: 6 / 8; }
+
+body.page-index .site-header .hero-name {
   display: flex;
-  flex-direction: row;
-  flex: 0 0 auto;
-  align-items: center;
-  gap: 0.5rem;
-  justify-self: start;
-  text-align: left;
+  align-items: baseline;
+  gap: 0.35em;
+  justify-content: flex-end;
 }
 
 body.page-index .site-header .hero-title,
 body.page-index .site-header .hero-subtitle,
 body.page-index .site-header .index-lang-btn,
-body.page-index .site-header .index-lang-sep {
+body.page-index .site-header .index-lang-sep,
+body.page-index .site-header .nav-link {
   font-family: var(--font-mono);
   font-size: 1.5rem;
-  font-weight: 350;
+  font-weight: 300;
 }
 
 body.page-index .site-header .hero-title {
-  margin-right: 0.15em;
+  margin-right: 0;
 }
 
 body.page-index .site-header .hero-subtitle {
@@ -197,7 +201,7 @@ body.page-index .site-header .hero-subtitle {
 
 body.page-index .site-header .index-lang-bar {
   margin-top: 0;
-  margin-left: 0.25rem;
+  justify-content: center;
 }
 
 .site-header > * {
@@ -286,6 +290,10 @@ body.page-index .site-header .index-lang-bar {
   width: 100%;
 }
 
+.hero-name {
+  display: block;
+}
+
 @media (max-width: 768px) {
   .hero {
     justify-self: end;
@@ -341,14 +349,10 @@ body.page-index .site-header .index-lang-bar {
   }
 }
 
-/* Index 页 Mobile：一字排开，统一字体，缩小以 fit 一行 */
+/* Index 页 Mobile：7 等分，字体更小、更细 */
 @media (max-width: 768px) {
   body.page-index .site-header {
-    padding: 0.6rem clamp(0.5rem, 3vw, 1rem) 0.5rem;
-    gap: 0;
-  }
-  body.page-index .site-header .nav {
-    gap: 0.75rem;
+    padding: 0.5rem clamp(0.5rem, 3vw, 1rem);
   }
   body.page-index .site-header .nav-link,
   body.page-index .site-header .hero-title,
@@ -356,11 +360,8 @@ body.page-index .site-header .index-lang-bar {
   body.page-index .site-header .index-lang-btn,
   body.page-index .site-header .index-lang-sep {
     font-family: var(--font-mono);
-    font-size: 0.65rem;
-    font-weight: 350;
-  }
-  body.page-index .site-header .hero {
-    gap: 0.35rem;
+    font-size: 0.6rem;
+    font-weight: 300;
   }
 }
 
