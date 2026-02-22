@@ -77,6 +77,10 @@
     overlay.querySelectorAll('.menu-overlay-link').forEach(function (a) {
       a.addEventListener('click', closeMenu);
     });
+
+    overlay.querySelectorAll('.menu-overlay-lang-btn').forEach(function (btn) {
+      btn.addEventListener('click', closeMenu);
+    });
   }
 
   // 加载 header

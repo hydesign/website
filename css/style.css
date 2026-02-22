@@ -357,20 +357,29 @@ body.page-index .site-header .index-lang-bar {
   }
 }
 
-/* Index 页 Mobile：7 等分，居中，IBM Plex Mono Light，渐进缩小 */
+/* Index 页 Mobile：7 等分，居中，IBM Plex Mono Light，渐进缩小（名字保持原大小、不居中） */
 @media (max-width: 768px) {
   body.page-index .site-header {
     padding: 0.5rem clamp(0.5rem, 2vw, 1rem);
   }
   body.page-index .site-header .nav-link,
-  body.page-index .site-header .hero-title,
-  body.page-index .site-header .hero-subtitle,
   body.page-index .site-header .index-lang-btn,
   body.page-index .site-header .index-lang-sep {
     font-family: 'Diatype Light', 'IBM Plex Mono', 'JetBrains Mono', monospace;
     font-size: clamp(0.4rem, 1.2vw + 0.4rem, 0.8rem);
     font-weight: 300;
     font-style: normal;
+  }
+  /* 名字保持桌面端大小和右对齐，不额外缩小 */
+  body.page-index .site-header .hero-title,
+  body.page-index .site-header .hero-subtitle {
+    font-family: 'Diatype Light', 'IBM Plex Mono', 'JetBrains Mono', monospace;
+    font-size: clamp(0.5rem, 1vw + 0.6rem, 1.5rem);
+    font-weight: 300;
+    font-style: normal;
+  }
+  body.page-index .site-header .hero-subtitle {
+    font-size: clamp(0.55rem, 1.1vw + 0.6rem, 1.6rem);
   }
 }
 
@@ -432,7 +441,7 @@ body.page-index .site-header .index-lang-bar {
   body.page-index .site-header .index-lang-bar {
     display: none !important;
   }
-  /* 布局：flex，hamburger 左，名字右 */
+  /* 布局：flex，hamburger 左，名字右，保持原位置 */
   body.page-index .site-header {
     display: flex !important;
     flex-direction: row;
@@ -445,6 +454,7 @@ body.page-index .site-header .index-lang-bar {
   }
   body.page-index .site-header .hero-name {
     flex-shrink: 0;
+    justify-content: flex-end;
   }
 }
 
@@ -489,6 +499,8 @@ body.page-index .site-header .index-lang-bar {
   font-family: 'Diatype Light', 'IBM Plex Mono', monospace;
   font-size: 1.5rem;
   font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
   color: #ffffff;
   text-decoration: none;
   transition: opacity 0.2s;
