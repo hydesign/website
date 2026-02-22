@@ -1,0 +1,10 @@
+/**
+ * Diatype Light — 正体、细字重，用于 index 页 header
+ */
+@font-face {
+  font-family: 'Diatype Light';
+  src: url('diatype-font-family/ABCDiatype-Light-Trial.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
