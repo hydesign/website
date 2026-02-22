@@ -5,13 +5,21 @@
   var SECTION_IDS = ['project', 'about', 'publications', 'contact'];
   var SECTION_PAGES = { project: 'projects', about: 'about', publications: 'publications', contact: 'contact' };
 
+  function getAboutLang() {
+    var cb = document.querySelector('.cv-lang-btn.active');
+    if (cb) return cb.dataset.lang;
+    var ib = document.querySelector('.index-lang-btn.active, .menu-overlay-lang-btn.active');
+    if (ib) return ib.dataset.lang;
+    return document.documentElement.lang === 'zh-CN' || document.documentElement.lang === 'zh' ? 'zh' : 'en';
+  }
+
   function renderAbout() {
     var aboutData = window.CV_ABOUT;
     var educationData = window.CV_EDUCATION;
     var exhibitionData = window.CV_EXHIBITION;
     var honorsData = window.CV_HONORS;
     if (!aboutData) return;
-    var lang = document.querySelector('.cv-lang-btn.active') ? document.querySelector('.cv-lang-btn.active').dataset.lang : 'en';
+    var lang = getAboutLang();
     if (!educationData || !exhibitionData || !honorsData) return;
     var about = aboutData[lang];
     var edu = educationData[lang];
@@ -35,7 +43,7 @@
   }
 
   function updateCvLabels() {
-    var lang = document.querySelector('.cv-lang-btn.active') ? document.querySelector('.cv-lang-btn.active').dataset.lang : 'en';
+    var lang = getAboutLang();
     document.querySelectorAll('.cv-label-en').forEach(function (el) { el.style.display = lang === 'en' ? 'inline' : 'none'; });
     document.querySelectorAll('.cv-label-zh').forEach(function (el) { el.style.display = lang === 'zh' ? 'inline' : 'none'; });
   }
@@ -43,12 +51,27 @@
   document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.cv-lang-btn').forEach(function (btn) {
       btn.addEventListener('click', function () {
+        var newLang = this.dataset.lang;
         document.querySelectorAll('.cv-lang-btn').forEach(function (b) { b.classList.remove('active'); });
         this.classList.add('active');
+        document.querySelectorAll('.index-lang-btn, .menu-overlay-lang-btn').forEach(function (b) {
+          b.classList.toggle('active', b.dataset.lang === newLang);
+        });
         renderAbout();
         updateCvLabels();
+        document.dispatchEvent(new CustomEvent('siteLangChange', { detail: { lang: newLang } }));
       });
     });
+  });
+
+  document.addEventListener('siteLangChange', function (e) {
+    if (e.detail && e.detail.lang) {
+      document.querySelectorAll('.cv-lang-btn').forEach(function (b) {
+        b.classList.toggle('active', b.dataset.lang === e.detail.lang);
+      });
+      renderAbout();
+      updateCvLabels();
+    }
   });
 
   function scrollToHash() {

@@ -62,6 +62,14 @@
       e.preventDefault();
       lang = btn.dataset.lang;
       render();
+      document.dispatchEvent(new CustomEvent('siteLangChange', { detail: { lang: lang } }));
+    }
+  });
+
+  document.addEventListener('siteLangChange', function(e) {
+    if (e.detail && e.detail.lang && e.detail.lang !== lang) {
+      lang = e.detail.lang;
+      render();
     }
   });
 

@@ -3,7 +3,7 @@
  */
 window.INDEX_DATA = {
   en: {
-    intro: 'I am currently engaged in a research practice I call <em>Agent-Based Art</em> incorporating embodied robots and artificial life systems—unfolding through the infinite generative pulse of machine learning. Neural networks operate in ceaseless interaction, their transmissions resonating with latent vitality, mediated and manifested as behavioral aesthetics.This series asks: How can we create automated systems that allow humans to perceive a sense of living belief? How might agents evolve behaviors within computational ecosystems or the physical world? Can they actively learn, nurture beliefs, or cultivate aesthetic sensibilities? And how does such knowledge traverse media art, contemporary machine culture, human–computer interfaces, animation, and robotic systems?',
+    intro: 'I am currently engaged in a research-based practice that I call <em>Agent-Based Art</em>. I explore how the continuous inferential capacity of machine learning, together with the kinetic capabilities of robot, gives rise to a latent sense of liveliness. My practice seeks to situate this liveliness within the behavioral aesthetics of agents, allowing them to evolve through interaction and duration, and to form continuously unfolding performative constellations with environments, materials, and technological networks.',
     introLink: 'read more about other series →',
     projects: [
       { slug: 'drift-of-the-uncharted', quote: '"As a legged robot moves, a sea-level-rise change realm within a space gradually unfolds..."', title: 'Drift of the Uncharted', year: '(2024-2025)', tag: 'Agent-Based Art', media: 'Quadruped Robot, Moving Projection, Climate Prediction' },
@@ -18,7 +18,7 @@ window.INDEX_DATA = {
     ]
   },
   zh: {
-    intro: '我目前正进行一种我称之为<em>基于代理的艺术 Agent-Based Art</em>的研究实践，将具身机器人与人工生命系统纳入其中——这一实践在机器学习无限生成的脉动中持续展开。神经网络在不断的交互中运行，其信息传递回荡着潜在的生命力，并通过行为的审美形态得以中介与呈现。这一系列回应如下问题：我们如何创造自动化系统，使人类观众能够感知到对象是活着的？代理是否能够在计算生态系统或物理世界中演化出行为？它们能否主动学习、孕育信念、培养审美感知？而这种知识又如何在媒体艺术、当代机器文化、人机交互、动画与机器人系统之间流动？',
+    intro: '我目前正进行一种我称之为基于代理的艺术Agent-Based Art的研究实践，机器学习可以不断生成的能力，和机器的运动能力，回荡着潜在的生命力(liveliness)，我致力于将这种生命力情境化于 agent 的行为美学，agent在互动和时间中演化行为，以及与其他环境、物质、技术网络构成不断生成的表演剧场。',
     introLink: '了解更多系列 →',
     projects: [
       { slug: 'drift-of-the-uncharted', quote: '"当机器狗在空间中移动，不久的将来,海平面上升所改变的城市景观逐渐在空间中呈现..."', title: '未知的漂行', year: '(2024-2025)', tag: 'Agent-Based Art', media: '四足机器人、移动投影、气候预测' },
