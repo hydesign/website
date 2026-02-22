@@ -78,6 +78,17 @@ body {
   }
 }
 
+/* About 页：第一段前留白减少到 1/3 */
+body.page-arizona-sans .page-wrapper {
+  padding-top: 4.5rem;
+}
+
+@media (max-width: 768px) {
+  body.page-arizona-sans .page-wrapper {
+    padding-top: 3.5rem;
+  }
+}
+
 /* Index 页：语言切换在名字下方，永远置顶，仅 index 页显示 */
 .index-lang-bar {
   display: none;
@@ -165,6 +176,13 @@ body.page-index .site-header {
   max-width: 100vw;
   padding-left: clamp(0.5rem, 2vw, 1.5rem);
   padding-right: clamp(0.5rem, 2vw, 1.5rem);
+}
+
+@media (max-width: 768px) {
+  body.page-index .site-header {
+    padding-left: clamp(0.35rem, 1.5vw, 1rem);
+    padding-right: clamp(0.35rem, 1.5vw, 1rem);
+  }
 }
 
 body.page-index .site-header .nav,
@@ -455,6 +473,12 @@ body.page-index .site-header .index-lang-bar {
   body.page-index .site-header .hero-name {
     flex-shrink: 0;
     justify-content: flex-end;
+    align-items: center;
+    overflow: visible;
+  }
+  body.page-index .site-header .hero-title,
+  body.page-index .site-header .hero-subtitle {
+    overflow: visible;
   }
 }
 
@@ -537,7 +561,11 @@ body:not(.page-index) .menu-overlay-lang {
   background: none;
   color: #ffffff;
   cursor: pointer;
-  transition: font-weight 0.2s;
+  transition: font-weight 0.2s, opacity 0.2s;
+}
+
+.menu-overlay-lang-btn:hover {
+  opacity: 0.6;
 }
 
 .menu-overlay-lang-btn.active {

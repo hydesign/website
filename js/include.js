@@ -100,7 +100,7 @@
         }
       })
       .catch(function () {
-        headerEl.outerHTML = '<header class="site-header"><nav class="nav"><a href="index.html" class="nav-link">PROJECTS</a><a href="about.html" class="nav-link">ABOUT</a><a href="publications.html" class="nav-link">PUBLICATIONS</a><a href="contact.html" class="nav-link">CONTACT</a></nav><div class="hero"><h1 class="hero-title">ARY-YUE HUANG</h1><h2 class="hero-subtitle">黄 钺</h2></div></header>';
+        headerEl.outerHTML = '<header class="site-header"><nav class="nav"><a href="index.html" class="nav-link">PROJECTS</a><a href="about.html" class="nav-link">ABOUT</a><a href="publications.html" class="nav-link">PUBLICATIONS</a><a href="contact.html" class="nav-link">CONTACT</a></nav><div class="hero"><h1 class="hero-title">ARY-YUE HUANG</h1><h2 class="hero-subtitle">黄钺</h2></div></header>';
       });
   }
 
