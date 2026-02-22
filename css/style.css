@@ -149,6 +149,45 @@ body.page-index .index-lang-bar {
   mix-blend-mode: difference;
 }
 
+/* Index 页：header 一字排开 */
+body.page-index .site-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.25rem;
+  grid-template-columns: unset;
+}
+
+body.page-index .site-header .nav {
+  flex-direction: row;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+body.page-index .site-header .hero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  justify-self: start;
+  text-align: left;
+}
+
+body.page-index .site-header .hero-title {
+  margin-right: 0.15em;
+}
+
+body.page-index .site-header .hero-subtitle {
+  margin-top: 0;
+}
+
+body.page-index .site-header .index-lang-bar {
+  margin-top: 0;
+  margin-left: 0.25rem;
+}
+
 .site-header > * {
   pointer-events: auto;
 }
@@ -287,6 +326,33 @@ body.page-index .index-lang-bar {
   .site-header .index-lang-btn,
   .site-header .index-lang-sep {
     font-size: 1rem;
+  }
+}
+
+/* Index 页 Mobile：一字排开时缩小间距和字号，避免溢出 */
+@media (max-width: 768px) {
+  body.page-index .site-header {
+    padding: 0.6rem clamp(0.5rem, 3vw, 1rem) 0.5rem;
+    gap: 0.6rem;
+  }
+  body.page-index .site-header .nav {
+    gap: 0.6rem;
+  }
+  body.page-index .site-header .nav-link {
+    font-size: 0.6rem;
+  }
+  body.page-index .site-header .hero-title {
+    font-size: 0.6rem;
+  }
+  body.page-index .site-header .hero-subtitle {
+    font-size: 0.65rem;
+  }
+  body.page-index .site-header .index-lang-btn,
+  body.page-index .site-header .index-lang-sep {
+    font-size: 0.65rem;
+  }
+  body.page-index .site-header .hero {
+    gap: 0.25rem;
   }
 }
 
