@@ -77,6 +77,11 @@
     overlay.querySelectorAll('.menu-overlay-link').forEach(function (a) {
       a.addEventListener('click', closeMenu);
     });
+
+    var closeBtn = overlay.querySelector('.menu-close');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeMenu);
+    }
   }
 
   // 加载 header

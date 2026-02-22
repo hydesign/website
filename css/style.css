@@ -438,7 +438,7 @@ body.page-index .site-header .index-lang-bar {
   }
 }
 
-/* 全屏遮罩 */
+/* 全屏遮罩：取消 mix-blend 叠加效果，左下角可点击的 X */
 .menu-overlay {
   position: fixed;
   top: 0;
@@ -449,6 +449,8 @@ body.page-index .site-header .index-lang-bar {
   height: 100vh;
   z-index: 9998;
   background: rgba(255, 255, 255, 0.8);
+  mix-blend-mode: normal;
+  isolation: isolate;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -464,6 +466,41 @@ body.page-index .site-header .index-lang-bar {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+}
+
+/* 遮罩内的 X 关闭按钮，左上角，可点击 */
+.menu-close {
+  position: absolute;
+  top: clamp(0.5rem, 2vw, 1.5rem);
+  left: clamp(0.5rem, 2vw, 1.5rem);
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.menu-close-line {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: currentColor;
+  position: absolute;
+}
+
+.menu-close-line:nth-child(1) {
+  transform: rotate(45deg);
+}
+
+.menu-close-line:nth-child(2) {
+  transform: rotate(-45deg);
 }
 
 .menu-overlay-nav {
