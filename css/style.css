@@ -175,38 +175,38 @@ body.scroll-snap-page .scroll-section .page-wrapper {
 }
 
 /* About / Publications / Contact 区使用 Arizona Sans 字体 */
-body.scroll-snap-page #section-about .page-wrapper,
-body.scroll-snap-page #section-publications .page-wrapper,
-body.scroll-snap-page #section-contact .page-wrapper {
+body.scroll-snap-page #about .page-wrapper,
+body.scroll-snap-page #publications .page-wrapper,
+body.scroll-snap-page #contact .page-wrapper {
   padding-top: 10rem;
 }
 
-body.scroll-snap-page #section-about .about-section {
+body.scroll-snap-page #about .about-section {
   margin-top: 0;
   gap: 0.4rem;
 }
-body.scroll-snap-page #section-about .cv-lang-toggle {
+body.scroll-snap-page #about .cv-lang-toggle {
   margin: 0 0 0.15rem 0;
 }
-body.scroll-snap-page #section-about .about-section .section-title {
+body.scroll-snap-page #about .about-section .section-title {
   margin: 0 0 0.25rem 0;
 }
-body.scroll-snap-page #section-about .about-section .section-title:first-of-type {
+body.scroll-snap-page #about .about-section .section-title:first-of-type {
   margin-top: 0;
 }
-body.scroll-snap-page #section-about .about-section,
-body.scroll-snap-page #section-about .about-intro,
-body.scroll-snap-page #section-about .about-bio,
-body.scroll-snap-page #section-about .section-title,
-body.scroll-snap-page #section-about .cv-category,
-body.scroll-snap-page #section-about .cv-list,
-body.scroll-snap-page #section-publications .publication,
-body.scroll-snap-page #section-publications .pub-title,
-body.scroll-snap-page #section-publications .pub-venue,
-body.scroll-snap-page #section-publications .pub-authors,
-body.scroll-snap-page #section-publications .pub-year,
-body.scroll-snap-page #section-contact .contact-label,
-body.scroll-snap-page #section-contact .contact-value {
+body.scroll-snap-page #about .about-section,
+body.scroll-snap-page #about .about-intro,
+body.scroll-snap-page #about .about-bio,
+body.scroll-snap-page #about .section-title,
+body.scroll-snap-page #about .cv-category,
+body.scroll-snap-page #about .cv-list,
+body.scroll-snap-page #publications .publication,
+body.scroll-snap-page #publications .pub-title,
+body.scroll-snap-page #publications .pub-venue,
+body.scroll-snap-page #publications .pub-authors,
+body.scroll-snap-page #publications .pub-year,
+body.scroll-snap-page #contact .contact-label,
+body.scroll-snap-page #contact .contact-value {
   font-family: 'ABC Arizona Sans', Georgia, sans-serif;
   font-weight: 300;
 }

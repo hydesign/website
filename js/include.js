@@ -11,7 +11,13 @@
   function getCurrentPage() {
     const path = window.location.pathname;
     const file = path.split('/').pop() || 'index.html';
-    if (file === 'index.html' || file === '' || path.endsWith('/')) return 'projects';
+    const hash = (window.location.hash || '').slice(1);
+    if (file === 'index.html' || file === '' || path.endsWith('/')) {
+      if (hash === 'about') return 'about';
+      if (hash === 'publications') return 'publications';
+      if (hash === 'contact') return 'contact';
+      return 'projects';
+    }
     if (file === 'about.html') return 'about';
     if (file === 'publications.html') return 'publications';
     if (file === 'contact.html') return 'contact';
