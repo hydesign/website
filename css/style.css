@@ -140,6 +140,77 @@ body.page-index .page-wrapper {
   }
 }
 
+/* 单页滚动吸附：上下滑动切换 Projects / About / Publications / Contact */
+html.scroll-snap-page,
+html.scroll-snap-page body {
+  height: 100%;
+}
+
+html.scroll-snap-page {
+  overflow: hidden;
+}
+
+body.scroll-snap-page {
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  height: 100%;
+  min-height: auto;
+  display: block;
+  flex-direction: unset;
+}
+
+body.scroll-snap-page .scroll-section {
+  min-height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+body.scroll-snap-page .scroll-section .page-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* About / Publications / Contact 区使用 Arizona Sans 字体 */
+body.scroll-snap-page #section-about .page-wrapper,
+body.scroll-snap-page #section-publications .page-wrapper,
+body.scroll-snap-page #section-contact .page-wrapper {
+  padding-top: 10rem;
+}
+
+body.scroll-snap-page #section-about .about-section {
+  margin-top: 0;
+  gap: 0.4rem;
+}
+body.scroll-snap-page #section-about .cv-lang-toggle {
+  margin: 0 0 0.15rem 0;
+}
+body.scroll-snap-page #section-about .about-section .section-title {
+  margin: 0 0 0.25rem 0;
+}
+body.scroll-snap-page #section-about .about-section .section-title:first-of-type {
+  margin-top: 0;
+}
+body.scroll-snap-page #section-about .about-section,
+body.scroll-snap-page #section-about .about-intro,
+body.scroll-snap-page #section-about .about-bio,
+body.scroll-snap-page #section-about .section-title,
+body.scroll-snap-page #section-about .cv-category,
+body.scroll-snap-page #section-about .cv-list,
+body.scroll-snap-page #section-publications .publication,
+body.scroll-snap-page #section-publications .pub-title,
+body.scroll-snap-page #section-publications .pub-venue,
+body.scroll-snap-page #section-publications .pub-authors,
+body.scroll-snap-page #section-publications .pub-year,
+body.scroll-snap-page #section-contact .contact-label,
+body.scroll-snap-page #section-contact .contact-value {
+  font-family: 'ABC Arizona Sans', Georgia, sans-serif;
+  font-weight: 300;
+}
+
 /* About 页：第一段前留白稍多 */
 body.page-arizona-sans .page-wrapper {
   padding-top: 10rem;
