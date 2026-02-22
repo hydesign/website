@@ -78,6 +78,17 @@ body {
   }
 }
 
+/* Index 页：首屏留白缩小 */
+body.page-index .page-wrapper {
+  padding-top: 4.5rem;
+}
+
+@media (max-width: 768px) {
+  body.page-index .page-wrapper {
+    padding-top: 3.5rem;
+  }
+}
+
 /* About 页：第一段前留白缩小 */
 body.page-arizona-sans .page-wrapper {
   padding-top: 4rem;
