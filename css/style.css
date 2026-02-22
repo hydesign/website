@@ -78,15 +78,27 @@ body {
   }
 }
 
-/* About 页：第一段前留白减少到 1/3 */
+/* About 页：第一段前留白大幅减少 */
 body.page-arizona-sans .page-wrapper {
-  padding-top: 4.5rem;
+  padding-top: 2.5rem;
 }
 
 @media (max-width: 768px) {
   body.page-arizona-sans .page-wrapper {
-    padding-top: 3.5rem;
+    padding-top: 2rem;
   }
+}
+
+body.page-arizona-sans .about-section {
+  margin-top: 0.25rem;
+}
+
+body.page-arizona-sans .cv-lang-toggle {
+  margin: 0.25rem 0 0.5rem;
+}
+
+body.page-arizona-sans .about-section .section-title:first-of-type {
+  margin-top: 0.5rem;
 }
 
 /* Index 页：语言切换在名字下方，永远置顶，仅 index 页显示 */
@@ -472,9 +484,10 @@ body.page-index .site-header .index-lang-bar {
   }
   body.page-index .site-header .hero-name {
     flex-shrink: 0;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
     overflow: visible;
+    min-width: min-content;
   }
   body.page-index .site-header .hero-title,
   body.page-index .site-header .hero-subtitle {
@@ -2803,8 +2816,8 @@ body.project-page-phalaenopsis .page-wrapper,
   transition: opacity 2s ease-out, transform 2s ease-out;
 }
 
-/* 首页 index：gallery 全页面宽 16:9，居中 */
-body.page-index {
+/* 首页 index：gallery 全页面宽 16:9，居中；overflow 放 main 避免裁切 header 名字 */
+body.page-index .page-wrapper {
   overflow-x: hidden;
 }
 body.page-index .project-gallery {
