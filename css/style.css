@@ -194,8 +194,8 @@ body.page-index .index-lang-bar {
   mix-blend-mode: difference;
 }
 
-/* Index 页：7 等分网格，名字占最后 2 列合并，填满全页，全部居中，IBM Plex Mono Light */
-body.page-index .site-header {
+/* 全页面桌面：7 等分网格，填满全页，全部居中 */
+.site-header {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 0;
@@ -208,25 +208,29 @@ body.page-index .site-header {
 }
 
 @media (max-width: 768px) {
-  body.page-index .site-header {
+  .site-header {
     padding-left: clamp(0.35rem, 1.5vw, 1rem);
     padding-right: clamp(0.5rem, 2vw, 1.25rem);
   }
 }
 
-body.page-index .site-header .nav,
-body.page-index .site-header .hero {
+.site-header .nav,
+.site-header .hero {
   display: contents;
 }
 
-body.page-index .site-header .nav-link:nth-child(1) { grid-column: 1; justify-self: center; }
-body.page-index .site-header .nav-link:nth-child(2) { grid-column: 2; justify-self: center; }
-body.page-index .site-header .nav-link:nth-child(3) { grid-column: 3; justify-self: center; }
-body.page-index .site-header .nav-link:nth-child(4) { grid-column: 4; justify-self: center; }
-body.page-index .site-header .index-lang-bar { grid-column: 5; justify-self: center; }
-body.page-index .site-header .hero-name { grid-column: 6 / 8; justify-self: center; }
+.site-header .nav-link:nth-child(1) { grid-column: 1; justify-self: center; }
+.site-header .nav-link:nth-child(2) { grid-column: 2; justify-self: center; }
+.site-header .nav-link:nth-child(3) { grid-column: 3; justify-self: center; }
+.site-header .nav-link:nth-child(4) { grid-column: 4; justify-self: center; }
+.site-header .index-lang-bar { grid-column: 5; justify-self: center; }
+.site-header .hero-name { grid-column: 6 / 8; justify-self: center; }
 
-body.page-index .site-header .hero-name {
+body:not(.page-index) .site-header .hero-name {
+  grid-column: 5 / 8;
+}
+
+.site-header .hero-name {
   display: flex;
   align-items: baseline;
   gap: 0.35em;
@@ -234,26 +238,26 @@ body.page-index .site-header .hero-name {
   width: 100%;
 }
 
-body.page-index .site-header .hero-title,
-body.page-index .site-header .hero-subtitle,
-body.page-index .site-header .index-lang-btn,
-body.page-index .site-header .index-lang-sep,
-body.page-index .site-header .nav-link {
+.site-header .hero-title,
+.site-header .hero-subtitle,
+.site-header .index-lang-btn,
+.site-header .index-lang-sep,
+.site-header .nav-link {
   font-family: 'Diatype Light', 'IBM Plex Mono', 'JetBrains Mono', monospace;
   font-size: clamp(0.5rem, 1vw + 0.6rem, 1.5rem);
   font-weight: 300;
   font-style: normal;
 }
 
-body.page-index .site-header .hero-title {
+.site-header .hero-title {
   margin-right: 0;
 }
 
-body.page-index .site-header .hero-subtitle {
+.site-header .hero-subtitle {
   margin-top: 0;
 }
 
-body.page-index .site-header .index-lang-bar {
+.site-header .index-lang-bar {
   margin-top: 0;
   justify-content: center;
 }
