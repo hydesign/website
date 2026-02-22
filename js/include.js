@@ -37,6 +37,48 @@
     });
   }
 
+  function initMenuOverlay(header, basePath) {
+    var toggle = header.querySelector('.menu-toggle');
+    var overlay = header.querySelector('.menu-overlay');
+    if (!toggle || !overlay) return;
+
+    function setActiveInOverlay() {
+      var page = getCurrentPage();
+      header.querySelectorAll('.menu-overlay-link[data-page]').forEach(function (a) {
+        a.classList.toggle('active', a.dataset.page === page);
+      });
+    }
+
+    function closeMenu() {
+      overlay.classList.remove('active');
+      toggle.classList.remove('active');
+      toggle.setAttribute('aria-expanded', 'false');
+      overlay.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    function openMenu() {
+      overlay.classList.add('active');
+      toggle.classList.add('active');
+      toggle.setAttribute('aria-expanded', 'true');
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      setActiveInOverlay();
+    }
+
+    toggle.addEventListener('click', function () {
+      if (overlay.classList.contains('active')) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    overlay.querySelectorAll('.menu-overlay-link').forEach(function (a) {
+      a.addEventListener('click', closeMenu);
+    });
+  }
+
   // 加载 header
   const headerEl = document.getElementById('header-placeholder');
   if (headerEl) {
@@ -48,6 +90,7 @@
         if (header) {
           setActiveLink(header);
           fixRelativeLinks(header, base);
+          initMenuOverlay(header, base);
           document.dispatchEvent(new CustomEvent('headerLoaded'));
         }
       })

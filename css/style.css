@@ -214,7 +214,8 @@ body.page-index .site-header .index-lang-bar {
 .hero-title,
 .hero-subtitle,
 .index-lang-bar .index-lang-btn,
-.index-lang-bar .index-lang-sep {
+.index-lang-bar .index-lang-sep,
+.menu-toggle {
   color: #ffffff; /* 配合 difference 实现自适应对比 */
   font-style: normal !important;
   font-synthesis: none; /* 禁止浏览器合成斜体 */
@@ -366,6 +367,164 @@ body.page-index .site-header .index-lang-bar {
     font-weight: 300;
     font-style: normal;
   }
+}
+
+/* ========== Index 页 Mobile：三杠菜单（左侧） + 名字（右侧） + 全屏遮罩 ========== */
+/* 三杠按钮：仅 index 页 mobile 显示，位于左侧 */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #ffffff;
+  pointer-events: auto;
+  transition: opacity 0.2s;
+}
+
+.menu-toggle:hover {
+  opacity: 0.85;
+}
+
+.menu-toggle-line {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: currentColor;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.menu-toggle.active .menu-toggle-line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.menu-toggle.active .menu-toggle-line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active .menu-toggle-line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  body.page-index .menu-toggle {
+    display: flex;
+    order: -1;
+  }
+  /* Index mobile：隐藏 nav 和 lang bar，只显示 hamburger + 名字 */
+  body.page-index .site-header .nav,
+  body.page-index .site-header .index-lang-bar {
+    display: none !important;
+  }
+  /* 布局：flex，hamburger 左，名字右 */
+  body.page-index .site-header {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: unset;
+  }
+  body.page-index .site-header .menu-toggle {
+    flex-shrink: 0;
+  }
+  body.page-index .site-header .hero-name {
+    flex-shrink: 0;
+  }
+}
+
+/* 全屏遮罩 */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9998;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.menu-overlay-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.menu-overlay-link {
+  font-family: 'Diatype Light', 'IBM Plex Mono', monospace;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #000000;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.menu-overlay-link:hover {
+  opacity: 0.6;
+}
+
+.menu-overlay-link.active {
+  font-weight: 600;
+}
+
+.menu-overlay-lang {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+body.page-index .menu-overlay-lang {
+  display: flex;
+}
+
+body:not(.page-index) .menu-overlay-lang {
+  display: none;
+}
+
+.menu-overlay-lang-btn {
+  font-family: 'Diatype Light', 'IBM Plex Mono', monospace;
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 0;
+  border: none;
+  background: none;
+  color: #000000;
+  cursor: pointer;
+  transition: font-weight 0.2s;
+}
+
+.menu-overlay-lang-btn.active {
+  font-weight: 600;
+}
+
+.menu-overlay-lang-sep {
+  font-family: 'Diatype Light', 'IBM Plex Mono', monospace;
+  font-size: 1.5rem;
+  color: #000000;
+  opacity: 0.6;
 }
 
 /* Main content - 90% 页面宽度，响应式 */

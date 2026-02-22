@@ -51,13 +51,13 @@
       if (window.initProjectGalleries) window.initProjectGalleries();
     }
 
-    document.querySelectorAll('.index-lang-btn').forEach(function(btn) {
+    document.querySelectorAll('.index-lang-btn, .menu-overlay-lang-btn').forEach(function(btn) {
       btn.classList.toggle('active', btn.dataset.lang === lang);
     });
   }
 
   document.addEventListener('click', function(e) {
-    var btn = e.target.closest('.index-lang-btn');
+    var btn = e.target.closest('.index-lang-btn, .menu-overlay-lang-btn');
     if (btn) {
       e.preventDefault();
       lang = btn.dataset.lang;
