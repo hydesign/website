@@ -91,12 +91,12 @@ body.page-index .page-wrapper {
 
 /* About 页：第一段前留白稍多 */
 body.page-arizona-sans .page-wrapper {
-  padding-top: 5rem;
+  padding-top: 10rem;
 }
 
 @media (max-width: 768px) {
   body.page-arizona-sans .page-wrapper {
-    padding-top: 4rem;
+    padding-top: 10rem;
   }
 }
 
