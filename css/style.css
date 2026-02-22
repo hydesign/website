@@ -188,18 +188,17 @@ body.page-index .site-header .index-lang-btn,
 body.page-index .site-header .index-lang-sep,
 body.page-index .site-header .nav-link {
   font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace;
-  font-size: 1.5rem;
+  font-size: clamp(0.5rem, 1vw + 0.6rem, 1.5rem);
   font-weight: 300;
+  font-style: normal;
 }
 
 body.page-index .site-header .hero-title {
   margin-right: 0;
-  font-size: 1.5rem;
 }
 
 body.page-index .site-header .hero-subtitle {
   margin-top: 0;
-  font-size: 1.5rem;
 }
 
 body.page-index .site-header .index-lang-bar {
@@ -352,7 +351,7 @@ body.page-index .site-header .index-lang-bar {
   }
 }
 
-/* Index 页 Mobile：7 等分，居中，IBM Plex Mono Light */
+/* Index 页 Mobile：7 等分，居中，IBM Plex Mono Light，渐进缩小 */
 @media (max-width: 768px) {
   body.page-index .site-header {
     padding: 0.5rem clamp(0.5rem, 2vw, 1rem);
@@ -363,8 +362,9 @@ body.page-index .site-header .index-lang-bar {
   body.page-index .site-header .index-lang-btn,
   body.page-index .site-header .index-lang-sep {
     font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace;
-    font-size: 0.6rem;
+    font-size: clamp(0.4rem, 1.2vw + 0.4rem, 0.8rem);
     font-weight: 300;
+    font-style: normal;
   }
 }
 
