@@ -11,13 +11,7 @@
   function getCurrentPage() {
     const path = window.location.pathname;
     const file = path.split('/').pop() || 'index.html';
-    const hash = (window.location.hash || '').slice(1);
-    if (file === 'index.html' || file === '' || path.endsWith('/')) {
-      if (hash === 'section-about') return 'about';
-      if (hash === 'section-publications') return 'publications';
-      if (hash === 'section-contact') return 'contact';
-      return 'projects';
-    }
+    if (file === 'index.html' || file === '' || path.endsWith('/')) return 'projects';
     if (file === 'about.html') return 'about';
     if (file === 'publications.html') return 'publications';
     if (file === 'contact.html') return 'contact';
