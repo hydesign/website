@@ -39,12 +39,12 @@
 
   function initMenuOverlay(header, basePath) {
     var toggle = header.querySelector('.menu-toggle');
-    var overlay = header.querySelector('.menu-overlay');
+    var overlay = document.querySelector('.menu-overlay');
     if (!toggle || !overlay) return;
 
     function setActiveInOverlay() {
       var page = getCurrentPage();
-      header.querySelectorAll('.menu-overlay-link[data-page]').forEach(function (a) {
+      document.querySelectorAll('.menu-overlay-link[data-page]').forEach(function (a) {
         a.classList.toggle('active', a.dataset.page === page);
       });
     }
@@ -77,11 +77,6 @@
     overlay.querySelectorAll('.menu-overlay-link').forEach(function (a) {
       a.addEventListener('click', closeMenu);
     });
-
-    var closeBtn = overlay.querySelector('.menu-close');
-    if (closeBtn) {
-      closeBtn.addEventListener('click', closeMenu);
-    }
   }
 
   // 加载 header
@@ -91,10 +86,11 @@
       .then(function (r) { return r.text(); })
       .then(function (html) {
         headerEl.outerHTML = html;
+        const root = document.querySelector('.header-root');
         const header = document.querySelector('.site-header');
         if (header) {
           setActiveLink(header);
-          fixRelativeLinks(header, base);
+          fixRelativeLinks(root || header, base);
           initMenuOverlay(header, base);
           document.dispatchEvent(new CustomEvent('headerLoaded'));
         }

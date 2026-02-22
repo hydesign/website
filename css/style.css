@@ -130,6 +130,11 @@ body.page-index .index-lang-bar {
   }
 }
 
+/* header-root 仅作 wrapper，overlay 与 header 平级以避开 mix-blend-mode */
+.header-root {
+  position: relative;
+}
+
 /* 顶部固定栏 - 网格：左列 nav，右列 名字 */
 .site-header {
   position: fixed;
@@ -417,10 +422,10 @@ body.page-index .site-header .index-lang-bar {
     display: flex;
     order: -1;
   }
-  /* 遮罩打开时隐藏 hamburger，避免两个 X 重合 */
-  body.page-index .site-header:has(.menu-overlay.active) .menu-toggle {
-    visibility: hidden;
-    pointer-events: none;
+  /* 遮罩打开时 header 置于 overlay 之上，取消 blend 使三杠/X 正常显示 */
+  body.page-index .header-root:has(.menu-overlay.active) .site-header {
+    z-index: 10000;
+    mix-blend-mode: normal;
   }
   /* Index mobile：隐藏 nav 和 lang bar，只显示 hamburger + 名字 */
   body.page-index .site-header .nav,
@@ -471,41 +476,6 @@ body.page-index .site-header .index-lang-bar {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-}
-
-/* 遮罩内的 X 关闭按钮，左上角，可点击 */
-.menu-close {
-  position: absolute;
-  top: clamp(0.5rem, 2vw, 1.5rem);
-  left: clamp(0.5rem, 2vw, 1.5rem);
-  width: 32px;
-  height: 32px;
-  padding: 0;
-  border: none;
-  background: none;
-  cursor: pointer;
-  color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
-}
-
-.menu-close-line {
-  display: block;
-  width: 20px;
-  height: 2px;
-  background: currentColor;
-  position: absolute;
-}
-
-.menu-close-line:nth-child(1) {
-  transform: rotate(45deg);
-}
-
-.menu-close-line:nth-child(2) {
-  transform: rotate(-45deg);
 }
 
 .menu-overlay-nav {
