@@ -78,28 +78,28 @@ body {
   }
 }
 
-/* About 页：第一段前留白大幅减少 */
+/* About 页：第一段前留白最小化 */
 body.page-arizona-sans .page-wrapper {
-  padding-top: 1.5rem;
+  padding-top: 5.5rem;
 }
 
 @media (max-width: 768px) {
   body.page-arizona-sans .page-wrapper {
-    padding-top: 1.25rem;
+    padding-top: 4.5rem;
   }
 }
 
 body.page-arizona-sans .about-section {
   margin-top: 0;
-  gap: 0.75rem;
+  gap: 0.4rem;
 }
 
 body.page-arizona-sans .cv-lang-toggle {
-  margin: 0 0 0.25rem 0;
+  margin: 0 0 0.15rem 0;
 }
 
 body.page-arizona-sans .about-section .section-title {
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.25rem 0;
 }
 
 body.page-arizona-sans .about-section .section-title:first-of-type {
@@ -158,9 +158,10 @@ body.page-index .index-lang-bar {
   }
 }
 
-/* header-root 仅作 wrapper，overlay 与 header 平级以避开 mix-blend-mode */
+/* header-root 仅作 wrapper，overflow visible 防止名字被裁切 */
 .header-root {
   position: relative;
+  overflow: visible;
 }
 
 /* 顶部固定栏 - 网格：左列 nav，右列 名字 */
@@ -489,13 +490,10 @@ body.page-index .site-header .index-lang-bar {
   }
   body.page-index .site-header .hero-name {
     flex-shrink: 0;
-    justify-content: flex-end;
-    align-items: center;
-    overflow: visible;
-  }
-  body.page-index .site-header .hero-title,
-  body.page-index .site-header .hero-subtitle {
-    overflow: visible;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.1em;
+    justify-content: center;
   }
 }
 
