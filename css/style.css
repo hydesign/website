@@ -448,7 +448,7 @@ body.page-index .site-header .index-lang-bar {
   width: 100vw;
   height: 100vh;
   z-index: 9998;
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.8);
   display: flex;
   flex-direction: column;
   align-items: center;
