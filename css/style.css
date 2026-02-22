@@ -3013,6 +3013,79 @@ body.page-index .project-gallery {
   color: var(--text-on-light);
 }
 
+/* Project 子页面：底部其他项目列表 */
+.project-nav-wrapper {
+  width: var(--content-width);
+  max-width: var(--max-width-wide);
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.project-nav {
+  font-family: var(--font-mono);
+}
+
+.project-nav-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.project-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project-nav-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35em;
+  font-size: 1.1rem;
+  color: var(--text-on-light);
+  text-decoration: none;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.project-nav-item:hover {
+  color: var(--text-muted);
+}
+
+.project-nav-item-current {
+  color: var(--text-muted);
+  cursor: default;
+  pointer-events: none;
+}
+
+.project-nav-item-year {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.project-nav-arrow {
+  margin-left: auto;
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+.project-nav-back {
+  display: inline-block;
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.project-nav-back:hover {
+  color: var(--text-on-light);
+}
+
 /* Footer - 透明底面 */
 .footer {
   padding: 2rem;
