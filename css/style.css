@@ -273,6 +273,23 @@ body.page-index .index-lang-bar {
   opacity: 0.95;
 }
 
+/* Mobile：header 字体缩小，必须在 base 样式之后才能生效 */
+@media (max-width: 768px) {
+  .site-header .nav-link {
+    font-size: 0.75rem;
+  }
+  .site-header .hero-title {
+    font-size: 0.75rem;
+  }
+  .site-header .hero-subtitle {
+    font-size: 0.8rem;
+  }
+  .site-header .index-lang-btn,
+  .site-header .index-lang-sep {
+    font-size: 1rem;
+  }
+}
+
 /* Main content - 90% 页面宽度，响应式 */
 .content {
   width: var(--content-width);
