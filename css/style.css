@@ -417,6 +417,11 @@ body.page-index .site-header .index-lang-bar {
     display: flex;
     order: -1;
   }
+  /* 遮罩打开时隐藏 hamburger，避免两个 X 重合 */
+  body.page-index .site-header:has(.menu-overlay.active) .menu-toggle {
+    visibility: hidden;
+    pointer-events: none;
+  }
   /* Index mobile：隐藏 nav 和 lang bar，只显示 hamburger + 名字 */
   body.page-index .site-header .nav,
   body.page-index .site-header .index-lang-bar {
@@ -438,7 +443,7 @@ body.page-index .site-header .index-lang-bar {
   }
 }
 
-/* 全屏遮罩：取消 mix-blend 叠加效果，左下角可点击的 X */
+/* 全屏遮罩：纯色灰底不透，不叠加下层，只有一个可点击 X */
 .menu-overlay {
   position: fixed;
   top: 0;
@@ -448,7 +453,7 @@ body.page-index .site-header .index-lang-bar {
   width: 100vw;
   height: 100vh;
   z-index: 9998;
-  background: rgba(255, 255, 255, 0.8);
+  background: #888888;
   mix-blend-mode: normal;
   isolation: isolate;
   display: flex;
@@ -479,7 +484,7 @@ body.page-index .site-header .index-lang-bar {
   border: none;
   background: none;
   cursor: pointer;
-  color: #000000;
+  color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -514,7 +519,7 @@ body.page-index .site-header .index-lang-bar {
   font-family: 'Diatype Light', 'IBM Plex Mono', monospace;
   font-size: 1.5rem;
   font-weight: 300;
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
   transition: opacity 0.2s;
 }
@@ -548,7 +553,7 @@ body:not(.page-index) .menu-overlay-lang {
   padding: 0;
   border: none;
   background: none;
-  color: #000000;
+  color: #ffffff;
   cursor: pointer;
   transition: font-weight 0.2s;
 }
@@ -560,8 +565,8 @@ body:not(.page-index) .menu-overlay-lang {
 .menu-overlay-lang-sep {
   font-family: 'Diatype Light', 'IBM Plex Mono', monospace;
   font-size: 1.5rem;
-  color: #000000;
-  opacity: 0.6;
+  color: #ffffff;
+  opacity: 0.8;
 }
 
 /* Main content - 90% 页面宽度，响应式 */
