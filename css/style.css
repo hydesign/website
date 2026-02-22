@@ -149,30 +149,42 @@ body.page-index .index-lang-bar {
   mix-blend-mode: difference;
 }
 
-/* Index 页：header 一字排开 */
+/* Index 页：header 一字排开、填满整行、字体统一为 nav */
 body.page-index .site-header {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
-  justify-content: flex-start;
-  gap: 1.25rem;
+  justify-content: space-between;
+  gap: 0;
   grid-template-columns: unset;
+  width: 100%;
 }
 
 body.page-index .site-header .nav {
   flex-direction: row;
-  gap: 1.25rem;
+  flex: 0 0 auto;
+  gap: 1.5rem;
   align-items: center;
 }
 
 body.page-index .site-header .hero {
   display: flex;
   flex-direction: row;
+  flex: 0 0 auto;
   align-items: center;
   gap: 0.5rem;
   justify-self: start;
   text-align: left;
+}
+
+body.page-index .site-header .hero-title,
+body.page-index .site-header .hero-subtitle,
+body.page-index .site-header .index-lang-btn,
+body.page-index .site-header .index-lang-sep {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 350;
 }
 
 body.page-index .site-header .hero-title {
@@ -329,30 +341,26 @@ body.page-index .site-header .index-lang-bar {
   }
 }
 
-/* Index 页 Mobile：一字排开时缩小间距和字号，避免溢出 */
+/* Index 页 Mobile：一字排开，统一字体，缩小以 fit 一行 */
 @media (max-width: 768px) {
   body.page-index .site-header {
     padding: 0.6rem clamp(0.5rem, 3vw, 1rem) 0.5rem;
-    gap: 0.6rem;
+    gap: 0;
   }
   body.page-index .site-header .nav {
-    gap: 0.6rem;
+    gap: 0.75rem;
   }
-  body.page-index .site-header .nav-link {
-    font-size: 0.6rem;
-  }
-  body.page-index .site-header .hero-title {
-    font-size: 0.6rem;
-  }
-  body.page-index .site-header .hero-subtitle {
-    font-size: 0.65rem;
-  }
+  body.page-index .site-header .nav-link,
+  body.page-index .site-header .hero-title,
+  body.page-index .site-header .hero-subtitle,
   body.page-index .site-header .index-lang-btn,
   body.page-index .site-header .index-lang-sep {
+    font-family: var(--font-mono);
     font-size: 0.65rem;
+    font-weight: 350;
   }
   body.page-index .site-header .hero {
-    gap: 0.25rem;
+    gap: 0.35rem;
   }
 }
 
