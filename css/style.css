@@ -78,14 +78,14 @@ body {
   }
 }
 
-/* About 页：第一段前留白最小化 */
+/* About 页：第一段前留白缩小 */
 body.page-arizona-sans .page-wrapper {
-  padding-top: 5.5rem;
+  padding-top: 4rem;
 }
 
 @media (max-width: 768px) {
   body.page-arizona-sans .page-wrapper {
-    padding-top: 4.5rem;
+    padding-top: 3rem;
   }
 }
 
@@ -477,23 +477,23 @@ body.page-index .site-header .index-lang-bar {
   body.page-index .site-header .index-lang-bar {
     display: none !important;
   }
-  /* 布局：flex，hamburger 左，名字右，保持原位置 */
+  /* 布局：保持 grid 约束，hamburger 左，名字右，1fr 限制名字不溢出 */
   body.page-index .site-header {
-    display: flex !important;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid !important;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto;
+    gap: 0;
+    justify-items: end;
     align-items: center;
-    grid-template-columns: unset;
   }
   body.page-index .site-header .menu-toggle {
-    flex-shrink: 0;
+    justify-self: start;
   }
   body.page-index .site-header .hero-name {
-    flex-shrink: 0;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 0.1em;
-    justify-content: center;
+    justify-self: end;
+    justify-content: flex-end;
+    min-width: 0;
+    max-width: 100%;
   }
 }
 
