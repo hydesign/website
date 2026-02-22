@@ -44,6 +44,57 @@
   padding: 0;
 }
 
+/* View Transitions：跨文档页面切换，按 index 项目顺序做前后滑动 */
+@view-transition {
+  navigation: auto;
+}
+
+/* forwards: 进入下一个项目（旧页左滑，新页从右入） */
+@keyframes vt-slide-out-to-left {
+  to { transform: translateX(-30%); opacity: 0.8; }
+}
+@keyframes vt-slide-in-from-right {
+  from { transform: translateX(30%); opacity: 0.8; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* backwards: 返回上一个项目（旧页右滑，新页从左入） */
+@keyframes vt-slide-out-to-right {
+  to { transform: translateX(30%); opacity: 0.8; }
+}
+@keyframes vt-slide-in-from-left {
+  from { transform: translateX(-30%); opacity: 0.8; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+html:active-view-transition-type(forwards),
+html:active-view-transition-type(backwards) {
+  :root {
+    view-transition-name: none;
+  }
+  .page-wrapper {
+    view-transition-name: page-content;
+  }
+}
+
+html:active-view-transition-type(forwards) {
+  &::view-transition-old(page-content) {
+    animation: vt-slide-out-to-left 0.35s ease-out both;
+  }
+  &::view-transition-new(page-content) {
+    animation: vt-slide-in-from-right 0.35s ease-out both;
+  }
+}
+
+html:active-view-transition-type(backwards) {
+  &::view-transition-old(page-content) {
+    animation: vt-slide-out-to-right 0.35s ease-out both;
+  }
+  &::view-transition-new(page-content) {
+    animation: vt-slide-in-from-left 0.35s ease-out both;
+  }
+}
+
 /* 全局基准字号：1rem = 18px。调整此处可改变全站「正常」字号 */
 html {
   font-size: 18px;
