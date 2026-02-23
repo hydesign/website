@@ -3445,7 +3445,7 @@ body.page-index .project-gallery {
 }
 
 .project-ring-bg.active {
-  opacity: 0.2;
+  opacity: 0.5;
 }
 
 .project-ring-wrapper {
