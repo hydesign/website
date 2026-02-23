@@ -6,8 +6,15 @@
   if (!data) return;
 
   // Force English titles for poetic typography feel
-  const projects = data['en'].projects;
-  if (!projects || projects.length === 0) return;
+  const allProjects = data['en'].projects;
+  if (!allProjects || allProjects.length === 0) return;
+
+  // Exclude current project from the ring
+  const currentPath = window.location.pathname || '';
+  const projects = allProjects.filter(function(p) {
+    return !currentPath.includes(p.slug);
+  });
+  if (projects.length === 0) return;
 
   const numItems = projects.length;
   
@@ -189,15 +196,8 @@
 
   ringWrapper.style.cursor = 'grab';
   
-  // Initialize position to the current project if possible
-  const currentPath = window.location.pathname;
-  let startIndex = 0;
-  projects.forEach((p, idx) => {
-    if (currentPath.includes(p.slug)) startIndex = idx;
-  });
-  
-  currentRotation = -startIndex * angleStep;
-  targetRotation = currentRotation;
+  currentRotation = 0;
+  targetRotation = 0;
 
   animate();
 })();
