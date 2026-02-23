@@ -3435,17 +3435,17 @@ body.page-index .project-gallery {
 }
 
 @keyframes project-ring-glow {
-  0% { box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.1); }
-  50% { box-shadow: 0 0 25px rgba(255, 255, 255, 0.7), 0 0 50px rgba(255, 255, 255, 0.3); }
-  100% { box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.1); }
+  0% { box-shadow: 0 0 8px rgba(255, 255, 255, 0.4), 0 0 15px rgba(255, 255, 255, 0.1); }
+  50% { box-shadow: 0 0 12px rgba(255, 255, 255, 0.7), 0 0 25px rgba(255, 255, 255, 0.3); }
+  100% { box-shadow: 0 0 8px rgba(255, 255, 255, 0.4), 0 0 15px rgba(255, 255, 255, 0.1); }
 }
 
 .project-ring-item {
   position: absolute;
-  top: -30px;
-  left: -30px;
-  width: 60px;
-  height: 60px;
+  top: -10px;
+  left: -10px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.4);
@@ -3470,10 +3470,10 @@ body.page-index .project-gallery {
   pointer-events: none;
   font-family: 'ABC Arizona Sans', Georgia, sans-serif;
   font-weight: 300;
-  font-size: 0.85rem;
+  font-size: 0.65rem;
   color: #fff;
   width: 300px;
-  margin-top: 160px;
+  margin-top: 100px;
   position: absolute;
   transition: opacity 0.5s ease;
   text-transform: uppercase;
@@ -3492,14 +3492,14 @@ body.page-index .project-gallery {
     height: 250px;
   }
   .project-ring-item {
-    top: -25px;
-    left: -25px;
-    width: 50px;
-    height: 50px;
+    top: -8px;
+    left: -8px;
+    width: 16px;
+    height: 16px;
   }
   .project-ring-item span {
-    font-size: 0.75rem;
+    font-size: 0.55rem;
     width: 240px;
-    margin-top: 130px;
+    margin-top: 80px;
   }
 }
