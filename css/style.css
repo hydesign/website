@@ -1113,10 +1113,11 @@ body.scroll-snap-page #publications .publications-section .section-title {
 
 .contact-logo {
   flex-shrink: 0;
+  margin-top: 4rem;
 }
 
 .contact-logo-img {
-  max-width: 12rem;
+  max-width: 18rem;
   width: 100%;
   height: auto;
 }
@@ -2404,7 +2405,7 @@ body.project-page-amphibious {
 
 .project-amphibious-img.reveal-on-scroll {
   opacity: 0;
-  transform: translateY(120px);
+  transform: translateY(80px);
   transition: opacity 2s ease-out, transform 2s ease-out;
 }
 
@@ -2977,7 +2978,7 @@ body.project-page-phalaenopsis .page-wrapper,
   overflow: hidden;
   background: #fff;
   opacity: 0;
-  transform: translateY(120px);
+  transform: translateY(80px);
   transition: opacity 2s ease-out, transform 2s ease-out;
 }
 
