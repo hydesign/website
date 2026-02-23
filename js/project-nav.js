@@ -11,6 +11,23 @@
 
   const numItems = projects.length;
   
+  const basePath = /\/projects\//.test(window.location.pathname) ? '../' : '';
+
+  const projectBgMap = {
+    'drift-of-the-uncharted': 'images/drift-of-the-uncharted/DOU-4.jpg',
+    'artificial-life-one-leg': 'images/artificial-life-one-leg/1leg-5.jpg',
+    'buffer-beach-let-the-waves-render': 'images/buffer-beach-let-the-waves-render/sf2-6.webp',
+    'amphibious-rover-ldn2030-scouting-log': 'images/amphibious-rover-ldn2030-scouting-log/amphibious-1.webp',
+    'fish-tree-rings-and-memory': 'images/fish-tree-rings-and-memory/fish-2.webp',
+    'i-just-stay-in-my-home-not-go-anywhere': 'images/i-just-stay-in-my-home-not-go-anywhere/notgoanywhere-2.webp',
+    'nomadic-annotators': 'images/nomadic-annotators/nomadic-3.webp',
+    'phalaenopsis-and-their-friends-whisper-their-tales': 'images/phalaenopsis-and-their-friends-whisper-their-tales/p-1.png',
+    'return-to-the-peach-blossom-wonderland': 'images/return-to-the-peach-blossom-wonderland/cover.webp'
+  };
+
+  const bgContainer = document.createElement('div');
+  bgContainer.className = 'project-ring-bg-container';
+
   const ringWrapper = document.createElement('div');
   ringWrapper.className = 'project-ring-wrapper';
   
@@ -18,7 +35,16 @@
   ring.className = 'project-ring';
   
   const items = [];
+  const bgs = [];
   projects.forEach((proj, i) => {
+    const bg = document.createElement('div');
+    bg.className = 'project-ring-bg';
+    if (projectBgMap[proj.slug]) {
+      bg.style.backgroundImage = `url('${basePath}${projectBgMap[proj.slug]}')`;
+    }
+    bgContainer.appendChild(bg);
+    bgs.push(bg);
+
     const item = document.createElement('div');
     item.className = 'project-ring-item';
     
@@ -48,6 +74,7 @@
   });
   
   ringWrapper.appendChild(ring);
+  container.appendChild(bgContainer);
   container.appendChild(ringWrapper);
 
   const radius = window.innerWidth < 600 ? 190 : 350; 
@@ -154,7 +181,10 @@
     });
     
     if (newActiveIndex !== activeIndex) {
+      if (activeIndex !== -1 && bgs[activeIndex]) bgs[activeIndex].classList.remove('active');
       activeIndex = newActiveIndex;
+      if (activeIndex !== -1 && bgs[activeIndex]) bgs[activeIndex].classList.add('active');
+      
       if (navigator.vibrate) {
         try { navigator.vibrate(15); } catch(e) {}
       }

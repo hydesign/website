@@ -3407,6 +3407,7 @@ body.page-index .project-gallery {
 
 /* Project Ring Navigation */
 .project-drift-ring-section {
+  position: relative;
   width: 100%;
   padding: 6rem 0;
   display: flex;
@@ -3414,8 +3415,37 @@ body.page-index .project-gallery {
   overflow: hidden;
 }
 
+.project-ring-bg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.project-ring-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center top;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 20%, rgba(0,0,0,0) 60%);
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 20%, rgba(0,0,0,0) 60%);
+}
+
+.project-ring-bg.active {
+  opacity: 1;
+}
+
 .project-ring-wrapper {
   position: relative;
+  z-index: 1;
   width: 100vw;
   max-width: 800px;
   height: 300px;
@@ -3470,14 +3500,16 @@ body.page-index .project-gallery {
   pointer-events: none;
   font-family: 'ABC Arizona Sans', Georgia, sans-serif;
   font-weight: 300;
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   color: #fff;
-  width: 300px;
+  width: 260px;
   margin-top: 100px;
   position: absolute;
   transition: opacity 0.5s ease;
   text-transform: uppercase;
   letter-spacing: 0.15em;
+  white-space: normal;
+  line-height: 1.4;
 }
 
 .project-ring-item.active span {
@@ -3498,8 +3530,9 @@ body.page-index .project-gallery {
     height: 16px;
   }
   .project-ring-item span {
-    font-size: 0.55rem;
-    width: 240px;
+    font-size: 0.5rem;
+    width: 200px;
     margin-top: 80px;
+    letter-spacing: 0.1em;
   }
 }
