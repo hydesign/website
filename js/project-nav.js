@@ -166,7 +166,7 @@
         scale = 0.5 + Math.pow((1 - absAngle / 90), 2) * 1.0; 
       }
       
-      const opacity = 0.2 + (1 - Math.min(absAngle / 180, 1)) * 0.8;
+      const opacity = 0.45 + (1 - Math.min(absAngle / 180, 1)) * 0.55;
       
       // Micro drift effect
       const driftY = Math.sin(time * 1.5 + i) * 8; 
