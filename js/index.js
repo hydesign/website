@@ -6,7 +6,6 @@
   if (!data) return;
 
   var introTextEl = document.getElementById('intro-text');
-  var introLinkEl = document.getElementById('intro-link');
   var projectsContainer = document.getElementById('projects-container');
   var lang = 'en';
 
@@ -15,7 +14,6 @@
     if (!d) return;
 
     if (introTextEl) introTextEl.innerHTML = d.intro;
-    if (introLinkEl) introLinkEl.textContent = d.introLink;
 
     if (projectsContainer) {
       var base = /\/projects\//.test(window.location.pathname) ? '../' : '';

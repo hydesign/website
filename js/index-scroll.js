@@ -74,14 +74,24 @@
     }
   });
 
+  function pathToSectionId(path) {
+    var p = (path || '').replace(/\/$/, '') || '/';
+    if (p === '/about') return 'about';
+    if (p === '/publications') return 'publications';
+    if (p === '/contact') return 'contact';
+    return 'project';
+  }
+
   function scrollToHash() {
+    var path = window.location.pathname;
     var hash = (window.location.hash || '').slice(1);
-    if (hash && SECTION_IDS.indexOf(hash) >= 0) {
-      var el = document.getElementById(hash);
-      if (el) {
-        el.scrollIntoView({ behavior: 'instant', block: 'start' });
-        updateNavFromScroll();
-      }
+    var sectionId = pathToSectionId(path);
+    if (hash && SECTION_IDS.indexOf(hash) >= 0) sectionId = hash;
+    var el = document.getElementById(sectionId);
+    if (el) {
+      el.scrollIntoView({ behavior: 'instant', block: 'start' });
+      updateNavFromScroll();
+      updateUrlFromSection(sectionId);
     } else {
       updateNavFromScroll();
     }
@@ -103,16 +113,29 @@
     });
   }
 
+  function sectionIdToPath(id) {
+    if (id === 'project') return '/';
+    if (id === 'about') return '/about';
+    if (id === 'publications') return '/publications';
+    if (id === 'contact') return '/contact';
+    return '/';
+  }
+
+  function updateUrlFromSection(sectionId) {
+    var newPath = sectionIdToPath(sectionId);
+    var currentPath = window.location.pathname.replace(/\/$/, '') || '/';
+    if (newPath !== currentPath) {
+      history.replaceState(null, '', newPath);
+    }
+  }
+
   function updateHashFromScroll() {
     var sections = SECTION_IDS.map(function (id) { return document.getElementById(id); }).filter(Boolean);
     var vh = window.innerHeight;
     for (var i = sections.length - 1; i >= 0; i--) {
       var rect = sections[i].getBoundingClientRect();
       if (rect.top <= vh * 0.5) {
-        var newHash = '#' + SECTION_IDS[i];
-        if (window.location.hash !== newHash) {
-          history.replaceState(null, '', newHash);
-        }
+        updateUrlFromSection(SECTION_IDS[i]);
         break;
       }
     }
@@ -126,6 +149,10 @@
     updateNavFromScroll();
     updateHashFromScroll();
   }, { passive: true });
+
+  window.addEventListener('popstate', function () {
+    scrollToHash();
+  });
 
   document.addEventListener('headerLoaded', function () {
     updateNavFromScroll();

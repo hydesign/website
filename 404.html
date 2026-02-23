@@ -1,31 +1,162 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="scroll-snap-page">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="ico.png" type="image/png">
-  <title>Page Not Found — aryyuehuang</title>
+  <title>aryyuehuang — Ary-Yue Huang</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/favorit-font-family.css">
   <link rel="stylesheet" href="css/diatype-font-family.css">
+  <link rel="stylesheet" href="css/abc-arizona-font.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500&family=IBM+Plex+Mono:wght@350;400&family=Georgia:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500&family=IBM+Plex+Mono:wght@300;350;400&family=Georgia:ital@0;1&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="page-index scroll-snap-page">
   <div id="header-placeholder"></div>
 
-  <main class="page-wrapper">
-  <div class="content">
-    <section class="intro">
-      <p>页面不存在。</p>
-      <a href="index.html" class="intro-link">返回首页 →</a>
-    </section>
-  </div>
-  </main>
+  <section id="project" class="scroll-section">
+    <main class="page-wrapper">
+      <div class="content">
+        <section class="intro">
+          <p class="intro-text" id="intro-text"></p>
+        </section>
+        <section class="projects" id="projects-container"></section>
+      </div>
+    </main>
+  </section>
+
+  <section id="about" class="scroll-section">
+    <main class="page-wrapper">
+      <div class="content content-wide">
+        <section class="about-section">
+          <div class="cv-lang-toggle">
+            <button type="button" class="cv-lang-btn active" data-lang="en">EN</button>
+            <button type="button" class="cv-lang-btn" data-lang="zh">CH</button>
+          </div>
+          <h2 class="section-title" id="about-bio-title"></h2>
+          <p class="about-bio" id="about-bio-text"></p>
+          <h2 class="section-title" id="about-practice-title"></h2>
+          <div id="about-practice-text"></div>
+          <h2 class="section-title"><span class="cv-label-en">CV</span><span class="cv-label-zh">简历</span></h2>
+          <h3 class="cv-category"><span class="cv-label-en">Education</span><span class="cv-label-zh">教育背景</span></h3>
+          <ul class="cv-list cv-education-list" id="cv-education-list"></ul>
+          <h3 class="cv-category"><span class="cv-label-en">Exhibition</span><span class="cv-label-zh">展览</span></h3>
+          <ul class="cv-list cv-exhibition-list" id="cv-exhibition-list"></ul>
+          <h3 class="cv-category"><span class="cv-label-en">Honors</span><span class="cv-label-zh">荣誉</span></h3>
+          <ul class="cv-list cv-honors-list" id="cv-honors-list"></ul>
+        </section>
+      </div>
+    </main>
+  </section>
+
+  <section id="publications" class="scroll-section">
+    <main class="page-wrapper">
+      <div class="content content-wide">
+        <section class="publications-section">
+          <h2 class="section-title">Publication</h2>
+          <article class="publication">
+            <div class="pub-year">2025</div>
+            <div class="pub-details">
+              <h3 class="pub-title">Drift of the Uncharted: A Speculative Fiction About Rising Sea-Level Landscapes through Robotic Performance</h3>
+              <p class="pub-authors"><strong>Ary-Yue Huang</strong>; Qing Qin; Wenzong Ma; Bingyuan Wang; Clea von Chamier-Waite</p>
+              <p class="pub-venue">Conference paper</p>
+              <a href="https://doi.org/10.1145/3757369.3767598" class="pub-doi" target="_blank" rel="noopener">DOI: 10.1145/3757369.3767598</a>
+            </div>
+          </article>
+          <article class="publication">
+            <div class="pub-year">2025</div>
+            <div class="pub-details">
+              <h3 class="pub-title">Situational Agency: The Framework for Designing Behavior in Agent-based art</h3>
+              <p class="pub-authors"><strong>Ary-Yue Huang</strong>; Varvara Guljajeva</p>
+              <p class="pub-venue">ISEA2025: 30th International Symposium on Electronic Art</p>
+              <a href="https://www.isea-symposium-archives.org/presentation/situational-agency-the-framework-for-designing-behavior-in-agent-based-art-presented-by-huang-and-guljajeva/" class="pub-doi" target="_blank" rel="noopener">Link</a>
+            </div>
+          </article>
+          <article class="publication">
+            <div class="pub-year">2025</div>
+            <div class="pub-details">
+              <h3 class="pub-title">Artificial Life, One Leg at a Time: The Aesthetics of Trial-and-Error in AI Training</h3>
+              <p class="pub-authors"><strong>Ary-Yue Huang</strong></p>
+              <p class="pub-venue">Conference paper</p>
+              <a href="https://doi.org/10.1145/3698061.3726944" class="pub-doi" target="_blank" rel="noopener">DOI: 10.1145/3698061.3726944</a>
+            </div>
+          </article>
+          <article class="publication">
+            <div class="pub-year">2024</div>
+            <div class="pub-details">
+              <h3 class="pub-title">Ephemera: Language as a Virus - AI-driven Interactive and Immersive Art Installation</h3>
+              <p class="pub-authors">Jiayang Huang; <strong>Yue Huang</strong>; David Yip; Varvara Guljajeva</p>
+              <p class="pub-venue">Proceedings of the ACM on Computer Graphics and Interactive Techniques</p>
+              <a href="https://doi.org/10.1145/3664219" class="pub-doi" target="_blank" rel="noopener">DOI: 10.1145/3664219</a>
+            </div>
+          </article>
+          <article class="publication">
+            <div class="pub-year">2023</div>
+            <div class="pub-details">
+              <h3 class="pub-title">Understanding AI Through Failure and Training Processes</h3>
+              <p class="pub-authors"><strong>Yue Huang</strong>; Varvara Guljajeva</p>
+              <p class="pub-venue">ARTECH '23: Proceedings of the 11th International Conference on Digital and Interactive Arts</p>
+              <a href="https://doi.org/10.1145/3632776.3632821" class="pub-doi" target="_blank" rel="noopener">DOI: 10.1145/3632776.3632821</a>
+            </div>
+          </article>
+          <article class="publication">
+            <div class="pub-year">2023</div>
+            <div class="pub-details">
+              <h3 class="pub-title">Bitter Data: An Exploration into Data Edibilization of Negative Emotion</h3>
+              <p class="pub-authors">Yufan Li; Kang Zhang; <strong>Yue Huang</strong>; Varvara Guljajeva</p>
+              <p class="pub-venue">2023 IEEE VIS Arts Program (VISAP)</p>
+              <a href="https://doi.org/10.1109/VISAP60414.2023.00010" class="pub-doi" target="_blank" rel="noopener">DOI: 10.1109/VISAP60414.2023.00010</a>
+            </div>
+          </article>
+          <article class="publication">
+            <div class="pub-year">2023</div>
+            <div class="pub-details">
+              <h3 class="pub-title">Bitter Data: Bitterness Taste in 100,000 Trouble Data</h3>
+              <p class="pub-authors">Yufan Li; <strong>Yue Huang</strong>; Kang Zhang; Varvara Guljajeva</p>
+              <p class="pub-venue">VINCI '23: Proceedings of the 16th International Symposium on Visual Information Communication and Interaction</p>
+              <a href="https://doi.org/10.1145/3615522.3615574" class="pub-doi" target="_blank" rel="noopener">DOI: 10.1145/3615522.3615574</a>
+            </div>
+          </article>
+        </section>
+      </div>
+    </main>
+  </section>
+
+  <section id="contact" class="scroll-section">
+    <main class="page-wrapper">
+      <div class="content content-narrow">
+        <section class="contact-section">
+          <div class="contact-item">
+            <span class="contact-label">Email</span>
+            <a href="mailto:hydesign97@gmail.com" class="contact-value">hydesign97@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Discord</span>
+            <span class="contact-value">huangyueary</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Instagram</span>
+            <a href="https://www.instagram.com/huangyue_dn/" class="contact-value" target="_blank" rel="noopener">huangyue_dn</a>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">WeChat</span>
+            <span class="contact-value">huangyue_Ary</span>
+          </div>
+        </section>
+      </div>
+    </main>
+  </section>
 
   <div id="footer-placeholder"></div>
+  <script src="js/gallery-config.js"></script>
+  <script src="js/index-data.js"></script>
+  <script src="js/cv-data.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/index-scroll.js"></script>
   <script src="js/view-transitions.js"></script>
   <script src="js/include.js"></script>
+  <script src="js/project-gallery.js"></script>
 </body>
 </html>

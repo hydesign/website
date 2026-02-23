@@ -10,9 +10,13 @@
 
   function getCurrentPage() {
     const path = window.location.pathname;
-    const file = path.split('/').pop() || 'index.html';
+    const pathNorm = path.replace(/\/$/, '') || '/';
+    const file = path.split('/').filter(Boolean).pop() || '';
     const hash = (window.location.hash || '').slice(1);
-    if (file === 'index.html' || file === '' || path.endsWith('/')) {
+    if (pathNorm === '/about') return 'about';
+    if (pathNorm === '/publications') return 'publications';
+    if (pathNorm === '/contact') return 'contact';
+    if (file === 'index.html' || pathNorm === '/' || pathNorm === '') {
       if (hash === 'about') return 'about';
       if (hash === 'publications') return 'publications';
       if (hash === 'contact') return 'contact';
@@ -106,7 +110,7 @@
         }
       })
       .catch(function () {
-        headerEl.outerHTML = '<header class="site-header"><nav class="nav"><a href="index.html" class="nav-link">PROJECTS</a><a href="about.html" class="nav-link">ABOUT</a><a href="publications.html" class="nav-link">PUBLICATIONS</a><a href="contact.html" class="nav-link">CONTACT</a></nav><div class="hero"><h1 class="hero-title">ARY-YUE HUANG</h1><h2 class="hero-subtitle">黄钺</h2></div></header>';
+        headerEl.outerHTML = '<header class="site-header"><nav class="nav"><a href="/" class="nav-link">PROJECTS</a><a href="/about" class="nav-link">ABOUT</a><a href="/publications" class="nav-link">PUBLICATIONS</a><a href="/contact" class="nav-link">CONTACT</a></nav><div class="hero"><h1 class="hero-title">ARY-YUE HUANG</h1><h2 class="hero-subtitle">黄钺</h2></div></header>';
       });
   }
 

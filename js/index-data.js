@@ -4,7 +4,6 @@
 window.INDEX_DATA = {
   en: {
     intro: 'I am currently engaged in a research-based practice that I call <em>Agent-Based Art</em>. I explore how the continuous inferential capacity of machine learning, together with the kinetic capabilities of robot, gives rise to a latent sense of liveliness. My practice seeks to situate this liveliness within the behavioral aesthetics of agents, allowing them to evolve through interaction and duration, and to form continuously unfolding performative constellations with environments, materials, and technological networks.',
-    introLink: 'read more about other series →',
     projects: [
       { slug: 'drift-of-the-uncharted', quote: '"As a legged robot moves, a sea-level-rise change realm within a space gradually unfolds..."', title: 'Drift of the Uncharted', year: '(2024-2025)', tag: 'Agent-Based Art', media: 'Quadruped Robot, Moving Projection, Climate Prediction' },
       { slug: 'artificial-life-one-leg', quote: null, title: 'Artificial Life: One Leg at a Time', year: '(2022)', tag: 'Agent-Based Art', media: 'Reinforcement Learning, Game Engine' },
@@ -19,7 +18,6 @@ window.INDEX_DATA = {
   },
   zh: {
     intro: '我目前正进行一种我称之为基于代理的艺术Agent-Based Art的研究实践，机器学习可以不断生成的能力，和机器的运动能力，回荡着潜在的生命力(liveliness)，我致力于将这种生命力情境化于 agent 的行为美学，agent在互动和时间中演化行为，以及与其他环境、物质、技术网络构成不断生成的表演剧场。',
-    introLink: '了解更多系列 →',
     projects: [
       { slug: 'drift-of-the-uncharted', quote: '"当机器狗在空间中移动，不久的将来,海平面上升所改变的城市景观逐渐在空间中呈现..."', title: '未知的漂行', year: '(2024-2025)', tag: 'Agent-Based Art', media: '四足机器人、移动投影、气候预测' },
       { slug: 'artificial-life-one-leg', quote: null, title: '人工生命：抬起左脚时别抬起右脚', year: '(2022)', tag: 'Agent-Based Art', media: '强化学习、游戏引擎' },
