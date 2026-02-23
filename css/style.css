@@ -200,6 +200,7 @@ body.scroll-snap-page #about .about-bio,
 body.scroll-snap-page #about .section-title,
 body.scroll-snap-page #about .cv-category,
 body.scroll-snap-page #about .cv-list,
+body.scroll-snap-page #publications .publications-section .section-title,
 body.scroll-snap-page #publications .publication,
 body.scroll-snap-page #publications .pub-title,
 body.scroll-snap-page #publications .pub-venue,
@@ -1041,6 +1042,10 @@ em.series-tag {
 /* Publications */
 .publications-section {
   margin-top: 1rem;
+}
+body.scroll-snap-page #publications .publications-section .section-title {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.4rem;
 }
 
 .publication {

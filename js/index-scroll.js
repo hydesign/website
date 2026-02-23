@@ -76,9 +76,9 @@
 
   function pathToSectionId(path) {
     var p = (path || '').replace(/\/$/, '') || '/';
-    if (p === '/about') return 'about';
-    if (p === '/publications') return 'publications';
-    if (p === '/contact') return 'contact';
+    if (p === '/about' || p === '/about.html') return 'about';
+    if (p === '/publications' || p === '/publications.html') return 'publications';
+    if (p === '/contact' || p === '/contact.html') return 'contact';
     return 'project';
   }
 
@@ -123,8 +123,11 @@
 
   function updateUrlFromSection(sectionId) {
     var newPath = sectionIdToPath(sectionId);
-    var currentPath = window.location.pathname.replace(/\/$/, '') || '/';
-    if (newPath !== currentPath) {
+    var currentPath = (window.location.pathname || '/').replace(/\/$/, '') || '/';
+    var currentFile = currentPath.split('/').pop() || '';
+    if (currentFile === 'about.html' || currentFile === 'publications.html' || currentFile === 'contact.html') {
+      history.replaceState(null, '', newPath);
+    } else if (newPath !== currentPath) {
       history.replaceState(null, '', newPath);
     }
   }

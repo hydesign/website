@@ -13,9 +13,9 @@
     const pathNorm = path.replace(/\/$/, '') || '/';
     const file = path.split('/').filter(Boolean).pop() || '';
     const hash = (window.location.hash || '').slice(1);
-    if (pathNorm === '/about') return 'about';
-    if (pathNorm === '/publications') return 'publications';
-    if (pathNorm === '/contact') return 'contact';
+    if (pathNorm === '/about' || file === 'about.html') return 'about';
+    if (pathNorm === '/publications' || file === 'publications.html') return 'publications';
+    if (pathNorm === '/contact' || file === 'contact.html') return 'contact';
     if (file === 'index.html' || pathNorm === '/' || pathNorm === '') {
       if (hash === 'about') return 'about';
       if (hash === 'publications') return 'publications';
