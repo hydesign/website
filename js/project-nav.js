@@ -169,14 +169,8 @@
       
       if (isFront) {
         itemObj.el.classList.add('active');
-        itemObj.textEl.style.opacity = 1;
-        itemObj.el.style.background = 'rgba(255, 255, 255, 1)';
-        itemObj.el.style.borderColor = '#fff';
       } else {
         itemObj.el.classList.remove('active');
-        itemObj.textEl.style.opacity = 0;
-        itemObj.el.style.background = 'transparent';
-        itemObj.el.style.borderColor = 'rgba(255, 255, 255, 0.4)';
       }
     });
     

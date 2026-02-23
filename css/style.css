@@ -3410,6 +3410,7 @@ body.page-index .project-gallery {
   position: relative;
   width: 100%;
   padding: 6rem 0;
+  margin-top: 15rem;
   display: flex;
   justify-content: center;
   overflow: hidden;
@@ -3435,12 +3436,10 @@ body.page-index .project-gallery {
   background-position: center top;
   opacity: 0;
   transition: opacity 0.8s ease;
-  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 20%, rgba(0,0,0,0) 60%);
-  mask-image: linear-gradient(to bottom, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.25) 20%, rgba(0,0,0,0) 60%);
 }
 
 .project-ring-bg.active {
-  opacity: 1;
+  opacity: 0.2;
 }
 
 .project-ring-wrapper {
@@ -3516,9 +3515,35 @@ body.page-index .project-gallery {
   opacity: 1;
 }
 
+/* Light theme overrides for project ring (e.g., phalaenopsis project) */
+body.project-page-phalaenopsis .project-ring-item {
+  border-color: rgba(0, 0, 0, 0.4);
+}
+
+body.project-page-phalaenopsis .project-ring-item.active {
+  background: rgba(0, 0, 0, 1);
+  border-color: #000;
+  animation: project-ring-glow-dark 4s infinite ease-in-out;
+}
+
+body.project-page-phalaenopsis .project-ring-item span {
+  color: #000;
+}
+
+body.project-page-phalaenopsis .project-drift-back {
+  color: #000;
+}
+
+@keyframes project-ring-glow-dark {
+  0% { box-shadow: 0 0 8px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 0, 0, 0.05); }
+  50% { box-shadow: 0 0 12px rgba(0, 0, 0, 0.5), 0 0 25px rgba(0, 0, 0, 0.2); }
+  100% { box-shadow: 0 0 8px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 0, 0, 0.05); }
+}
+
 @media (max-width: 768px) {
   .project-drift-ring-section {
     padding: 4rem 0;
+    margin-top: 8rem;
   }
   .project-ring-wrapper {
     height: 250px;
