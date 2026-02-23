@@ -5,12 +5,8 @@
   const data = window.INDEX_DATA;
   if (!data) return;
 
-  let lang = 'en';
-  if (document.documentElement.lang && document.documentElement.lang.startsWith('zh')) {
-    lang = 'zh';
-  }
-
-  const projects = data[lang].projects;
+  // Force English titles for poetic typography feel
+  const projects = data['en'].projects;
   if (!projects || projects.length === 0) return;
 
   const numItems = projects.length;
@@ -54,7 +50,7 @@
   ringWrapper.appendChild(ring);
   container.appendChild(ringWrapper);
 
-  const radius = window.innerWidth < 600 ? 160 : 250; 
+  const radius = window.innerWidth < 600 ? 190 : 350; 
   const angleStep = 360 / numItems;
   
   let currentRotation = 0;
@@ -112,6 +108,7 @@
     
     let newActiveIndex = -1;
     let minDistance = Infinity;
+    const time = Date.now() * 0.001; // For drift effect
 
     items.forEach((itemObj) => {
       const i = itemObj.index;
@@ -137,7 +134,10 @@
       
       const opacity = 0.2 + (1 - Math.min(absAngle / 180, 1)) * 0.8;
       
-      itemObj.el.style.transform = `rotateY(${angle}deg) translateZ(${radius}px) scale(${scale})`;
+      // Micro drift effect
+      const driftY = Math.sin(time * 1.5 + i) * 8; 
+      
+      itemObj.el.style.transform = `rotateY(${angle}deg) translateZ(${radius}px) translateY(${driftY}px) scale(${scale})`;
       itemObj.el.style.opacity = opacity;
       
       if (isFront) {
