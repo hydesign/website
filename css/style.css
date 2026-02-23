@@ -3404,3 +3404,88 @@ body.page-index .project-gallery {
     font-size: 0.8rem;
   }
 }
+
+/* Project Ring Navigation */
+.project-drift-ring-section {
+  width: 100%;
+  padding: 6rem 0;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.project-ring-wrapper {
+  position: relative;
+  width: 100vw;
+  max-width: 800px;
+  height: 300px;
+  perspective: 1200px;
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.project-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform-style: preserve-3d;
+}
+
+.project-ring-item {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transform-origin: center center;
+  transition: background 0.3s, border 0.3s;
+}
+
+.project-ring-item.active {
+  background: rgba(255, 255, 255, 1);
+  border-color: #fff;
+  z-index: 10;
+}
+
+.project-ring-item span {
+  opacity: 0;
+  pointer-events: none;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: #fff;
+  width: 240px;
+  margin-top: 140px;
+  position: absolute;
+  transition: opacity 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.project-ring-item.active span {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .project-drift-ring-section {
+    padding: 4rem 0;
+  }
+  .project-ring-wrapper {
+    height: 250px;
+  }
+  .project-ring-item span {
+    font-size: 0.7rem;
+    width: 200px;
+    margin-top: 120px;
+  }
+}
