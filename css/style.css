@@ -1104,13 +1104,36 @@ body.scroll-snap-page #publications .publications-section .section-title {
 /* Contact */
 .contact-section {
   margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: calc(100vh - 14rem);
+}
+
+.contact-logo {
+  flex-shrink: 0;
+}
+
+.contact-logo-img {
+  max-width: 12rem;
+  width: 100%;
+  height: auto;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem 3rem;
+  width: 100%;
+  max-width: 28rem;
 }
 
 .contact-item {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
-  margin-bottom: 1.75rem;
+  margin-bottom: 0;
 }
 
 .contact-label {
@@ -3289,6 +3312,10 @@ body.page-index .project-gallery {
 
   .contact-value {
     font-size: 1.1rem;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   .project-detail-title {

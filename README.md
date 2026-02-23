@@ -1,87 +1,16 @@
 # aryyuehuang — Ary-Yue Huang 个人网站
 
-艺术家与研究员黄钺的 portfolio 网站，适配 GitHub Pages 托管。
+域名在腾讯云购买，部署于 GitHub Pages。网站：<https://aryyuehuang.com>
 
-原网站基于 Cargo 制作 ([aryyuehuang.com](https://aryyuehuang.com/))，本版本为静态 HTML/CSS 实现，可在 GitHub 上免费托管。
+**开发与维护**：参见 [DEV.md](DEV.md)，包含项目结构、数据来源、维护步骤及给新 Agent 的备忘。
 
-## 部署到 GitHub Pages
+---
 
-### 方式一：从本仓库根目录发布
-
-1. 在 GitHub 创建新仓库（如 `aryyuehuang.github.io` 或 `website`）
-2. **注意**：GitHub 单文件限制 100MB，超大 GIF 已排除（见下方「推送失败」）
-3. 将所有文件推送到仓库：
-
-```bash
-cd /Users/ary/Documents/new_website
-git init
-git add .
-git commit -m "Initial commit: portfolio site for GitHub Pages"
-git branch -M main
-git remote add origin https://github.com/hydesign/website.git
-git push -u origin main
-```
-
-3. 在 GitHub 仓库中：**Settings → Pages**
-   - Source: **Deploy from a branch**
-   - Branch: **main**（或 master）
-   - Folder: **/ (root)**
-   - 保存后等待几分钟
-
-4. 访问地址：
-   - 若仓库名为 `aryyuehuang.github.io`：`https://aryyuehuang.github.io`
-   - 否则：`https://你的用户名.github.io/仓库名/`
-
-5. **启用 GitHub Pages**：Settings → Pages → Source 选 "Deploy from a branch" → Branch 选 `main`，根目录 `/`
-
-### 推送失败（HTTP 400 / hung up）
-
-若出现 `RPC failed`、`hung up unexpectedly`，多为仓库含超过 100MB 的文件。已处理的改动：
-- `.gitignore` 排除 `images folder/` 和超大 GIF
-- `gallery-config.js` 中 nomadic-annotators 暂时仅使用 nomadic-1.jpg、nomadic-3.jpg
-
-在终端执行推送前，可增大 Git 缓冲区：
-```bash
-git config http.postBuffer 524288000
-git push -f origin main
-```
-
-### 方式二：使用子目录 /docs
-
-1. 将 `index.html`、`about.html` 等移至 `docs/` 目录
-2. 将 `css/` 也放入 `docs/`
-3. 在 Pages 设置中将 Folder 选为 **/docs**
-
-## 自定义域名（可选）
-
-若要绑定到 `aryyuehuang.com`：
-
-1. 在项目根目录创建文件 `CNAME`，内容为：`aryyuehuang.com`
-2. 在域名服务商处添加 DNS 解析：
-   - 类型：`A`，记录：`185.199.108.153`（及同网段其他 IP）
-   - 或 类型：`CNAME`，记录：`你的用户名.github.io`
-
-## 本地预览
-
-```bash
-python3 -m http.server 8000
-# 浏览器访问 http://localhost:8000
-```
-
-手机预览（同一 WiFi）：
-
-```bash
-./serve-lan.sh
-# 或
-python3 -m http.server 8080 --bind 0.0.0.0
-# 手机访问 http://你的电脑IP:8080
-```
-
-## 项目结构
+## 项目结构（简要）
 
 ```
-.
-├── index.html          # 首页（项目列表 + 各项目 gallery）
+├── index.html          # 主页面（单页，含 project / about / publications / contact）
+├── 404.html            # 404 fallback，支持 /about、/publications、/contact 干净 URL
 ├── about.html
 ├── publications.html
 ├── contact.html
