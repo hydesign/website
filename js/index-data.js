@@ -24,7 +24,7 @@ window.INDEX_DATA = {
       { slug: 'return-to-the-peach-blossom-wonderland', quote: null, title: '重访桃花源', year: '(2020)', tag: 'Infinite Cinema', media: '三通道影像、风格迁移算法' },
       { slug: 'buffer-beach-let-the-waves-render', quote: null, title: '缓冲海滩', year: '(2024)', tag: 'Software Aesthetics', media: '影像' },
       { slug: 'nomadic-annotators', quote: null, title: '游牧标注者', year: '(2022-2023)', tag: 'Speculative Fiction', media: '影像、虚拟制作' },
-      { slug: 'i-just-stay-in-my-home-not-go-anywhere', quote: null, title: '我只是待在家里，哪儿也不去', year: '(2021)', tag: 'Software Aesthetics', media: '影像' },
+      { slug: 'i-just-stay-in-my-home-not-go-anywhere', quote: null, title: '我只想呆在家里，哪都不去', year: '(2021)', tag: 'Software Aesthetics', media: '影像' },
       { slug: 'amphibious-rover-ldn2030-scouting-log', quote: '"LDN2030 水陆两栖 rover，被用于勘探伦敦多处被淹区域，探索人类难以抵达之地。"', title: 'LDN2030 勘探日志', year: '(2022)', tag: 'Agent-Based Art', media: 'Rover 机器人、扩展影院' },
       { slug: 'phalaenopsis-and-their-friends-whisper-their-tales', quote: null, title: '兰花与它的朋友们诉说着秘密', year: '(2022)', tag: 'Trans-Species', media: '互动系统、多物种剧场' },
       { slug: 'fish-tree-rings-and-memory', quote: null, title: '鱼、年轮与记忆技术', year: '(2019)', tag: 'Trans-Species', media: '装置' }

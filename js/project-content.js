@@ -9,16 +9,14 @@ window.PROJECT_CONTENT = {
       keywords: 'Quadruped Robot, Virtual Production, Game Engine, Sea-Level Prediction model',
       intro: 'Drift of the Uncharted emerges as a robotic art installation, intertwining climate prediction, real-world landscape scanning, scene reconstruction, game engines, and virtual projection to unfurl a speculative world where urban landscapes bear the imprints of future sea-level rise, creating an immersive exploration of climate change\'s potential impacts. The project utilizes 3D Gaussian Splatting for reconstructing regions prone to the impacts of sea-level rise while computer-generated water are integrated into the scenario through a game engine. A quadruped robot equipped with a projector traverses the physical and virtual space, projecting sea level rise scenes onto the exhibition area, as if it were a spectral agent of humanity, peering into the drowned cityscapes.',
       context1: 'To illustrate the profound impact of future sea-level rise on urban environments, we selected Shanghai, Shenzhen, and Guangzhou as the primary locations for scene reconstruction. We utilized Climate Central\'s Coastal Risk Screening Tool with 2050 as the projection year. The model, based on IPCC 2021 data, projects combined impacts of local sea level rise and annual flood heights, assuming current emission policies and a projected global temperature increase of 3.6°C by 2100. The analysis employed the 50th percentile of projections for heat-trapping pollution\'s impact on sea levels, excluding areas isolated by elevated terrain. The rationale for choosing these cities lies in their status as coastal metropolises with developed economies and high population densities, making them particularly vulnerable to the effects of sea-level rise—especially Shanghai. From the areas highlighted in blue on the projection maps - indicating zones vulnerable to sea-level rise and annual flooding - we identified specific locations of cultural and urban significance, including cultural institutions, historic architectural sites, financial centers, old town districts, and wetlands, all of which are deeply intertwined with resident life and collective urban memory.',
-      context2: 'The rationale for choosing these cities lies in their status as coastal metropolises with developed economies and high population densities, making them particularly vulnerable to the effects of sea-level rise—especially Shanghai. From the areas highlighted in blue on the projection maps—indicating zones vulnerable to sea-level rise and annual flooding—we identified specific locations of cultural and urban significance, including cultural institutions, historic architectural sites, financial centers, old town districts, and wetlands, all of which are deeply intertwined with resident life and collective urban memory.',
       backLink: '← Back to Projects'
     },
     zh: {
       title: '未知的漂行',
       year: '2024-2025',
       keywords: '四足机器人、移动投影、气候预测',
-      intro: '《未知的漂行》是一场机器人艺术装置，将气候预测、实景扫描、场景重建、游戏引擎与虚拟投影交织，呈现一个城市景观烙下未来海平面上升印记的推想世界，营造对气候变化潜在影响的沉浸式探索。项目采用3D高斯泼溅技术重建易受海平面上升影响的区域，并通过游戏引擎将计算机生成的水体融入场景。配备投影仪的四足机器人在物理与虚拟空间中穿行，将海平面上升的场景投射到展区，宛如人类的一道幽灵代理，窥视着被淹没的城市景观。',
+      intro: '未知的漂行是一个机器人艺术装置，将气候预测、实景扫描重建与投影交织在一起，呈现一个海平面上升后的可能性未来。项目采用3D高斯泼溅技术重建易受海平面上升影响的区域，并通过游戏引擎将计算机生成的水体融入场景。搭载投影仪的四足机器人在物理与虚拟空间中穿行，将海平面上升的场景投射到空间中，就如同人类代理机器人勘查着被淹没的城市景观。',
       context1: '为阐明未来海平面上升对城市环境的深远影响，我们选择上海、深圳和广州作为场景重建的主要地点。采用气候中心（Climate Central）2050年预测的沿海风险筛查工具，该模型基于IPCC 2021数据，假设现行排放政策及2100年全球升温3.6°C的情景，预测当地海平面上升与年度洪水高度的综合影响。分析采用热污染对海平面影响的中位数预测，排除高地隔离区域。选择这些城市的理由在于它们作为沿海都会，经济发达、人口密度高，易受海平面上升影响——尤其是上海。我们从预测地图上蓝色标注的区域——即易受海平面上升和年度洪水威胁的地带——识别出具有文化与城市意义的特定地点，包括文化机构、历史建筑、金融中心、老城区与湿地，它们与居民生活和集体城市记忆紧密交织。',
-      context2: '选择这些城市的理由在于它们作为沿海都会的地位，经济发达、人口密度高，使其尤其易受海平面上升影响——尤其是上海。从预测地图上蓝色标注的区域——即易受海平面上升和年度洪水威胁的地带——我们识别出具有文化与城市意义的特定地点，包括文化机构、历史建筑遗址、金融中心、老城区和湿地，它们与居民生活和集体城市记忆紧密交织。',
       backLink: '← 返回项目'
     }
   },
@@ -53,7 +51,7 @@ window.PROJECT_CONTENT = {
     zh: {
       title: '缓冲海滩：让洋流渲染',
       meta: ['2024', '1\'56"', '影像'],
-      p1: '《缓冲海滩：让洋流渲染》是《<a href="i-just-stay-in-my-home-not-go-anywhere.html?lang=zh">我只是待在家里，哪儿也不去</a>》的续作。',
+      p1: '《缓冲海滩：让洋流渲染》是《<a href="i-just-stay-in-my-home-not-go-anywhere.html?lang=zh">我只想呆在家里，哪都不去</a>》的续作。',
       p2: '欢迎来到未渲染的海岸线：沙粒紧握着建模阶段遗留的多边形脾气。你在软件参数支配的潮汐上漂浮，而投射「真实」海滩的屏幕，不过是又一层疲惫的贴图。一位老人跃入水中——他的身体消解为线框轮廓——驾驭着故障般的波浪穿过机器学习出的残骸：由默认预设镶嵌的珊瑚礁、半成品动画中循环的水母，触须闪烁成碎形尘埃……',
       backLink: '← 返回项目'
     }
@@ -70,7 +68,7 @@ window.PROJECT_CONTENT = {
       title: '游牧标注者',
       meta: ['2023', '17\'49"', '影像'],
       p1: '在中国的「东数西算」政策下，贵州未来可能在峡谷中建起众多数据中心，其丰富的谷地地形或将成为无人机的训练数据。佩戴AR眼镜的数据标注员穿行于自然之中进行标注。作为标注系统的基础设施与云计算的物理终端，贵州宛如一座巨大的计算与存储栈。',
-      p2: '本项目受 Iris Long 与何子科的研究项目「Under the Cloud」以及夏冰清关于数字劳动的研究启发。',
+      p2: '本项目受 Iris Long 与Zike He的研究项目「Under the Cloud」以及夏冰清关于数字劳动的研究启发。',
       backLink: '← 返回项目'
     }
   },
@@ -82,9 +80,9 @@ window.PROJECT_CONTENT = {
       backLink: '← Back to Projects'
     },
     zh: {
-      title: '我只是待在家里，哪儿也不去',
+      title: '我只想呆在家里，哪都不去',
       meta: ['2021', '1\'33"', '影像'],
-      p1: '从一个荒废的3D项目文件出发，我设想一种软件唯物主义：它既非我们生活的物理现实，亦非完美渲染结果的虚拟世界，而是介于两者之间、作为半成品的幽灵。软件的界面在此被揭示。栖居于其中的意识，并不在意世界的粗糙。',
+      p1: '从一个荒废的3D项目文件出发，我设想一种软件唯物主义：它既非我们生活的物理现实，亦非完美渲染结果的虚拟世界，而是介于两者之间、作为半成品的幽灵。软件的界面在此被揭示。栖居于其中的意识并不在意世界的粗糙。',
       backLink: '← 返回项目'
     }
   },
@@ -133,8 +131,8 @@ window.PROJECT_CONTENT = {
     zh: {
       title: 'LDN2030 水陆两栖 Rover 勘探日志',
       meta: ['2022', '自主 Rover', '投影仪、移动投影'],
-      collab: '与 <a href="https://qqiinng.com/amphibious-rover-ldn2030-scouting-log" target="_blank" rel="noopener">秦卿</a>、赵祎立、王越、黄心韵 合作',
-      p1: '正如科学家所预测的，全球气候变化加速了海平面上升。到2030年，泰晤士河沿岸的伦敦部分区域将被淹没。LDN2030 水陆两栖 Rover 被用于勘探伦敦多处被淹区域，探索人类难以抵达之地。勘探日志揭示了不久的将来我们可能都要面对的严峻洪水环境。',
+      collab: '与 <a href="https://qqiinng.com/amphibious-rover-ldn2030-scouting-log" target="_blank" rel="noopener">Qing Qin</a>、Yili Zhao、Yue Wang、Xinyun Huang 合作',
+      p1: '正如科学家所预测的，全球气候变化加速了海平面上升。到2030年，泰晤士河沿岸的伦敦部分区域将被淹没。LDN2030 水陆两栖机器 被用于勘探伦敦多处被淹区域，探索人类难以抵达之地。勘探日志揭示了不久的将来我们可能都要面对的严峻洪水环境。',
       p2: '在网页的互动地图上，您可以查看2030年海平面上升后的模拟陆地模型（Climate Central，2021），该模型基于政府间气候变化专门委员会（IPCC）——联合国评估气候变化相关科学的机构——2021年提供的数据。',
       ref: 'Climate Central (2021) Coastal Risk Screening Tool. 参见：<a href="https://coastal.climatecentral.org/mapview/12/-0.1382/51.4889/0535e2f64b95c4cee465eb8e31859e27b938e3e114611ffedae393b175c5fa08" target="_blank" rel="noopener">coastal.climatecentral.org</a>（访问于 2022年3月8日）。',
       backLink: '← 返回项目'

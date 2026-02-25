@@ -52,7 +52,7 @@
       var introWrap = document.querySelector('.project-drift-intro .project-drift-text');
       if (introWrap) introWrap.innerHTML = '<p>' + (d.intro || '') + '</p>';
       var ctxWrap = document.querySelector('.project-drift-context-text');
-      if (ctxWrap) ctxWrap.innerHTML = '<p>' + (d.context1 || '') + '</p><p>' + (d.context2 || '') + '</p>';
+      if (ctxWrap) ctxWrap.innerHTML = '<p>' + (d.context1 || '') + '</p>';
     } else if (slug === 'artificial-life-one-leg') {
       set('.project-one-leg-title', d.title);
       set('.project-one-leg-meta', d.meta);
