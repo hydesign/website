@@ -250,7 +250,8 @@ body.page-arizona-sans .about-section .section-title:first-of-type {
   justify-content: flex-end;
 }
 
-body.page-index .index-lang-bar {
+body.page-index .index-lang-bar,
+body[class*="project-page"] .index-lang-bar {
   display: flex;
 }
 
