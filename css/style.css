@@ -350,7 +350,7 @@ body.page-index .index-lang-bar {
 .site-header .hero-name { grid-column: 6 / 8; justify-self: center; }
 
 body:not(.page-index) .site-header .hero-name {
-  grid-column: 5 / 8;
+  grid-column: 6 / 8;
 }
 
 .site-header .hero-name {
@@ -700,7 +700,7 @@ body.page-index .menu-overlay-lang {
 }
 
 body:not(.page-index) .menu-overlay-lang {
-  display: none;
+  display: flex;
 }
 
 .menu-overlay-lang-btn {
