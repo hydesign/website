@@ -82,6 +82,9 @@
   </div>
   <script src="../js/view-transitions.js"></script>
   <script src="../js/include.js"></script>
+  <script src="../js/site-lang.js"></script>
+  <script src="../js/project-content.js"></script>
+  <script src="../js/project-lang.js"></script>
   <script src="../js/index-data.js"></script>
   <script src="../js/project-nav.js"></script>
   <script src="../js/project-image-lightbox.js"></script>
@@ -97,8 +100,9 @@
     var essayZh = document.getElementById('phala-essay-zh');
     var essaySection = document.getElementById('phala-essay');
     var refList = document.getElementById('phala-reference-list');
-    var gridLang = 'en';
-    var essayLang = 'en';
+    var initLang = (window.getSiteLang && window.getSiteLang()) || 'en';
+    var gridLang = initLang;
+    var essayLang = initLang;
 
     function renderGrid() {
       grid.innerHTML = data.map(function(item) {
@@ -147,6 +151,21 @@
         this.classList.add('active');
         renderEssay();
       });
+    });
+
+    document.querySelectorAll('.phala-lang-btn').forEach(function(b) {
+      b.classList.toggle('active', b.dataset.lang === initLang);
+    });
+
+    document.addEventListener('siteLangChange', function(e) {
+      if (e.detail && e.detail.lang) {
+        gridLang = essayLang = e.detail.lang;
+        document.querySelectorAll('.phala-lang-btn').forEach(function(b) {
+          b.classList.toggle('active', b.dataset.lang === e.detail.lang);
+        });
+        renderGrid();
+        renderEssay();
+      }
     });
 
     renderGrid();

@@ -7,7 +7,7 @@
 
   var introTextEl = document.getElementById('intro-text');
   var projectsContainer = document.getElementById('projects-container');
-  var lang = 'en';
+  var lang = (window.getSiteLang && window.getSiteLang()) || 'en';
 
   function render() {
     var d = data[lang];
@@ -19,7 +19,7 @@
       var base = /\/projects\//.test(window.location.pathname) ? '../' : '';
       projectsContainer.innerHTML = d.projects.map(function(p) {
         var slug = p.slug;
-        var href = base + 'projects/' + slug + '.html';
+        var href = base + 'projects/' + slug + '.html' + (lang === 'zh' ? '?lang=zh' : '');
         var quoteHtml = p.quote
           ? '<blockquote class="project-quote">' + p.quote + '</blockquote>'
           : '';
@@ -59,6 +59,7 @@
     if (btn) {
       e.preventDefault();
       lang = btn.dataset.lang;
+      if (window.setSiteLang) window.setSiteLang(lang);
       render();
       document.dispatchEvent(new CustomEvent('siteLangChange', { detail: { lang: lang } }));
     }

@@ -5,8 +5,8 @@
   const data = window.INDEX_DATA;
   if (!data) return;
 
-  // Force English titles for poetic typography feel
-  const allProjects = data['en'].projects;
+  const siteLang = (window.getSiteLang && window.getSiteLang()) || 'en';
+  const allProjects = data[siteLang] ? data[siteLang].projects : data['en'].projects;
   if (!allProjects || allProjects.length === 0) return;
 
   // Exclude current project from the ring
