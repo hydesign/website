@@ -39,9 +39,9 @@ window.CV_EXHIBITION = {
   en: [
     { year: '2026', items: [
       'Uncharted Realms II: Thirty Chinese Artists in AI Art (未卜之境 2：中國人工智能藝術三十人展), Artificial Life: One Leg at a Time, group exhibition, Sept.–Dec., 798 District, Beijing, China',
-      'Planetary Embassy (行星协商), Drift of the Uncharted, popup show, Sept. 23, Embassy of Switzerland in China, Beijing, China',
-      'Planetary Embassy (行星协商), Drift of the Uncharted, group exhibition, Oct. 29–Nov. 17, By Art Matter, Hangzhou, China',
-      'On the Waterfront, Drift of the Uncharted, group exhibition, Oct. 18–Dec. 20, Organhaus (Richaus Block), Chongqing, China'
+      'Planetary Embassy (行星协商), popup show, Sept. 23, Embassy of Switzerland in China, Beijing, China',
+      'Planetary Embassy (行星协商), group exhibition, Oct. 29–Nov. 17, By Art Matter, Hangzhou, China',
+      'On the Waterfront, group exhibition, Oct. 18–Dec. 20, Organhaus (Richaus Block), Chongqing, China'
     ] },
     { year: '2025', items: ['Ars Electronica Campus, Postcity, Linz, Austria', 'Bay Area Art and Technology Triennial: Brackish Waters, Turbulence, and Algorithmic Landscapes, Guangzhou Academy of Fine Arts Museum, Guangzhou, China', 'Hong Kong AI Art Festival, HKCEC, Hong Kong, China', 'Bi-City Biennale of Urbanism/Architecture, Hetao Innovation and Technology Center, Shenzhen, China', '21st Athens Digital Arts Festival, Athens'] },
     { year: '2024', items: ['Altering Nature: Exploring Life in Computational Art, Guangzhou, China'] },
@@ -55,9 +55,9 @@ window.CV_EXHIBITION = {
   zh: [
     { year: '2026', items: [
       '未卜之境 2：中國人工智能藝術三十人展，《Artificial Life: One Leg at a Time》，群展，9月至12月，798多觉艺术工厂，北京，中国',
-      '行星协商，《Drift of the Uncharted》，快闪展，9月23日，瑞士驻中国大使馆，北京，中国',
-      '行星协商，《Drift of the Uncharted》，群展，10月29日至11月17日，天目里美术馆，杭州，中国',
-      'On the Waterfront，《Drift of the Uncharted》，群展，10月18日至12月20日，器·Haus空间（瑞器馆），重庆，中国'
+      '行星协商，快闪展，9月23日，瑞士驻中国大使馆，北京，中国',
+      '行星协商，群展，10月29日至11月17日，天目里美术馆，杭州，中国',
+      'On the Waterfront，群展，10月18日至12月20日，器·Haus空间（瑞器馆），重庆，中国'
     ] },
     { year: '2025', items: ['林茨电子艺术节 campus 单元，Postcity, 奥地利', '湾区艺术与科技三年展：咸水、湍流与算法景观，广州美术学院美术馆, 广州, 中国', '香港人工智能艺术节，香港会议展览中心（HKCEC），香港, 中国', '深港城市/建筑双城双年展，河套创新与科技中心，深圳, 中国', '第21届雅典数字艺术节，希腊, 雅典'] },
     { year: '2024', items: ['改变中的自然：探索计算艺术中的生命，广州, 中国'] },
