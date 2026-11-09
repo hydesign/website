@@ -41,7 +41,7 @@ window.CV_EXHIBITION = {
       'Uncharted Realms II: Thirty Chinese Artists in AI Art (未卜之境 2：中國人工智能藝術三十人展), Artificial Life: One Leg at a Time, group exhibition, Sept.–Dec., 798 District, Beijing, China; curated by BoQiao Wang',
       'Planetary Embassy (行星协商), Drift of the Uncharted, popup show, Sept. 23, Embassy of Switzerland in China, Beijing, China',
       'Planetary Embassy (行星协商), Drift of the Uncharted, group exhibition, Oct. 29–Nov. 17, By Art Matter, Hangzhou, China; curated by Jowei. <a href="https://hkustgz-my.sharepoint.com/:i:/g/personal/yhuang948_connect_hkust-gz_edu_cn/IQDO9YfZrEiWTar3-73ngM8wASQakuKGlyp9qjppbb-222A?e=OJAEdJ">Poster</a>',
-      'On the Waterfront, Drift of the Uncharted, group exhibition, Organhaus (Richaus Block), Chongqing, China; curated and organised by Ben G. Fordor, Forothee Frank, Ni Kun, Leo Schatzl and Ranier Noebauer-Kammerer. <a href="https://hkustgz-my.sharepoint.com/:b:/g/personal/yhuang948_connect_hkust-gz_edu_cn/IQDZ_HEy2hTFQ4LnQ4UTTV4TAfM-PbTETqm7AAwUSRaO3Oc?e=sm4mr3">Poster</a>'
+      'On the Waterfront, Drift of the Uncharted, group exhibition, Oct. 18–Dec. 20, Organhaus (Richaus Block), Chongqing, China; curated and organised by Ben G. Fodor, Dorothee Frank, Ni Kun, Leo Schatzl and Rainer Noebauer-Kammerer. <a href="https://hkustgz-my.sharepoint.com/:b:/g/personal/yhuang948_connect_hkust-gz_edu_cn/IQDZ_HEy2hTFQ4LnQ4UTTV4TAfM-PbTETqm7AAwUSRaO3Oc?e=sm4mr3">Poster</a>'
     ] },
     { year: '2025', items: ['Ars Electronica Campus, Postcity, Linz, Austria', 'Bay Area Art and Technology Triennial: Brackish Waters, Turbulence, and Algorithmic Landscapes, Guangzhou Academy of Fine Arts Museum, Guangzhou, China', 'Hong Kong AI Art Festival, HKCEC, Hong Kong, China', 'Bi-City Biennale of Urbanism/Architecture, Hetao Innovation and Technology Center, Shenzhen, China', '21st Athens Digital Arts Festival, Athens'] },
     { year: '2024', items: ['Altering Nature: Exploring Life in Computational Art, Guangzhou, China'] },
@@ -57,7 +57,7 @@ window.CV_EXHIBITION = {
       '未卜之境 2：中國人工智能藝術三十人展，《Artificial Life: One Leg at a Time》，群展，9月至12月，798多觉艺术工厂，北京，中国；策展人：王泊乔',
       '行星协商，《Drift of the Uncharted》，快闪展，9月23日，瑞士驻中国大使馆，北京，中国',
       '行星协商，《Drift of the Uncharted》，群展，10月29日至11月17日，天目里美术馆，杭州，中国；策展人：魏颖。<a href="https://hkustgz-my.sharepoint.com/:i:/g/personal/yhuang948_connect_hkust-gz_edu_cn/IQDO9YfZrEiWTar3-73ngM8wASQakuKGlyp9qjppbb-222A?e=OJAEdJ">海报</a>',
-      'On the Waterfront，《Drift of the Uncharted》，群展，器·Haus空间（瑞器馆），重庆，中国；策展与组织：Ben G. Fordor、Forothee Frank、倪昆、Leo Schatzl、Ranier Noebauer-Kammerer。<a href="https://hkustgz-my.sharepoint.com/:b:/g/personal/yhuang948_connect_hkust-gz_edu_cn/IQDZ_HEy2hTFQ4LnQ4UTTV4TAfM-PbTETqm7AAwUSRaO3Oc?e=sm4mr3">海报</a>'
+      'On the Waterfront，《Drift of the Uncharted》，群展，10月18日至12月20日，器·Haus空间（瑞器馆），重庆，中国；策展与组织：Ben G. Fodor、Dorothee Frank、倪昆、Leo Schatzl、Rainer Noebauer-Kammerer。<a href="https://hkustgz-my.sharepoint.com/:b:/g/personal/yhuang948_connect_hkust-gz_edu_cn/IQDZ_HEy2hTFQ4LnQ4UTTV4TAfM-PbTETqm7AAwUSRaO3Oc?e=sm4mr3">海报</a>'
     ] },
     { year: '2025', items: ['林茨电子艺术节 campus 单元，Postcity, 奥地利', '湾区艺术与科技三年展：咸水、湍流与算法景观，广州美术学院美术馆, 广州, 中国', '香港人工智能艺术节，香港会议展览中心（HKCEC），香港, 中国', '深港城市/建筑双城双年展，河套创新与科技中心，深圳, 中国', '第21届雅典数字艺术节，希腊, 雅典'] },
     { year: '2024', items: ['改变中的自然：探索计算艺术中的生命，广州, 中国'] },
